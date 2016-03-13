@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-teppeis",
+  "description": "ESLint config set for me!",
+  "version": "0.0.1",
+  "author": "Teppei Sato <teppeis@gmail.com>",
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all --parallel test:*",
+    "test:closure": "eslint -c closure.js examples/closure.js",
+    "test:closure-es6": "eslint -c closure-es6.js examples/closure-es6.js",
+    "test:es5": "eslint -c index.js examples/es5.js",
+    "test:es6": "eslint -c es6.js examples/es6.js",
+    "test:node": "eslint -c node.js examples/node.js",
+    "test:node-es6": "eslint -c node-es6.js examples/node-es6.js",
+    "watch": "chokidar '**/*.js' -c 'npm test'"
+  },
+  "dependencies": {
+    "eslint-plugin-node": "^1.0.0",
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "eslint": "^2.4.0",
+    "npm-run-all": "^1.6.0"
+  },
+  "homepage": "https://github.com/teppeis/eslint-config-teppeis",
+  "repository": "https://github.com/teppeis/eslint-config-teppeis",
+  "bugs": {
+    "url": "https://github.com/teppeis/eslint-config-teppeis"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "license": "MIT"
+}

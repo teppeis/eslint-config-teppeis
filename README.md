@@ -1,0 +1,91 @@
+eslint-config-teppeis
+====
+
+ESLint config set for me!
+
+[![NPM version][npm-image]][npm-url]
+![Node.js Version Support][node-version]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][deps-image]][deps-url]
+![License][license]
+
+`npm i -D eslint-config-teppeis` and specify in your `.eslintrc.json`:
+
+```json
+{
+    "extends": "teppeis"
+}
+```
+
+Default config is for ES5.
+
+## Usage
+
+### For ES6
+
+```json
+{
+    "extends": "teppeis/es6"
+}
+```
+
+### For Closure Compiler code format
+
+```json
+{
+    "extends": "teppeis/closure"
+}
+```
+
+### For Closure Compiler code format with ES6
+
+```json
+{
+    "extends": "teppeis/closure-es6"
+}
+```
+
+### For Node.js
+
+This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+
+```json
+{
+    "extends": "teppeis/node",
+    "rules": {
+        // default
+        "node/no-unsupported-features": [2, {"version": 0.12}]
+    }
+}
+```
+
+### For Node.js with ES6
+
+This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+
+```json
+{
+    "extends": "teppeis/node-es6",
+    "rules": {
+        // default
+        "node/no-unsupported-features": 0
+    }
+}
+```
+
+## License
+
+Licensed under the MIT license.
+Copyright © 2016, Teppei Sato
+
+[npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
+[npm-url]: https://npmjs.org/package/eslint-config-teppeis
+[npm-downloads-image]: https://img.shields.io/npm/dm/eslint-config-teppeis.svg
+[travis-image]: https://img.shields.io/travis/teppeis/eslint-config-teppeis/master.svg
+[travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
+[deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
+[deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
+[node-version]: https://img.shields.io/badge/Node.js%20support-v0.10–v5-brightgreen.svg
+[coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
+[coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
+[license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
