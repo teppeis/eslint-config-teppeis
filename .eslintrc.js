@@ -1,11 +1,14 @@
 "use strict";
 
-var extend = require('extend');
+var extend = require("extend");
 
 module.exports = extend(true, {},
-  require('./node'),
+  require("./node"),
   {
     "rules": {
+      "quotes": [2, "double"],
+      "quote-props": 0,
+      "no-magic-numbers": 0,
     }
   }
 );
