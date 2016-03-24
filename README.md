@@ -29,7 +29,7 @@ Default config is for ES5.
 }
 ```
 
-### For Closure Compiler code format
+### For Closure Compiler coding style
 
 ```json
 {
@@ -37,7 +37,7 @@ Default config is for ES5.
 }
 ```
 
-### For Closure Compiler code format with ES6
+### For Closure Compiler coding style with ES6
 
 ```json
 {
