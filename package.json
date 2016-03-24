@@ -10,12 +10,12 @@
   "scripts": {
     "lint": "eslint *.js lib",
     "test": "npm run lint && npm-run-all --parallel test:*",
-    "test:closure": "eslint -c closure.js examples/closure.js",
-    "test:closure-es6": "eslint -c closure-es6.js examples/closure-es6.js",
-    "test:es5": "eslint -c index.js examples/es5.js",
-    "test:es6": "eslint -c es6.js examples/es6.js",
-    "test:node": "eslint -c node.js examples/node.js",
-    "test:node-es6": "eslint -c node-es6.js examples/node-es6.js"
+    "test:closure": "eslint --no-eslintrc -c closure.js examples/closure.js",
+    "test:closure-es6": "eslint --no-eslintrc -c closure-es6.js examples/closure-es6.js",
+    "test:es5": "eslint --no-eslintrc -c index.js examples/es5.js",
+    "test:es6": "eslint --no-eslintrc -c es6.js examples/es6.js",
+    "test:node": "eslint --no-eslintrc -c node.js examples/node.js",
+    "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js"
   },
   "dependencies": {
     "eslint-plugin-node": "^1.0.0",
