@@ -8,7 +8,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "npm-run-all --parallel test:*",
+    "lint": "eslint *.js lib",
+    "test": "npm run lint && npm-run-all --parallel test:*",
     "test:closure": "eslint -c closure.js examples/closure.js",
     "test:closure-es6": "eslint -c closure-es6.js examples/closure-es6.js",
     "test:es5": "eslint -c index.js examples/es5.js",
