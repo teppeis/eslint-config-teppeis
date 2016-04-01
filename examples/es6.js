@@ -19,6 +19,10 @@ class Foo {
     });
   }
 
+  env() {
+    return Promise.resolve(1);
+  }
+
   confusingArrow() {
     return n => (n * Math.random() > 0.5 ? 1 : 2);
   }
