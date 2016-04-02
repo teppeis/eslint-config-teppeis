@@ -22,7 +22,7 @@
     "extend": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^2.5.1",
+    "eslint": "^2.6.0",
     "npm-run-all": "^1.6.0"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
