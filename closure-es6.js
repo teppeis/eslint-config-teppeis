@@ -1,9 +1,9 @@
 "use strict";
 
-var extend = require("extend");
-
-module.exports = extend(true, {},
-  require("./lib/base"),
-  require("./lib/closure"),
-  require("./lib/es6")
-);
+module.exports = {
+  "extends": [
+    "./lib/base.js",
+    "./lib/closure.js",
+    "./lib/es6.js",
+  ]
+};
