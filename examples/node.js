@@ -1,6 +1,6 @@
 'use strict';
 
-require('extend');
+require('eslint-plugin-node');
 require('./node');
 // require('./missing');
 
