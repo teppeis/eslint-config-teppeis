@@ -15,6 +15,8 @@
     "test:es5": "eslint --no-eslintrc -c index.js examples/es5.js",
     "test:es6": "eslint --no-eslintrc -c es6.js examples/es6.js",
     "test:node": "eslint --no-eslintrc -c node.js examples/node.js",
+    "test:node-v4": "eslint --no-eslintrc -c node-v4.js examples/node-v4.js",
+    "test:node-v6": "eslint --no-eslintrc -c node-v6.js examples/node-v6.js",
     "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js"
   },
   "dependencies": {
