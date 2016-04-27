@@ -19,6 +19,12 @@ class Foo {
     });
   }
 
+  namedCall() {
+    this.invoke(function foo(param) {
+      alert(param);
+    });
+  }
+
   env() {
     return Promise.resolve(1);
   }
