@@ -45,7 +45,7 @@ Default config is for ES5.
 }
 ```
 
-### For Node.js
+### For Node.js without ES6 features
 
 This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
 
@@ -65,19 +65,35 @@ and specify `engines` in package.json for [node/no-unsupported-features](https:/
 }
 ```
 
-### For Node.js with ES6
+### For Node.js v4 and v6
 
 This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
 
 ```json
 {
-    "extends": "teppeis/node-es6",
-    "rules": {
-        // default
-        "node/no-unsupported-features": 0
-    }
+    "extends": "teppeis/node-v4"
 }
 ```
+
+or
+
+```json
+{
+    "extends": "teppeis/node-v6"
+}
+```
+
+### For Node.js with full ES6 features
+
+This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+
+```json
+{
+    "extends": "teppeis/node-es6"
+}
+```
+
+In this config, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES6 features.
 
 If you use ES6 Modules, override `parserOptions.sourceType`.
 
