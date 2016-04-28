@@ -32,6 +32,10 @@ class Foo {
   confusingArrow() {
     return n => (n * Math.random() > 0.5 ? 1 : 2);
   }
+
+  static [Symbol.hasInstance](obj) {
+    return obj.constructor === Foo;
+  }
 }
 
 exports.obj = {
