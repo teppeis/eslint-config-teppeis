@@ -39,6 +39,7 @@ class Foo {
 }
 
 exports.obj = {
+  1: 'b',
   foo() {},
   // allow properties
   Foo: Foo
