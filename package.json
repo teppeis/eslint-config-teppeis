@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "eslint": "^2.9.0",
-    "eslint-plugin-node": "^1.1.0"
+    "eslint-plugin-node": "^1.2.2"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
