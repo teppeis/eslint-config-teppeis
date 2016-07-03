@@ -20,7 +20,7 @@
     "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js"
   },
   "dependencies": {
-    "eslint-plugin-node": "^1.5.0"
+    "eslint-plugin-node": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
