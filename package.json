@@ -7,6 +7,17 @@
     "node": ">= 4"
   },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "closure.js",
+    "closure-es6.js",
+    "es6.js",
+    "node.js",
+    "node-es6.js",
+    "node-v4.js",
+    "node-v6.js",
+    "lib"
+  ],
   "scripts": {
     "lint": "eslint *.js lib",
     "test": "npm run lint && run-p 'test:*'",
@@ -14,16 +25,19 @@
     "test:closure-es6": "eslint --no-eslintrc -c closure-es6.js examples/closure-es6.js",
     "test:es5": "eslint --no-eslintrc -c index.js examples/es5.js",
     "test:es6": "eslint --no-eslintrc -c es6.js examples/es6.js",
+    "test:mocha": "mocha test",
     "test:node": "eslint --no-eslintrc -c node.js examples/node.js",
+    "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js",
     "test:node-v4": "eslint --no-eslintrc -c node-v4.js examples/node-v4.js",
-    "test:node-v6": "eslint --no-eslintrc -c node-v6.js examples/node-v6.js",
-    "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js"
+    "test:node-v6": "eslint --no-eslintrc -c node-v6.js examples/node-v6.js"
   },
   "dependencies": {
     "eslint-plugin-node": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^3.0.0",
+    "glob": "^7.0.5",
+    "mocha": "^2.5.3",
     "npm-run-all": "^2.1.0"
   },
   "peerDependencies": {
