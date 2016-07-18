@@ -2,7 +2,7 @@
 
 module.exports = {
   "extends": [
-    "./node.js",
+    "./node-v4.js",
   ],
   "rules": {
     "quotes": [2, "double"],
