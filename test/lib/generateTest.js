@@ -19,15 +19,14 @@ function generateTest(result) {
   const expected = match[2];
 
   it(`${rule}: ${expected}`, () => {
-    if (expected === 'off') {
+    const messageForTheRule = messages.filter(m => m.ruleId === rule)[0];
+    if (expected === 'off' && messageForTheRule) {
+      assert.fail(null, null, formatMessages(messages).join('\n'));
+    } else if (expected === 'error' && !messageForTheRule) {
       if (messages.length > 0) {
-        assert.fail(messages.length, 0, formatMessages(messages).join('\n'));
-      }
-    } else if (expected === 'error') {
-      if (!messages.filter(m => m.ruleId === rule).length) {
-        let msg = [`${rule} error is expected, but actually passed.`];
-        msg = msg.concat(formatMessages(messages));
-        assert.fail(null, null, msg.join('\n'));
+        assert.fail(null, null, formatMessages(messages).join('\n'));
+      } else {
+        assert.fail(null, null, 'No errors despite your expectation');
       }
     }
   });
