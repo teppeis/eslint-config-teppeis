@@ -35,13 +35,13 @@
     "eslint-plugin-node": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.1.1",
+    "eslint": "^3.2.0",
     "glob": "^7.0.5",
     "mocha": "^2.5.3",
     "npm-run-all": "^2.1.0"
   },
   "peerDependencies": {
-    "eslint": "^3.1.1",
+    "eslint": "^3.2.0",
     "eslint-plugin-node": "^2.0.0"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
