@@ -23,7 +23,7 @@ function foo1(var_args) {}
 function foo2(opt_foo) {}
 
 // allow @private `var foo_ = 0`
-let foo_ = 0;
+const foo_ = 0;
 
 // allow both `{'foo': 1}` and `{foo: 1}`
 let obj = {

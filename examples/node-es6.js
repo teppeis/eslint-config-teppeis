@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable no-magic-numbers */
+
 require('eslint-plugin-node');
 require('./node');
 // require('./missing');
