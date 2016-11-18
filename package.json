@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "eslint": "^3.4.0",
-    "eslint-plugin-node": "^2.0.0"
+    "eslint-plugin-node": "^3.0.4"
   },
   "devDependencies": {
     "eslint": "^3.2.2",
