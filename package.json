@@ -25,6 +25,7 @@
     "test:closure-es6": "eslint --no-eslintrc -c closure-es6.js examples/closure-es6.js",
     "test:es5": "eslint --no-eslintrc -c index.js examples/es5.js",
     "test:es6": "eslint --no-eslintrc -c es6.js examples/es6.js",
+    "test:es2017": "eslint --no-eslintrc -c es2017.js examples/es2017.js",
     "test:mocha": "mocha test",
     "test:node": "eslint --no-eslintrc -c node.js examples/node.js",
     "test:node-es6": "eslint --no-eslintrc -c node-es6.js examples/node-es6.js",
@@ -32,7 +33,7 @@
     "test:node-v6": "eslint --no-eslintrc -c node-v6.js examples/node-v6.js"
   },
   "dependencies": {
-    "eslint": "^3.4.0",
+    "eslint": "^3.8.1",
     "eslint-plugin-node": "^2.0.0"
   },
   "devDependencies": {
