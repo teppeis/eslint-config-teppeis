@@ -21,11 +21,19 @@ Default config is for ES5.
 
 ## Usage
 
-### For ES6
+### For ES6 or ES2017
 
 ```json
 {
     "extends": "teppeis/es6"
+}
+```
+
+or
+
+```json
+{
+    "extends": "teppeis/es2017"
 }
 ```
 
@@ -83,9 +91,9 @@ or
 }
 ```
 
-### For Node.js with full ES6 features
+### For Node.js with full ES6 or ES2017 features
 
-This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+These configs include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
 
 ```json
 {
@@ -93,9 +101,17 @@ This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-p
 }
 ```
 
-In this config, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES6 features.
+or
 
-If you use ES6 Modules, override `parserOptions.sourceType`.
+```json
+{
+    "extends": "teppeis/node-es2017"
+}
+```
+
+In these configs, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES6 or ES2017 features.
+
+If you use ES Modules, override `parserOptions.sourceType`.
 
 ```json
 {
@@ -117,7 +133,7 @@ Copyright © 2016, Teppei Sato
 [travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
-[node-version]: https://img.shields.io/badge/Node.js%20support-v4–v6-brightgreen.svg
+[node-version]: https://img.shields.io/badge/Node.js%20support-v4–v7-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
