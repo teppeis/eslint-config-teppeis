@@ -3,7 +3,7 @@
 /* eslint-disable no-magic-numbers, no-unused-vars */
 
 // async/await
-const foo = async a => await alert(a);
+const foo = async a => fetch(a);
 
 // comma-dangle for "functions"
 function comma(
