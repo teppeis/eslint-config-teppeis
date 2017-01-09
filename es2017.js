@@ -3,8 +3,6 @@
 module.exports = {
   "extends": [
     "./es6.js",
+    "./lib/es2017.js",
   ],
-  "parserOptions": {
-    "ecmaVersion": 2017,
-  },
 };

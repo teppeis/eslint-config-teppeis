@@ -28,10 +28,12 @@ describe('eslint-config-teppeis', () => {
   });
 
   describeVerify('es6');
+  describeVerify('es2017');
   describeVerify('closure');
   describeVerify('closure-es6');
   describeVerify('node');
   describeVerify('node-es6');
+  describeVerify('node-es2017');
   describeVerify('node-v4');
   describeVerify('node-v6');
 });
