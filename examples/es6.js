@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* eslint-disable no-magic-numbers */
 
@@ -41,10 +41,18 @@ class Foo {
 }
 
 exports.obj = {
-  1: 'b',
+  1: "b",
   foo() {},
   // allow properties
   Foo: Foo,
 };
 
 exports.Foo = Foo;
+
+// object-shorthand
+let foo = {
+  foo: (bar, baz) => {
+    let piyo = bar + baz;
+    piyo();
+  },
+};
