@@ -1,6 +1,10 @@
-"use strict";
+'use strict';
 
 /* eslint-disable no-magic-numbers */
+
+require('eslint-plugin-node');
+require('../node/node');
+// require('./missing');
 
 class Foo {
   constructor(foo) {
@@ -21,38 +25,15 @@ class Foo {
     });
   }
 
-  namedCall() {
-    this.invoke(function foo(param) {
-      alert(param);
-    });
-  }
-
-  env() {
-    return Promise.resolve(1);
-  }
-
   confusingArrow() {
     return n => (n * Math.random() > 0.5 ? 1 : 2);
-  }
-
-  static [Symbol.hasInstance](obj) {
-    return obj.constructor === Foo;
   }
 }
 
 exports.obj = {
-  1: "b",
   foo() {},
   // allow properties
-  Foo: Foo,
+  Foo: Foo
 };
 
 exports.Foo = Foo;
-
-// object-shorthand
-let foo = {
-  foo: (bar, baz) => {
-    let piyo = bar + baz;
-    piyo();
-  },
-};
