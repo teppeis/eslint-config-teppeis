@@ -2,6 +2,10 @@
 
 /* eslint-disable no-magic-numbers */
 
+require('eslint-plugin-node');
+require('../node/node');
+// require('./missing');
+
 class Foo {
   constructor(foo) {
     this.foo = foo;
@@ -21,30 +25,15 @@ class Foo {
     });
   }
 
-  namedCall() {
-    this.invoke(function foo(param) {
-      alert(param);
-    });
-  }
-
-  env() {
-    return Promise.resolve(1);
-  }
-
   confusingArrow() {
     return n => (n * Math.random() > 0.5 ? 1 : 2);
-  }
-
-  static [Symbol.hasInstance](obj) {
-    return obj.constructor === Foo;
   }
 }
 
 exports.obj = {
-  1: 'b',
   foo() {},
   // allow properties
-  Foo: Foo,
+  Foo: Foo
 };
 
 exports.Foo = Foo;
