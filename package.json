@@ -27,6 +27,7 @@
     "test:mocha": "mocha test"
   },
   "dependencies": {
+    "eslint-plugin-eslint-comments": "^1.0.0",
     "eslint-plugin-node": "^4.0.1"
   },
   "devDependencies": {
