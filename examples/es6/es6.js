@@ -57,3 +57,7 @@ let foo = {
   },
 };
 foo.foo();
+
+// template-tab-spacing
+function tag() {}
+alert(tag`hello`);
