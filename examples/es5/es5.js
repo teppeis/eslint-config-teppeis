@@ -36,7 +36,6 @@ function canUseQuerySelector_(parent) {
  * @param {Object} properties Hash of property:value pairs.
  */
 function setProperties(element, properties) {
-  /* eslint-disable no-param-reassign */
   Object.keys(properties).forEach(function(key) {
     var val = properties[key];
     if (key === 'style') {
@@ -49,7 +48,6 @@ function setProperties(element, properties) {
       element[key] = val;
     }
   });
-  /* eslint-enable no-param-reassign */
 }
 
 exports.getElementByClass = getElementByClass;
