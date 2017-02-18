@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-teppeis",
   "description": "ESLint config set for me!",
-  "version": "3.10.0",
+  "version": "3.11.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
     "node": ">= 4"
