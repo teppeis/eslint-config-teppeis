@@ -51,7 +51,7 @@ exports.Foo = Foo;
 
 // object-shorthand
 let foo = {
-  foo: (bar, baz) => {
+  foo(bar, baz) {
     let piyo = bar + baz;
     piyo();
   },
