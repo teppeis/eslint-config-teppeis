@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "eslint-plugin-eslint-comments": "^1.0.0",
-    "eslint-plugin-node": "^4.1.0"
+    "eslint-plugin-node": "^4.2.1"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
@@ -39,7 +39,7 @@
   "peerDependencies": {
     "eslint": "^3.17.1",
     "eslint-plugin-eslint-comments": "^1.0.0",
-    "eslint-plugin-node": "^4.1.0"
+    "eslint-plugin-node": "^4.2.1"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
