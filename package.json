@@ -37,7 +37,7 @@
     "npm-run-all": "^4.0.0"
   },
   "peerDependencies": {
-    "eslint": "^3.17.0",
+    "eslint": "^3.17.1",
     "eslint-plugin-eslint-comments": "^1.0.0",
     "eslint-plugin-node": "^4.1.0"
   },
