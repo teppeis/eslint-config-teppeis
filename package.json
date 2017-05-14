@@ -33,7 +33,7 @@
   "devDependencies": {
     "eslint": "^3.17.1",
     "glob": "^7.0.5",
-    "mocha": "^3.0.2",
+    "mocha": "^3.4.0",
     "npm-run-all": "^4.0.0"
   },
   "peerDependencies": {
