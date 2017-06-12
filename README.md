@@ -1,6 +1,8 @@
 eslint-config-teppeis
 ====
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/teppeis/eslint-config-teppeis.svg)](https://greenkeeper.io/)
+
 ESLint config set for me!
 
 [![NPM version][npm-image]][npm-url]
