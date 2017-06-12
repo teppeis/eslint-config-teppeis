@@ -124,7 +124,7 @@ If you use ES Modules, override `parserOptions.sourceType`.
 ## License
 
 Licensed under the MIT license.
-Copyright © 2016, Teppei Sato
+Copyright © 2017, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
@@ -133,7 +133,7 @@ Copyright © 2016, Teppei Sato
 [travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
-[node-version]: https://img.shields.io/badge/Node.js%20support-v4–v7-brightgreen.svg
+[node-version]: https://img.shields.io/badge/Node.js%20support-v4,v6,v8-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
