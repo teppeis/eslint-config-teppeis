@@ -10,6 +10,10 @@ function formatMessages(messages) {
 function generateTest(result) {
   const filePath = result.filePath;
   const messages = result.messages;
+  const fatal = messages.find(_ => _.fatal);
+  if (fatal) {
+    throw new Error(`Fatal: ${fatal.message}`);
+  }
 
   const match = /([^.]*)\.(off|warn|error)\.js$/.exec(filePath);
   if (!match) {
