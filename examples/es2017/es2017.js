@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint-disable no-magic-numbers, no-unused-vars, no-undef */
+/* eslint-disable no-unused-vars, no-undef */
 
 // async/await
 const foo = async a => {

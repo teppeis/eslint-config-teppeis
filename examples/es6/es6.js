@@ -1,7 +1,5 @@
 'use strict';
 
-/* eslint-disable no-magic-numbers */
-
 class Foo {
   constructor(foo) {
     this.foo = foo;
