@@ -8,5 +8,5 @@ module.exports = {
   ],
   "rules": {
     "node/no-unsupported-features": [2, {"version": 6}],
-  }
+  },
 };
