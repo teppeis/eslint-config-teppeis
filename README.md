@@ -21,11 +21,11 @@ Default config is for ES5.
 
 ## Usage
 
-### For ES6 or ES2017
+### For ES2015(ES6) or ES2017
 
 ```json
 {
-    "extends": "teppeis/es6"
+    "extends": "teppeis/es2015"
 }
 ```
 
@@ -45,15 +45,15 @@ or
 }
 ```
 
-### For Closure Compiler coding style with ES6
+### For Closure Compiler coding style with ES2015
 
 ```json
 {
-    "extends": "teppeis/closure-es6"
+    "extends": "teppeis/closure-es2015"
 }
 ```
 
-### For Node.js without ES6 features
+### For Node.js without ES2015 features
 
 This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
 
@@ -91,13 +91,13 @@ or
 }
 ```
 
-### For Node.js with full ES6 or ES2017 features
+### For Node.js with full ES2015 or ES2017 features
 
 These configs include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
 
 ```json
 {
-    "extends": "teppeis/node-es6"
+    "extends": "teppeis/node-es2015"
 }
 ```
 
@@ -109,7 +109,7 @@ or
 }
 ```
 
-In these configs, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES6 or ES2017 features.
+In these configs, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES2015 or ES2017 features.
 
 If you use ES Modules, override `parserOptions.sourceType`.
 
@@ -124,7 +124,7 @@ If you use ES Modules, override `parserOptions.sourceType`.
 ## License
 
 Licensed under the MIT license.
-Copyright © 2017, Teppei Sato
+Copyright 息 2017, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis

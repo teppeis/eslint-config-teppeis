@@ -28,17 +28,13 @@ function describeVerify(configName, opt_useModule) {
 }
 
 describe('eslint-config-teppeis', () => {
-  describe('base', () => {
-    const results = verify('base', false, 'index');
-    results.forEach(result => generateTest(result));
-  });
-
-  describeVerify('es6', true);
+  describeVerify('es5');
+  describeVerify('es2015', true);
   describeVerify('es2017', true);
   describeVerify('closure');
-  describeVerify('closure-es6', true);
+  describeVerify('closure-es2015', true);
   describeVerify('node');
-  describeVerify('node-es6', true);
+  describeVerify('node-es2015', true);
   describeVerify('node-es2017', true);
   describeVerify('node-v4');
   describeVerify('node-v6');
