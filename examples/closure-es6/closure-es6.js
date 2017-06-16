@@ -28,6 +28,6 @@ const foo_ = 0;
 // allow both `{'foo': 1}` and `{foo: 1}`
 let obj = {
   foo: 1,
-  'bar': 2
+  'bar': 2,
 };
 /* eslint-enable no-unused-vars */

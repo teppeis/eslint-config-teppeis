@@ -31,7 +31,7 @@ class Foo {
 exports.obj = {
   foo() {},
   // allow properties
-  Foo: Foo
+  Foo: Foo,
 };
 
 exports.Foo = Foo;
