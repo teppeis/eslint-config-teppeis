@@ -1,0 +1,3 @@
+{
+    "extends": "../../closure-es2015.js"
+}

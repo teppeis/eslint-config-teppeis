@@ -6,18 +6,9 @@
   "engines": {
     "node": ">= 4"
   },
-  "main": "index.js",
+  "main": "es2015.js",
   "files": [
-    "index.js",
-    "closure.js",
-    "closure-es6.js",
-    "es6.js",
-    "es2017.js",
-    "node.js",
-    "node-es6.js",
-    "node-es2017.js",
-    "node-v4.js",
-    "node-v6.js",
+    "*.js",
     "lib"
   ],
   "scripts": {

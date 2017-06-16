@@ -25,7 +25,7 @@ Default config is for ES5.
 
 ```json
 {
-    "extends": "teppeis/es6"
+    "extends": "teppeis/es2015"
 }
 ```
 
@@ -49,7 +49,7 @@ or
 
 ```json
 {
-    "extends": "teppeis/closure-es6"
+    "extends": "teppeis/closure-es2015"
 }
 ```
 
@@ -97,7 +97,7 @@ These configs include [eslint-plugin-node](https://www.npmjs.com/package/eslint-
 
 ```json
 {
-    "extends": "teppeis/node-es6"
+    "extends": "teppeis/node-es2015"
 }
 ```
 
