@@ -5,5 +5,5 @@ module.exports = {
     "./lib/base.js",
     "./lib/closure.js",
     "./lib/es6.js",
-  ]
+  ],
 };

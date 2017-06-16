@@ -1,7 +1,5 @@
 'use strict';
 
-/* eslint-disable no-magic-numbers */
-
 require('eslint-plugin-node');
 require('../node/node');
 // require('./missing');
@@ -33,7 +31,7 @@ class Foo {
 exports.obj = {
   foo() {},
   // allow properties
-  Foo: Foo
+  Foo: Foo,
 };
 
 exports.Foo = Foo;

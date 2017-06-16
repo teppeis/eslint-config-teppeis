@@ -11,5 +11,5 @@ module.exports = {
     // Not yet in Node v4
     "prefer-rest-params": 0,
     "prefer-spread": 0,
-  }
+  },
 };
