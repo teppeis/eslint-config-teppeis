@@ -124,7 +124,7 @@ If you use ES Modules, override `parserOptions.sourceType`.
 ## License
 
 Licensed under the MIT license.
-Copyright 諱ｯ 2017, Teppei Sato
+Copyright (c) 2017, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
