@@ -5,7 +5,7 @@ ESLint config set for me!
 
 [![NPM version][npm-image]][npm-url]
 ![Node.js Version Support][node-version]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][circleci-image]][circleci-url]
 [![Dependency Status][deps-image]][deps-url]
 ![License][license]
 
@@ -124,13 +124,15 @@ If you use ES Modules, override `parserOptions.sourceType`.
 ## License
 
 Licensed under the MIT license.
-Copyright 息 2017, Teppei Sato
+Copyright (c) 2017, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
 [npm-downloads-image]: https://img.shields.io/npm/dm/eslint-config-teppeis.svg
 [travis-image]: https://img.shields.io/travis/teppeis/eslint-config-teppeis/master.svg
 [travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
+[circleci-image]: https://img.shields.io/circleci/project/github/teppeis/eslint-config-teppeis/master.svg
+[circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
 [node-version]: https://img.shields.io/badge/Node.js%20support-v4,v6,v8-brightgreen.svg
