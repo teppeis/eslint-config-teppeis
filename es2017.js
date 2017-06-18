@@ -2,7 +2,9 @@
 
 module.exports = {
   "extends": [
-    "./es2015.js",
+    "./lib/base.js",
+    "./lib/es2015.js",
+    "./lib/es2016.js",
     "./lib/es2017.js",
   ],
 };

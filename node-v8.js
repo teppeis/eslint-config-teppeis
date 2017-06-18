@@ -9,6 +9,6 @@ module.exports = {
     "./lib/es2017.js",
   ],
   "rules": {
-    "node/no-unsupported-features": 0,
+    "node/no-unsupported-features": [2, {"version": 8}],
   },
 };

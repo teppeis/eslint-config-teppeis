@@ -21,7 +21,7 @@ Default config is for ES5.
 
 ## Usage
 
-### For ES2015(ES6) or ES2017
+### For pure ECMAScript
 
 ```json
 {
@@ -29,41 +29,29 @@ Default config is for ES5.
 }
 ```
 
-or
-
-```json
-{
-    "extends": "teppeis/es2017"
-}
-```
+- `teppeis/es5`: equals to `teppeis`
+- `teppeis/es2015`
+- `teppeis/es2016`
+- `teppeis/es2017`
 
 ### For Closure Compiler coding style
 
-```json
-{
-    "extends": "teppeis/closure"
-}
-```
+- `teppeis/closure`: (ES5)
+- `teppeis/closure-es2015`
+- `teppeis/closure-es2016`
+- `teppeis/closure-es2017`
 
-### For Closure Compiler coding style with ES2015
+### For Node.js
 
-```json
-{
-    "extends": "teppeis/closure-es2015"
-}
-```
+They includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
 
-### For Node.js without ES2015 features
+#### With transpilers like Babel
 
-This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+- `teppeis/node-es2017`
 
-```json
-{
-    "extends": "teppeis/node"
-}
-```
-
-and specify `engines` in package.json for [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md).
+`teppeis/node-es2017` doesn't specify Node.js version, so you need to specify it in `engines` in `package.json` for
+[node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md)
+like:
 
 ```json
 {
@@ -73,50 +61,34 @@ and specify `engines` in package.json for [node/no-unsupported-features](https:/
 }
 ```
 
-### For Node.js v4 and v6
+#### Without transpilers
 
-This config includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
+- `teppeis/node-v4`
+- `teppeis/node-v6`
+- `teppeis/node-v8`
 
-```json
-{
-    "extends": "teppeis/node-v4"
-}
-```
+## Customize
 
-or
+### For ES Modules
 
-```json
-{
-    "extends": "teppeis/node-v6"
-}
-```
-
-### For Node.js with full ES2015 or ES2017 features
-
-These configs include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node)
-
-```json
-{
-    "extends": "teppeis/node-es2015"
-}
-```
-
-or
-
-```json
-{
-    "extends": "teppeis/node-es2017"
-}
-```
-
-In these configs, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled to use full ES2015 or ES2017 features.
-
-If you use ES Modules, override `parserOptions.sourceType`.
+Override `parserOptions.sourceType`.
 
 ```json
 {
     "parserOptions": {
         "sourceType": "module"
+    }
+}
+```
+
+### For browsers
+
+Add `browser` to `env`.
+
+```json
+{
+    "env": {
+        "browser": true
     }
 }
 ```
