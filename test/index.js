@@ -2,6 +2,7 @@
 
 const glob = require('glob');
 const eslint = require('eslint');
+
 const CLIEngine = eslint.CLIEngine;
 const generateTest = require('./lib/generateTest');
 
@@ -13,7 +14,7 @@ function verify(configName, opt_useModule, opt_configFile) {
   };
   if (opt_useModule) {
     options.parserOptions = {
-      sourceType: 'module'
+      sourceType: 'module',
     };
   }
   const engine = new CLIEngine(options);
@@ -30,9 +31,12 @@ function describeVerify(configName, opt_useModule) {
 describe('eslint-config-teppeis', () => {
   describeVerify('es5');
   describeVerify('es2015', true);
+  describeVerify('es2016', true);
   describeVerify('es2017', true);
   describeVerify('closure');
   describeVerify('closure-es2015', true);
+  describeVerify('closure-es2016', true);
+  describeVerify('closure-es2017', true);
   describeVerify('node-es2017', true);
   describeVerify('node-v4');
   describeVerify('node-v6');

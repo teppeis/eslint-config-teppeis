@@ -36,7 +36,7 @@ Default config is for ES5.
 
 ### For Closure Compiler coding style
 
-- `teppeis/closure` (ES5)
+- `teppeis/closure`: (ES5)
 - `teppeis/closure-es2015`
 - `teppeis/closure-es2016`
 - `teppeis/closure-es2017`
