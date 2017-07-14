@@ -43,7 +43,7 @@ Default config is for ES5.
 
 ### For Node.js
 
-They includes [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
+They include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
 
 #### With transpilers like Babel
 
