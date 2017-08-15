@@ -48,9 +48,9 @@ exports.obj = {
 exports.Foo = Foo;
 
 // object-shorthand
-let foo = {
+const foo = {
   foo(bar, baz) {
-    let piyo = bar + baz;
+    const piyo = bar + baz;
     piyo();
   },
 };
