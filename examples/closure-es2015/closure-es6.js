@@ -26,7 +26,7 @@ function foo2(opt_foo) {}
 const foo_ = 0;
 
 // allow both `{'foo': 1}` and `{foo: 1}`
-let obj = {
+const obj = {
   foo: 1,
   'bar': 2,
 };

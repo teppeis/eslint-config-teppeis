@@ -9,6 +9,18 @@ ESLint config set for me!
 [![Dependency Status][deps-image]][deps-url]
 ![License][license]
 
+## Priority
+
+1. Avoid "Possible Errors"
+2. Keep "Best Practices" if common
+3. Use "Modern Style (ES2015+)" if available
+4. Format "Stylistic Issues" if fixable
+
+This rules is based on `eslint:recommended`.
+Only additional or orverwritten rules are specified. 
+
+## Usage
+
 `npm i -D eslint-config-teppeis` and specify in your `.eslintrc.json`:
 
 ```json
@@ -18,8 +30,6 @@ ESLint config set for me!
 ```
 
 Default config is for ES5.
-
-## Usage
 
 ### For pure ECMAScript
 
