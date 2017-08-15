@@ -14,14 +14,12 @@ class Foo {
   }
 
   call() {
-    this.invoke(param => {
-      alert(param);
-    });
+    this.invoke(param => param);
   }
 
   namedCall() {
     this.invoke(function foo(param) {
-      alert(param);
+      return param;
     });
   }
 
@@ -38,14 +36,13 @@ class Foo {
   }
 }
 
-exports.obj = {
+const obj = {
   1: 'b',
   foo() {},
   // allow properties
   Foo: Foo,
 };
-
-exports.Foo = Foo;
+obj.foo();
 
 // object-shorthand
 const foo = {
@@ -58,4 +55,4 @@ foo.foo();
 
 // template-tab-spacing
 function tag() {}
-alert(tag`hello`);
+foo.foo(tag`hello`);

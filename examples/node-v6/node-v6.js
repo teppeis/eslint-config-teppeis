@@ -6,6 +6,6 @@ Math.max(...nums);
 
 // prefer-rest-params: off
 function noArguments(...args) {
-  alert(args);
+  console.log(args);
 }
 noArguments();
