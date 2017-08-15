@@ -18,13 +18,13 @@
     "test:mocha": "mocha test"
   },
   "dependencies": {
-    "eslint-plugin-eslint-comments": "^1.0.0",
-    "eslint-plugin-node": "^5.0.0"
+    "eslint-plugin-eslint-comments": "^1.0.3",
+    "eslint-plugin-node": "^5.1.1"
   },
   "devDependencies": {
-    "eslint": "^4.0.0",
+    "eslint": "^4.4.1",
     "glob": "^7.0.5",
-    "mocha": "^3.0.2",
+    "mocha": "^3.5.0",
     "npm-run-all": "^4.0.0"
   },
   "peerDependencies": {
