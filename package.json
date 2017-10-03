@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint": "^4.4.1",
     "glob": "^7.0.5",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.0",
     "npm-run-all": "^4.0.0"
   },
   "peerDependencies": {
