@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable no-unused-vars */
+
 class Foo {
   constructor(foo) {
     this.foo = foo;
@@ -42,7 +44,6 @@ const obj = {
   // allow properties
   Foo: Foo,
 };
-obj.foo();
 
 // object-shorthand
 const foo = {
@@ -51,8 +52,16 @@ const foo = {
     piyo();
   },
 };
-foo.foo();
 
 // template-tab-spacing
 function tag() {}
 foo.foo(tag`hello`);
+
+// https://eslint.org/docs/rules/generator-star-spacing
+function* generator() {}
+const anonymous = function*() {
+  yield* generator();
+};
+const method = {
+  *generator() {},
+};
