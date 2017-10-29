@@ -273,11 +273,12 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-plugin-eslint-comments@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-1.0.3.tgz#29443862c1a27219bf41342099ee951f9966004c"
+eslint-plugin-eslint-comments@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-eslint-comments/-/eslint-plugin-eslint-comments-2.0.0.tgz#eaa9ab0d004a50a85401e1045fa359974c06821b"
   dependencies:
     escape-string-regexp "^1.0.5"
+    ignore "^3.3.7"
 
 eslint-plugin-node@^5.1.1:
   version "5.1.1"
@@ -504,6 +505,10 @@ iconv-lite@^0.4.17:
 ignore@^3.3.3:
   version "3.3.3"
   resolved "https://registry.npmjs.org/ignore/-/ignore-3.3.3.tgz#432352e57accd87ab3110e82d3fea0e47812156d"
+
+ignore@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.npmjs.org/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
