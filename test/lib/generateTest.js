@@ -19,19 +19,16 @@ function generateTest(result) {
   if (!match) {
     throw new Error(`Invalid filePath: ${filePath}`);
   }
-  const rule = match[1];
+  // Support rules from plugins
+  const rule = match[1].replace('#', '/');
   const expected = match[2];
 
   it(`${rule}: ${expected}`, () => {
-    const messageForTheRule = messages.filter(m => m.ruleId === rule)[0];
-    if (expected === 'off' && messageForTheRule) {
-      assert.fail(null, null, formatMessages(messages).join('\n'));
-    } else if (expected === 'error' && !messageForTheRule) {
-      if (messages.length > 0) {
-        assert.fail(null, null, formatMessages(messages).join('\n'));
-      } else {
-        assert.fail(null, null, 'No errors despite your expectation');
-      }
+    const messagesForTheRule = messages.filter(m => m.ruleId === rule);
+    if (expected === 'off' && messagesForTheRule.length > 0) {
+      assert.fail(null, null, formatMessages(messagesForTheRule).join('\n'));
+    } else if (expected === 'error' && messagesForTheRule.length === 0) {
+      assert.fail(null, null, 'No errors despite your expectation');
     }
   });
 }
