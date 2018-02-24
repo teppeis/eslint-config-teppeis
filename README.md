@@ -43,6 +43,7 @@ Default config is for ES5.
 - `teppeis/es2015`
 - `teppeis/es2016`
 - `teppeis/es2017`
+- `teppeis/es2018`
 
 ### For Closure Compiler coding style
 
@@ -50,6 +51,7 @@ Default config is for ES5.
 - `teppeis/closure-es2015`
 - `teppeis/closure-es2016`
 - `teppeis/closure-es2017`
+- `teppeis/closure-es2018`
 
 ### For Node.js
 
@@ -75,7 +77,8 @@ like:
 
 - `teppeis/node-v4`
 - `teppeis/node-v6`
-- `teppeis/node-v8`
+- `teppeis/node-v8` (v8.3+)
+- `teppeis/node-v9`
 
 ## Customize
 
