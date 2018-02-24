@@ -10,6 +10,6 @@ module.exports = {
     "./lib/es2018.js",
   ],
   "rules": {
-    "node/no-unsupported-features": [2, {"version": 8.3}],
+    "node/no-unsupported-features": [2, {"version": 9}],
   },
 };
