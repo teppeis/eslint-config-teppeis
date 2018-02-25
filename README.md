@@ -77,7 +77,7 @@ like:
 
 - `teppeis/node-v4`
 - `teppeis/node-v6`
-- `teppeis/node-v8` (v8.3+)
+- `teppeis/node-v8` (v8.3+ for rest/spread object properties)
 - `teppeis/node-v9`
 
 ## Customize
