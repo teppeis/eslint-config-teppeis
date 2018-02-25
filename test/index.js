@@ -11,6 +11,7 @@ function verify(configName, opt_useModule, opt_configFile) {
   const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.js`);
   const options = {
     configFile: `${__dirname}/../${configFile}.js`,
+    ignore: false,
   };
   if (opt_useModule) {
     options.parserOptions = {
@@ -41,4 +42,5 @@ describe('eslint-config-teppeis', () => {
   describeVerify('node-v4');
   describeVerify('node-v6');
   describeVerify('node-v8');
+  describeVerify('prettier');
 });

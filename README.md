@@ -82,6 +82,25 @@ like:
 
 ## Customize
 
+### Use Prettier
+
+Install `prettier` with `--save-exact` ([recommended](https://prettier.io/docs/en/install.html)).
+
+```console
+$ npm i -D --save-exact prettier
+```
+
+Override extends with `teppeis/prettier`.
+
+```json
+{
+    "extends": [
+        "teppeis/es2018",
+        "teppeis/prettier"
+    ]
+}
+```
+
 ### For ES Modules
 
 Override `parserOptions.sourceType`.
