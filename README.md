@@ -135,7 +135,7 @@ Copyright (c) 2017, Teppei Sato
 [npm-downloads-image]: https://img.shields.io/npm/dm/eslint-config-teppeis.svg
 [travis-image]: https://img.shields.io/travis/teppeis/eslint-config-teppeis/master.svg
 [travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
-[circleci-image]: https://img.shields.io/circleci/project/github/teppeis/eslint-config-teppeis/master.svg
+[circleci-image]: https://circleci.com/gh/teppeis/eslint-config-teppeis.svg?style=shield
 [circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
