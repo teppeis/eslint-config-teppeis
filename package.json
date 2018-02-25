@@ -9,6 +9,7 @@
   "main": "es2015.js",
   "files": [
     "*.js",
+    ".prettierrc.json",
     "lib"
   ],
   "scripts": {
