@@ -20,15 +20,21 @@ function generateTest(result) {
     throw new Error(`Invalid filePath: ${filePath}`);
   }
   // Support rules from plugins
-  const rule = match[1].replace('#', '/');
+  const ruleAndTestCase = match[1].split('%');
+  const rule = ruleAndTestCase[0].replace('#', '/');
+  const testCase = ruleAndTestCase[1];
   const expected = match[2];
 
-  it(`${rule}: ${expected}`, () => {
+  it(`${rule}${testCase ? ` (${testCase})` : ''}: ${expected}`, () => {
     const messagesForTheRule = messages.filter(m => m.ruleId === rule);
     if (expected === 'off' && messagesForTheRule.length > 0) {
       assert.fail(null, null, formatMessages(messagesForTheRule).join('\n'));
     } else if (expected === 'error' && messagesForTheRule.length === 0) {
-      assert.fail(null, null, 'No errors despite your expectation');
+      if (messages.length > 0) {
+        assert.fail(null, null, `${rule} passed, but: \n${formatMessages(messages).join('\n')}`);
+      } else {
+        assert.fail(null, null, 'No errors despite your expectation');
+      }
     }
   });
 }
