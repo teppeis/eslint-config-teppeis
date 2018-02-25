@@ -14,7 +14,7 @@ ESLint config set for me!
 1. Avoid "Possible Errors"
 2. Keep "Best Practices" if common
 3. Use "Modern Style (ES2015+)" if available
-4. Format "Stylistic Issues" if fixable
+4. Format "Stylistic Issues" if fixable or use Prettier
 
 This rules is based on `eslint:recommended`.
 Only additional or orverwritten rules are specified. 
@@ -87,10 +87,12 @@ like:
 Install `prettier` with `--save-exact` ([recommended](https://prettier.io/docs/en/install.html)).
 
 ```console
-$ npm i -D --save-exact prettier
+$ npm i -D -E prettier
+# or
+$ yarn add -D -E prettier
 ```
 
-Override extends with `teppeis/prettier`.
+Override dupulicated or conflicted rules with `teppeis/prettier`.
 
 ```json
 {
@@ -128,7 +130,7 @@ Add `browser` to `env`.
 ## License
 
 Licensed under the MIT license.
-Copyright (c) 2017, Teppei Sato
+Copyright (c) 2018, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
