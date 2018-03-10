@@ -1,5 +1,11 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    ":separatePatchReleases",
+    ":automergePatch",
+    ":preserveSemverRanges",
+    ":unpublishSafe"
+  ],
+  "upgradeInRange": true,
+  "timezone": "Asia/Tokyo"
 }
