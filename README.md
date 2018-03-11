@@ -141,7 +141,7 @@ Copyright (c) 2018, Teppei Sato
 [circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
-[node-version]: https://img.shields.io/badge/Node.js%20support-v4,v6,v8-brightgreen.svg
+[node-version]: https://img.shields.io/badge/Node.js%20support-v4,v6,v8,v9-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg

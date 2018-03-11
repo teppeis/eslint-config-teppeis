@@ -5,6 +5,7 @@ workflows:
       - node-v4
       - node-v6
       - node-v8
+      - node-v9
 
 version: 2
 jobs:
@@ -69,3 +70,7 @@ jobs:
     <<: *node-base
     docker:
       - image: node:8
+  node-v9:
+    <<: *node-base
+    docker:
+      - image: node:9
