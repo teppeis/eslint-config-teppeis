@@ -7,14 +7,12 @@
     "node": ">= 4"
   },
   "main": "es2015.js",
-  "files": [
-    "*.js",
-    ".prettierrc.json",
-    "lib"
-  ],
+  "files": ["*.js", ".prettierrc.json", "lib"],
   "scripts": {
-    "lint": "eslint *.js lib examples",
-    "test": "run-p -l -n -c --aggregate-output lint unit",
+    "lint:js": "eslint *.js lib examples",
+    "lint:json": "prettier --list-different '**/*.json'",
+    "lint:json:fix": "prettier --write '**/*.json'",
+    "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",
     "unit": "mocha test"
   },
   "dependencies": {
@@ -43,9 +41,6 @@
   "bugs": {
     "url": "https://github.com/teppeis/eslint-config-teppeis"
   },
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
+  "keywords": ["eslint", "eslint-config"],
   "license": "MIT"
 }
