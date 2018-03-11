@@ -1,13 +1,17 @@
 {
   "name": "eslint-config-teppeis",
   "description": "ESLint config set for me!",
-  "version": "6.6.1",
+  "version": "6.6.2",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
     "node": ">= 4"
   },
   "main": "es2015.js",
-  "files": ["*.js", ".prettierrc.json", "lib"],
+  "files": [
+    "*.js",
+    ".prettierrc.json",
+    "lib"
+  ],
   "scripts": {
     "lint:js": "eslint '**/*.js' '**/.*.js'",
     "lint:json": "prettier --list-different '**/*.json'",
@@ -41,6 +45,9 @@
   "bugs": {
     "url": "https://github.com/teppeis/eslint-config-teppeis"
   },
-  "keywords": ["eslint", "eslint-config"],
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
   "license": "MIT"
 }
