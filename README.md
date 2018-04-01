@@ -57,11 +57,11 @@ Default config is for ES5.
 
 They include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
 
-#### With transpilers like Babel
+#### Detect Node.js version from `engines` field in `package.json`
 
-- `teppeis/node-es2017`
+- `teppeis/node`
 
-`teppeis/node-es2017` doesn't specify Node.js version, so you need to specify it in `engines` in `package.json` for
+Node.js version is not specified in this config, so you need to specify it in `engines` in `package.json` for
 [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md)
 like:
 
@@ -73,13 +73,19 @@ like:
 }
 ```
 
-#### Without transpilers
+#### Specific version
 
-- `teppeis/node`
 - `teppeis/node-v4`
 - `teppeis/node-v6`
 - `teppeis/node-v8` (v8.3+ for rest/spread object properties)
 - `teppeis/node-v9`
+
+#### With Babel
+
+- `teppeis/node-es2017`
+- `teppeis/node-es2018`
+
+They disable [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md).
 
 ## Customize
 
