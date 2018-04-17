@@ -29,6 +29,12 @@ Only additional or orverwritten rules are specified.
 }
 ```
 
+and
+
+```$
+$ eslint --report-unused-disable-directives
+```
+
 Default config is for ES5.
 
 ### For pure ECMAScript
@@ -68,7 +74,7 @@ like:
 ```json
 {
     "engines": {
-        "node": ">= 4"
+        "node": ">= 6"
     }
 }
 ```
