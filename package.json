@@ -4,7 +4,7 @@
   "version": "6.8.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
   "main": "es2015.js",
   "files": [
@@ -33,11 +33,7 @@
     "prettier": "1.12.0"
   },
   "peerDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-eslint-comments": "^2.0.2",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-prettier": "^2.6.0"
+    "eslint": "^4.19.1"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",

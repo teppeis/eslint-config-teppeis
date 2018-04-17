@@ -34,13 +34,16 @@ describe('eslint-config-teppeis', () => {
   describeVerify('es2015', true);
   describeVerify('es2016', true);
   describeVerify('es2017', true);
+  describeVerify('es2018', true);
   describeVerify('closure');
   describeVerify('closure-es2015', true);
   describeVerify('closure-es2016', true);
   describeVerify('closure-es2017', true);
+  describeVerify('closure-es2018', true);
   describeVerify('node-es2017', true);
-  describeVerify('node-v4');
+  describeVerify('node-es2018', true);
   describeVerify('node-v6');
   describeVerify('node-v8');
+  describeVerify('node-v9');
   describeVerify('prettier');
 });
