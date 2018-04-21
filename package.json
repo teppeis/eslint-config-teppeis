@@ -10,6 +10,7 @@
   "files": [
     "*.js",
     ".prettierrc.json",
+    ".prettierignore",
     "lib"
   ],
   "scripts": {
