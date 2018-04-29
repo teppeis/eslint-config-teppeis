@@ -8,6 +8,7 @@ module.exports = {
     "./lib/es2016.js",
   ],
   "rules": {
+    "no-restricted-globals": [2, "URL", "URLSearchParams"],
     "node/no-unsupported-features": [2, {"version": 6}],
   },
 };

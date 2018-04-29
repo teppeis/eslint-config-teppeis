@@ -11,6 +11,7 @@ module.exports = {
     "./lib/es2018.js",
   ],
   "rules": {
+    "no-restricted-globals": [2, "URL", "URLSearchParams"],
     "node/no-unsupported-features": [2, {"version": 8.3}],
   },
 };
