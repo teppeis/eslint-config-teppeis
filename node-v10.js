@@ -9,6 +9,10 @@ module.exports = {
     "./lib/es2017.js",
     "./lib/es2018.js",
   ],
+  "globals": {
+    "URL": false,
+    "URLSearchParams": false,
+  },
   "rules": {
     "node/no-unsupported-features": [2, {"version": 10}],
   },

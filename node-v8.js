@@ -7,6 +7,7 @@ module.exports = {
     "./lib/es2015.js",
     "./lib/es2016.js",
     "./lib/es2017.js",
+    // to parse object rest/spread properties
     "./lib/es2018.js",
   ],
   "rules": {
