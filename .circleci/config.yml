@@ -48,4 +48,4 @@ jobs:
   node-v10:
     <<: *node-base
     docker:
-      - image: node:10
+      - image: node:10@sha256:50d1c6343296e35b54259a8fe88ce3c278c69bacdefd070038a5b32c82f3ca8d
