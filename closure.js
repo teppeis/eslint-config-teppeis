@@ -1,8 +1,5 @@
-"use strict";
+'use strict';
 
 module.exports = {
-  "extends": [
-    "./lib/base.js",
-    "./lib/closure.js",
-  ],
+  extends: ['./lib/base.js', './lib/closure.js'],
 };
