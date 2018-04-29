@@ -1,10 +1,5 @@
-"use strict";
+'use strict';
 
 module.exports = {
-  "extends": [
-    "./node-v6.js",
-  ],
-  "rules": {
-    "quotes": [2, "double"],
-  },
+  extends: ['./node-v6.js', './prettier.js'],
 };

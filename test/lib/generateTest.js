@@ -3,8 +3,10 @@
 const assert = require('assert');
 
 function formatMessages(messages) {
-  return messages.map(message =>
-    `${message.line}:${message.column} ${message.message.slice(0, -1)} - ${message.ruleId}`);
+  return messages.map(
+    message =>
+      `${message.line}:${message.column} ${message.message.slice(0, -1)} - ${message.ruleId}`
+  );
 }
 
 function generateTest(result) {
