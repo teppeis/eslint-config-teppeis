@@ -1,6 +1,5 @@
-'use strict';
-
 /* eslint-disable no-unused-vars */
+'use strict';
 
 class Foo {
   constructor(foo) {

@@ -11,6 +11,7 @@ function verify(configName, useModule = false, configFile = configName) {
   const options = {
     configFile: `${__dirname}/../${configFile}.js`,
     ignore: false,
+    reportUnusedDisableDirectives: true,
   };
   if (useModule) {
     options.parserOptions = {
