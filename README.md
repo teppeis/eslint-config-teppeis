@@ -29,6 +29,8 @@ Only additional or orverwritten rules are specified.
 }
 ```
 
+and run `eslint --report-unused-disable-directives`.
+
 Default config is for ES5.
 
 ### For pure ECMAScript
