@@ -6,14 +6,13 @@ const eslint = require('eslint');
 const CLIEngine = eslint.CLIEngine;
 const generateTest = require('./lib/generateTest');
 
-function verify(configName, opt_useModule, opt_configFile) {
-  const configFile = opt_configFile || configName;
+function verify(configName, useModule = false, configFile = configName) {
   const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.js`);
   const options = {
     configFile: `${__dirname}/../${configFile}.js`,
     ignore: false,
   };
-  if (opt_useModule) {
+  if (useModule) {
     options.parserOptions = {
       sourceType: 'module',
     };
@@ -22,9 +21,9 @@ function verify(configName, opt_useModule, opt_configFile) {
   return engine.executeOnFiles(paths).results;
 }
 
-function describeVerify(configName, opt_useModule) {
+function describeVerify(configName, useModule = false) {
   describe(configName, () => {
-    const results = verify(configName, opt_useModule);
+    const results = verify(configName, useModule);
     results.forEach(result => generateTest(result));
   });
 }
@@ -39,8 +38,8 @@ describe('eslint-config-teppeis', () => {
   describeVerify('closure-es2016', true);
   describeVerify('closure-es2017', true);
   describeVerify('node-es2017', true);
-  describeVerify('node-v4');
   describeVerify('node-v6');
   describeVerify('node-v8');
+  describeVerify('node-v10');
   describeVerify('prettier');
 });
