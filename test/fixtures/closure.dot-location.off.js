@@ -1,0 +1,4 @@
+goog.
+  foo.
+  bar.
+  baz();
