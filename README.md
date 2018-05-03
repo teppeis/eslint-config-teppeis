@@ -31,7 +31,7 @@ Only additional or orverwritten rules are specified.
 
 and run `eslint --report-unused-disable-directives`.
 
-Default config is for ES5.
+Default config equals to `teppeis/es2018`.
 
 ### For pure ECMAScript
 
@@ -41,11 +41,11 @@ Default config is for ES5.
 }
 ```
 
-- `teppeis/es5`: equals to `teppeis`
+- `teppeis/es5`
 - `teppeis/es2015`
 - `teppeis/es2016`
 - `teppeis/es2017`
-- `teppeis/es2018`
+- `teppeis/es2018`: equals to `teppeis`
 
 ### For Closure Compiler coding style
 
