@@ -49,11 +49,16 @@ Default config is for ES5.
 
 ### For Closure Compiler coding style
 
-- `teppeis/closure`: (ES5)
-- `teppeis/closure-es2015`
-- `teppeis/closure-es2016`
-- `teppeis/closure-es2017`
-- `teppeis/closure-es2018`
+Extends `teppeis/closure` after base config.
+
+```json
+{
+    "extends": [
+        "teppeis/es2015",
+        "teppeis/closure"
+    ]
+}
+```
 
 ### For Node.js
 
