@@ -64,34 +64,27 @@ Extends `teppeis/closure` after base config.
 
 They include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
 
-#### Detect Node.js version from `engines` field in `package.json`
-
-- `teppeis/node`
-
-Node.js version is not specified in this config, so you need to specify it in `engines` in `package.json` for
-[node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md)
-like:
-
-```json
-{
-    "engines": {
-        "node": ">= 6"
-    }
-}
-```
-
-#### Specific version
+#### With specific version
 
 - `teppeis/node-v6`
 - `teppeis/node-v8` (v8.3+ for rest/spread object properties)
 - `teppeis/node-v10`
 
-#### With Babel
+#### With Babel or other transpilers
 
-- `teppeis/node-es2017`
-- `teppeis/node-es2018`
+Extends `teppeis/node` after base config.
 
-They disable [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md).
+```json
+{
+    "extends": [
+        "teppeis/es2018",
+        "teppeis/node"
+    ]
+}
+```
+
+In `teppeis/node`, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled.
+Available ES features depend on the base config.
 
 ## Customize
 

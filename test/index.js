@@ -37,7 +37,6 @@ describe('eslint-config-teppeis', () => {
   describeVerify('es2016', true);
   describeVerify('es2017', true);
   describeVerify('closure', false, path.join(__dirname, 'fixtures/.closure.eslintrc.json'));
-  describeVerify('node-es2017', true);
   describeVerify('node-v6');
   describeVerify('node-v8');
   describeVerify('node-v10');

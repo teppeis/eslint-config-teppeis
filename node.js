@@ -1,5 +1,8 @@
 'use strict';
 
 module.exports = {
-  extends: ['./lib/base.js', './lib/node.js'],
+  extends: ['./lib/node.js'],
+  rules: {
+    'node/no-unsupported-features': 0,
+  },
 };
