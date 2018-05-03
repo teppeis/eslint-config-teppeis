@@ -1,7 +1,6 @@
 'use strict';
-'use module';
 
-const a = require('a');
-const b = require('b');
+var a = require('a');
+var b = require('b');
 
-const aaa = 1;
+var aaa = 1;

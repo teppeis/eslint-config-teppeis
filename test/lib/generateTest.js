@@ -1,6 +1,7 @@
 'use strict';
 
 const assert = require('assert');
+const path = require('path');
 
 function formatMessages(messages) {
   return messages.map(
@@ -10,11 +11,14 @@ function formatMessages(messages) {
 }
 
 function generateTest(result) {
-  const filePath = result.filePath;
+  const filePath = path.basename(result.filePath);
   const messages = result.messages;
-  const fatal = messages.find(_ => _.fatal);
-  if (fatal) {
-    throw new Error(`Fatal: ${fatal.message}`);
+  const fatals = messages.filter(_ => !!_.fatal);
+  if (fatals.length) {
+    fatals.forEach(fatal => {
+      console.error(`${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`);
+    });
+    throw new Error(`Fatal error`);
   }
 
   const match = /([^.]*)\.(off|warn|error)\.js$/.exec(filePath);
