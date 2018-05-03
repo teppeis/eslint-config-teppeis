@@ -18,7 +18,7 @@ function generateTest(result) {
     fatals.forEach(fatal => {
       console.error(`${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`);
     });
-    throw new Error(`Fatal error`);
+    throw new Error('Fatal error');
   }
 
   const match = /([^.]*)\.(off|warn|error)\.js$/.exec(filePath);
