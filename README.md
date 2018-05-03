@@ -109,6 +109,19 @@ Override dupulicated or conflicted rules with `teppeis/prettier`.
 }
 ```
 
+### Use Mocha for test
+
+This enables mocha globals like `describe` or `it` in `**/test/*.js`.
+
+```json
+{
+    "extends": [
+        "teppeis/es2018",
+        "teppeis/mocha"
+    ]
+}
+```
+
 ### For ES Modules
 
 Override `parserOptions.sourceType`.
