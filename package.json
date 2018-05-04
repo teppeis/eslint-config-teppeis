@@ -3,6 +3,9 @@
   "description": "ESLint config set for me!",
   "version": "7.0.0-beta.3",
   "author": "Teppei Sato <teppeis@gmail.com>",
+  "publishConfig": {
+    "tag": "next"
+  },
   "engines": {
     "node": ">= 6"
   },
