@@ -34,11 +34,7 @@
     "prettier": "1.12.1"
   },
   "peerDependencies": {
-    "eslint": "^5.0.0-alpha.2",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-eslint-comments": "^2.0.2",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-prettier": "^2.6.0"
+    "eslint": "^5.0.0-alpha.2"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
@@ -47,7 +43,8 @@
   },
   "keywords": [
     "eslint",
-    "eslint-config"
+    "eslint-config",
+    "prettier"
   ],
   "license": "MIT"
 }
