@@ -37,6 +37,7 @@ class Foo {
   }
 }
 
+// object-shorthand: properties
 const obj = {
   1: 'b',
   foo() {},
@@ -44,12 +45,23 @@ const obj = {
   Foo: Foo,
 };
 
-// object-shorthand
+// object-shorthand: methods
 const foo = {
+  // prefer method shorthand to `function()`
   foo(bar, baz) {
+    const piyo = bar + baz;
+    return piyo();
+  },
+  // allow arrow functions
+  bar: (bar, baz) => {
+    const piyo = bar + baz;
+    return piyo();
+  },
+  bar2: (bar, baz) => {
     const piyo = bar + baz;
     piyo();
   },
+  baz: (bar, baz) => bar + baz,
 };
 
 // template-tab-spacing
