@@ -3,8 +3,10 @@
 module.exports = {
   overrides: [
     {
-      files: ['**/test/*.js'],
-      env: {mocha: true},
+      files: ['**/test/**/*.js'],
+      env: {
+        mocha: true,
+      },
     },
   ],
 };
