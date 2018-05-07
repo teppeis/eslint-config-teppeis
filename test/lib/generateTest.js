@@ -21,7 +21,7 @@ function generateTest(result) {
     throw new Error('Fatal error');
   }
 
-  const match = /([^.]*)\.(off|warn|error)\.js$/.exec(filePath);
+  const match = /([^.]*)\.(pass|fail)\.js$/.exec(filePath);
   if (!match) {
     throw new Error(`Invalid filePath: ${filePath}`);
   }
@@ -33,9 +33,9 @@ function generateTest(result) {
 
   it(`${rule}${testCase ? ` (${testCase})` : ''}: ${expected}`, () => {
     const messagesForTheRule = messages.filter(m => m.ruleId === rule);
-    if (expected === 'off' && messagesForTheRule.length > 0) {
+    if (expected === 'pass' && messagesForTheRule.length > 0) {
       assert.fail(null, null, formatMessages(messagesForTheRule).join('\n'));
-    } else if (expected === 'error' && messagesForTheRule.length === 0) {
+    } else if (expected === 'fail' && messagesForTheRule.length === 0) {
       if (messages.length > 0) {
         assert.fail(null, null, `${rule} passed, but: \n${formatMessages(messages).join('\n')}`);
       } else {
