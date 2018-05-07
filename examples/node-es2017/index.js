@@ -1,7 +1,7 @@
 'use strict';
 
 require('eslint-plugin-node');
-require('./node-es2017');
+require('./');
 // require('./missing');
 
 function Foo() {}
