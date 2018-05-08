@@ -29,8 +29,6 @@ Only additional or orverwritten rules are specified.
 }
 ```
 
-and run `eslint --report-unused-disable-directives`.
-
 Default config equals to `teppeis/es2018`.
 
 ### For pure ECMAScript
