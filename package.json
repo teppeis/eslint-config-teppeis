@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-eslint-comments": "^2.0.2",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0"
   },
@@ -39,7 +38,7 @@
   "peerDependencies": {
     "eslint": "^5.0.0-alpha.2",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-eslint-comments": "^2.0.2",
+    "eslint-plugin-eslint-comments": "^3.0.0-beta.2",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-prettier": "^2.6.0"
   },
