@@ -1,0 +1,3 @@
+{
+  "extends": ["../../node-v10.js", "../../mocha.js"]
+}

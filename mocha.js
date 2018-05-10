@@ -7,6 +7,10 @@ module.exports = {
       env: {
         mocha: true,
       },
+      rules: {
+        // allow `this.timeout(1000)`
+        'no-invalid-this': 0,
+      },
     },
   ],
 };
