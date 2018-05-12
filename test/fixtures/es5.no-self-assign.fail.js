@@ -1,0 +1,1 @@
+obj.a = obj.a;
