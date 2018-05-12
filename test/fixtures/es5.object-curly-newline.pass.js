@@ -12,6 +12,8 @@ var e = {
     foo: 1,
     bar: 2
 };
+var e2 = {foo: 1,
+    bar: 2};
 var f = {foo: function() {dosomething();}};
 var g = {
     foo: function() {
