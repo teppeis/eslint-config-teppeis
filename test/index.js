@@ -36,9 +36,9 @@ describe('eslint-config-teppeis', () => {
   describeVerify('es2015', true);
   describeVerify('es2016', true);
   describeVerify('es2017', true);
-  describeVerify('closure', false, path.join(__dirname, 'fixtures/.closure.eslintrc.json'));
+  describeVerify('+closure', false, path.join(__dirname, 'fixtures/.closure.eslintrc.json'));
   describeVerify('node-v6');
   describeVerify('node-v8');
   describeVerify('node-v10');
-  describeVerify('prettier', false, path.join(__dirname, 'fixtures/.prettier.eslintrc.json'));
+  describeVerify('+prettier', false, path.join(__dirname, 'fixtures/.prettier.eslintrc.json'));
 });

@@ -31,7 +31,7 @@ Only additional or orverwritten rules are specified.
 
 Default config equals to `teppeis/es2018`.
 
-### For pure ECMAScript
+### Choose base ECMAScript version 
 
 ```json
 {
@@ -47,13 +47,13 @@ Default config equals to `teppeis/es2018`.
 
 ### For Closure Compiler coding style
 
-Extends `teppeis/closure` after base config.
+Extends `teppeis/+closure` after base config.
 
 ```json
 {
     "extends": [
         "teppeis/es2015",
-        "teppeis/closure"
+        "teppeis/+closure"
     ]
 }
 ```
@@ -64,19 +64,29 @@ They include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-no
 
 #### With specific version
 
+Chose config for specific Node version
+
+```json
+{
+    "extends": [
+        "teppeis/node-v10"
+    ]
+}
+```
+
 - `teppeis/node-v6`
 - `teppeis/node-v8` (v8.3+ for rest/spread object properties)
 - `teppeis/node-v10`
 
 #### With Babel or other transpilers
 
-Extends `teppeis/node` after base config.
+Extends `teppeis/+node` after base config.
 
 ```json
 {
     "extends": [
         "teppeis/es2018",
-        "teppeis/node"
+        "teppeis/+node"
     ]
 }
 ```
@@ -96,13 +106,13 @@ $ npm i -D -E prettier
 $ yarn add -D -E prettier
 ```
 
-Override dupulicated or conflicted rules with `teppeis/prettier`.
+Override dupulicated or conflicted rules with `teppeis/+prettier`.
 
 ```json
 {
     "extends": [
         "teppeis/es2018",
-        "teppeis/prettier"
+        "teppeis/+prettier"
     ]
 }
 ```
@@ -115,7 +125,7 @@ This enables mocha globals like `describe` or `it` in `**/test/*.js`.
 {
     "extends": [
         "teppeis/es2018",
-        "teppeis/mocha"
+        "teppeis/+mocha"
     ]
 }
 ```
