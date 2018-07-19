@@ -27,7 +27,7 @@ function generateTest(result) {
   }
   // Support rules from plugins
   const ruleAndTestCase = match[1].split('%');
-  const rule = ruleAndTestCase[0].replace('#', '/');
+  const rule = ruleAndTestCase[0].replace(/#/g, '/');
   const testCase = ruleAndTestCase[1];
   const expected = match[2];
 

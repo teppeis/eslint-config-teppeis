@@ -1,5 +1,4 @@
-eslint-config-teppeis
-====
+# eslint-config-teppeis
 
 ESLint config set for me!
 
@@ -11,13 +10,13 @@ ESLint config set for me!
 
 ## Priority
 
-1. Avoid "Possible Errors"
-2. Keep "Best Practices" if common
-3. Use "Modern Style (ES2015+)" if available
-4. Format "Stylistic Issues" if fixable or use Prettier
+1.  Avoid "Possible Errors"
+2.  Keep "Best Practices" if common
+3.  Use "Modern Style (ES2015+)" if available
+4.  Format "Stylistic Issues" if fixable or use Prettier
 
 This rules is based on `eslint:recommended`.
-Only additional or orverwritten rules are specified. 
+Only additional or orverwritten rules are specified.
 
 ## Usage
 
@@ -25,17 +24,17 @@ Only additional or orverwritten rules are specified.
 
 ```json
 {
-    "extends": "teppeis"
+  "extends": "teppeis"
 }
 ```
 
 Default config equals to `teppeis/es2018`.
 
-### Choose base ECMAScript version 
+### Choose base ECMAScript version
 
 ```json
 {
-    "extends": "teppeis/es2015"
+  "extends": "teppeis/es2015"
 }
 ```
 
@@ -51,10 +50,7 @@ Extends `teppeis/+closure` after base config.
 
 ```json
 {
-    "extends": [
-        "teppeis/es2015",
-        "teppeis/+closure"
-    ]
+  "extends": ["teppeis/es2015", "teppeis/+closure"]
 }
 ```
 
@@ -68,15 +64,13 @@ Chose config for specific Node version
 
 ```json
 {
-    "extends": [
-        "teppeis/node-v10"
-    ]
+  "extends": ["teppeis/node-v10"]
 }
 ```
 
-- `teppeis/node-v6`
-- `teppeis/node-v8` (v8.3+ for rest/spread object properties)
-- `teppeis/node-v10`
+- `teppeis/node-v6` (v6.6+ for `util.inspect.custom`)
+- `teppeis/node-v8` (v8.10+ for `SharedArrayBuffer` and `Atomics`)
+- `teppeis/node-v10` (v10.6+ for `dns.promise`)
 
 #### With Babel or other transpilers
 
@@ -84,10 +78,7 @@ Extends `teppeis/+node` after base config.
 
 ```json
 {
-    "extends": [
-        "teppeis/es2018",
-        "teppeis/+node"
-    ]
+  "extends": ["teppeis/es2018", "teppeis/+node"]
 }
 ```
 
@@ -110,10 +101,7 @@ Override dupulicated or conflicted rules with `teppeis/+prettier`.
 
 ```json
 {
-    "extends": [
-        "teppeis/es2018",
-        "teppeis/+prettier"
-    ]
+  "extends": ["teppeis/es2018", "teppeis/+prettier"]
 }
 ```
 
@@ -123,10 +111,7 @@ This enables mocha globals like `describe` or `it` in `**/test/*.js`.
 
 ```json
 {
-    "extends": [
-        "teppeis/es2018",
-        "teppeis/+mocha"
-    ]
+  "extends": ["teppeis/es2018", "teppeis/+mocha"]
 }
 ```
 
@@ -136,9 +121,9 @@ Override `parserOptions.sourceType`.
 
 ```json
 {
-    "parserOptions": {
-        "sourceType": "module"
-    }
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }
 ```
 
@@ -148,9 +133,9 @@ Add `browser` to `env`.
 
 ```json
 {
-    "env": {
-        "browser": true
-    }
+  "env": {
+    "browser": true
+  }
 }
 ```
 

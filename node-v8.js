@@ -12,7 +12,9 @@ module.exports = {
     './lib/es2018.js',
   ],
   rules: {
-    'no-restricted-globals': [2, 'URL', 'URLSearchParams'],
-    'node/no-unsupported-features': [2, {version: 8.3}],
+    // Atomics and SharedArrayBuffer are supported in v8.10
+    'node/no-unsupported-features/es-builtins': [2, {version: '>=8.10'}],
+    'node/no-unsupported-features/es-syntax': [2, {version: '>=8.10'}],
+    'node/no-unsupported-features/node-builtins': [2, {version: '>=8.10'}],
   },
 };
