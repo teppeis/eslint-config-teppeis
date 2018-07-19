@@ -23,7 +23,7 @@
   "dependencies": {
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-eslint-comments": "^3.0.1",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-prettier": "^2.6.2"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-eslint-comments": "^3.0.1",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-prettier": "^2.6.2"
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
