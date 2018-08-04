@@ -76,3 +76,7 @@ const anonymous = function*() {
 const method = {
   *generator() {},
 };
+
+// no-misleading-character-class
+const a = /^[abc]$/;
+const b = /^[👍]$/u;
