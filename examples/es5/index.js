@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /**
@@ -21,3 +22,6 @@ function setProperties(element, properties) {
 }
 
 setProperties();
+
+// unicorn
+var s = '\u001B';

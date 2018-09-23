@@ -80,3 +80,6 @@ const method = {
 // no-misleading-character-class
 const a = /^[abc]$/;
 const b = /^[👍]$/u;
+
+// unicorn/prefer-starts-ends-with
+foo.startsWith('bar');
