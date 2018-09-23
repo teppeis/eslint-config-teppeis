@@ -131,7 +131,7 @@ This adds `browser` to `env`.
 
 ```json
 {
-  "extends": ["teppeis/es2018", "teppeis/+broser"]
+  "extends": ["teppeis/es2018", "teppeis/+browser"]
 }
 ```
 
