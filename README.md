@@ -117,25 +117,21 @@ This enables mocha globals like `describe` or `it` in `**/test/*.js`.
 
 ### For ES Modules
 
-Override `parserOptions.sourceType`.
+This overrides `parserOptions.sourceType`.
 
 ```json
 {
-  "parserOptions": {
-    "sourceType": "module"
-  }
+  "extends": ["teppeis/es2018", "teppeis/+module"]
 }
 ```
 
 ### For browsers
 
-Add `browser` to `env`.
+This adds `browser` to `env`.
 
 ```json
 {
-  "env": {
-    "browser": true
-  }
+  "extends": ["teppeis/es2018", "teppeis/+broser"]
 }
 ```
 
