@@ -70,7 +70,8 @@ Chose config for specific Node version
 
 - `teppeis/node-v6` (v6.6+ for `util.inspect.custom`)
 - `teppeis/node-v8` (v8.10+ for `SharedArrayBuffer` and `Atomics`)
-- `teppeis/node-v10` (v10.6+ for `dns.promise`)
+- `teppeis/node-v10` (v10.12+ for `crypto.generateKeyPair`)
+- `teppeis/node-v11` (v11.0+ for many globals)
 
 #### With Babel or other transpilers
 
