@@ -70,7 +70,8 @@ Chose config for specific Node version
 
 - `teppeis/node-v6` (v6.6+ for `util.inspect.custom`)
 - `teppeis/node-v8` (v8.10+ for `SharedArrayBuffer` and `Atomics`)
-- `teppeis/node-v10` (v10.6+ for `dns.promise`)
+- `teppeis/node-v10` (v10.12+ for `crypto.generateKeyPair`)
+- `teppeis/node-v11` (v11.0+ for many globals)
 
 #### With Babel or other transpilers
 
@@ -149,7 +150,7 @@ Copyright (c) 2018, Teppei Sato
 [circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
-[node-version]: https://img.shields.io/badge/Node.js%20support-v6,v8,v10-brightgreen.svg
+[node-version]: https://img.shields.io/badge/Node.js%20support-v6,v8,v10,v11-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg

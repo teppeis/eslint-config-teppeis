@@ -1,7 +1,6 @@
 'use strict';
 
-// crypto.generateKeyPair is supported in v10.13.0
-const version = '>=10.13.0';
+const version = '>=11.0.0';
 
 module.exports = {
   extends: [

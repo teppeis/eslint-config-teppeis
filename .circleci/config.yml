@@ -5,6 +5,7 @@ workflows:
       - node-v6
       - node-v8
       - node-v10
+      - node-v11
 
 version: 2
 jobs:
@@ -49,3 +50,7 @@ jobs:
     <<: *node-base
     docker:
       - image: node:10@sha256:09dedfecd09e55b5b39ca9f04c40b1b70889a0b65d2de4d9d510d39b1a213c5f
+  node-v11:
+    <<: *node-base
+    docker:
+      - image: node:11
