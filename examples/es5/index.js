@@ -5,8 +5,10 @@
  * Sets multiple properties on a node.
  * @param {Element} element DOM node to set properties on.
  * @param {Object} properties Hash of property:value pairs.
+ * @param {boolean|string|number|null|undefined} a
+ * @return {null}
  */
-function setProperties(element, properties) {
+function setProperties(element, properties, a) {
   Object.keys(properties).forEach(function(key) {
     var val = properties[key];
     if (key === 'style') {
@@ -19,9 +21,19 @@ function setProperties(element, properties) {
       element[key] = val;
     }
   });
+  return null;
 }
 
 setProperties();
+
+/**
+ * @constructor
+ */
+function foo() {}
+
+/**
+ */
+function noparam(a, b) {}
 
 // unicorn
 var s = '\u001B';
