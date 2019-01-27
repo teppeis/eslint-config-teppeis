@@ -30,4 +30,21 @@ var obj = {
   foo: 1,
   'bar': 2
 };
+
+// eslint-plugin-jsdoc
+
+/**
+ * @param {number} foo
+ * @return {boolean}
+ */
+function params(foo) {
+  return true;
+}
+
+/**
+ * require-param: allowOverrideWithoutParam: true
+ * @override
+ */
+function overrides(foo) {
+}
 /* eslint-enable no-unused-vars */
