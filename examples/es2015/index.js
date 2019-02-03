@@ -67,6 +67,8 @@ const foo = {
 // template-tab-spacing
 function tag() {}
 foo.foo(tag`hello`);
+// no-unused-expressions: allowTaggedTemplates: true
+tag`hello`;
 
 // https://eslint.org/docs/rules/generator-star-spacing
 function* generator() {}
