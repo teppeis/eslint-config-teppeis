@@ -41,5 +41,5 @@ describe('eslint-config-teppeis', () => {
   describeVerify('node-v8');
   describeVerify('node-v10');
   describeVerify('+prettier', false, path.join(__dirname, 'fixtures/.prettier.eslintrc.json'));
-  describeVerify('typescript');
+  describeVerify('typescript', true, path.join(__dirname, 'fixtures/.typescript.eslintrc.json'));
 });

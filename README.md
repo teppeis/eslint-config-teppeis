@@ -137,6 +137,16 @@ This adds `browser` to `env`.
 }
 ```
 
+### TypeScript (experimental)
+
+```json
+{
+  "extends": ["teppeis/es2019", "teppeis/+typescript"]
+}
+```
+
+It enables ES Modules.
+
 ## License
 
 Licensed under the MIT license.

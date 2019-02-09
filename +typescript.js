@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  extends: ['./es2019.js', './+prettier.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    // TODO: Users have to specify their local config
     project: './tsconfig.json',
     sourceType: 'module',
   },
