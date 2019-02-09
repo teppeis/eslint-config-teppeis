@@ -8,7 +8,7 @@ const CLIEngine = eslint.CLIEngine;
 const generateTest = require('./lib/generateTest');
 
 function verify(configName, useModule = false, configFile = `${__dirname}/../${configName}.js`) {
-  const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.js`);
+  const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`);
   const options = {
     configFile,
     ignore: false,
@@ -41,4 +41,5 @@ describe('eslint-config-teppeis', () => {
   describeVerify('node-v8');
   describeVerify('node-v10');
   describeVerify('+prettier', false, path.join(__dirname, 'fixtures/.prettier.eslintrc.json'));
+  describeVerify('typescript');
 });

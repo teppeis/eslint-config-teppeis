@@ -21,7 +21,7 @@ function generateTest(result) {
     throw new Error('Fatal error');
   }
 
-  const match = /([^.]*)\.(pass|fail)\.js$/.exec(filePath);
+  const match = /([^.]*)\.(pass|fail)\.(?:js|ts)$/.exec(filePath);
   if (!match) {
     throw new Error(`Invalid filePath: ${filePath}`);
   }
