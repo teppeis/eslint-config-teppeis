@@ -43,6 +43,7 @@ Default config equals to `teppeis/es2018`.
 - `teppeis/es2016`
 - `teppeis/es2017`
 - `teppeis/es2018`: equals to `teppeis`
+- `teppeis/es2019`
 
 ### For Closure Compiler coding style
 
