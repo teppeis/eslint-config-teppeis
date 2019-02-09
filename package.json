@@ -4,7 +4,7 @@
   "version": "9.3.0-beta.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 6"
+    "node": ">= 6.6"
   },
   "main": "es2018.js",
   "files": [
