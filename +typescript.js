@@ -7,8 +7,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  // Don't add these rules to avoid conflicting with prettier
-  // https://github.com/prettier/eslint-config-prettier/blob/master/%40typescript-eslint.js
   rules: {
     // ES2019 available in TypeScript
     'node/no-unsupported-features/es-syntax': 0,
