@@ -3,7 +3,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    // TODO: Users have to specify their local config
     project: './tsconfig.json',
     sourceType: 'module',
   },
