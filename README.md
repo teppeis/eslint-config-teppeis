@@ -84,8 +84,10 @@ Extends `teppeis/+node` after base config.
 }
 ```
 
-In `teppeis/node`, [node/no-unsupported-features](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md) is disabled.
+In `teppeis/+node`, [node/no-unsupported-features/es-syntax](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md) is disabled.
 Available ES features depend on the base config.
+
+[node/no-unsupported-features/es-builtins](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md) and [node/no-unsupported-features/node-builtins](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md) are enabled. It is assumed that polyfill is not used.
 
 ## Customize
 
@@ -136,6 +138,22 @@ This adds `browser` to `env`.
   "extends": ["teppeis/es2018", "teppeis/+browser"]
 }
 ```
+
+### TypeScript (experimental)
+
+```json
+{
+  "extends": [
+    "teppeis/es2019",
+    "teppeis/+node",
+    "teppeis/+typescript",
+    "teppeis/+prettier",
+    "teppeis/+mocha"
+  ]
+}
+```
+
+It enables ES Modules.
 
 ## License
 
