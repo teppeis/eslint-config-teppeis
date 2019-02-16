@@ -10,9 +10,6 @@ module.exports = {
   rules: {
     // ES2019 available in TypeScript
     'node/no-unsupported-features/es-syntax': 0,
-    // node plugin doesn't support *.ts
-    // TODO: use eslint-plugin-import
-    'node/no-missing-import': 0,
 
     // allow overload
     'no-dupe-class-members': 0,
@@ -36,5 +33,10 @@ module.exports = {
     // opinionated
     // '@typescript-eslint/promise-function-async': 2,
     '@typescript-eslint/restrict-plus-operands': 2,
+  },
+  settings: {
+    node: {
+      tryExtensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.node'],
+    },
   },
 };
