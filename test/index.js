@@ -4,7 +4,7 @@ const path = require('path');
 const glob = require('glob');
 const eslint = require('eslint');
 
-const CLIEngine = eslint.CLIEngine;
+const {CLIEngine} = eslint;
 const generateTest = require('./lib/generateTest');
 
 function verify(configName, useModule = false, configFile = `${__dirname}/../${configName}.js`) {

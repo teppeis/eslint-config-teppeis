@@ -89,3 +89,8 @@ foo.startsWith('bar');
 // prefer-spread: disable
 const args = [];
 foo.apply(undefined, args);
+
+// prefer-destructuring
+const array = [];
+const a0 = array[0];
+const {prop1} = foo;

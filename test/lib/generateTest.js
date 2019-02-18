@@ -12,7 +12,7 @@ function formatMessages(messages) {
 
 function generateTest(result) {
   const filePath = path.basename(result.filePath);
-  const messages = result.messages;
+  const {messages} = result;
   const fatals = messages.filter(_ => !!_.fatal);
   if (fatals.length) {
     fatals.forEach(fatal => {
