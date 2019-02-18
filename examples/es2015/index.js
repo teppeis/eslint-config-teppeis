@@ -85,3 +85,7 @@ const b = /^[👍]$/u;
 
 // unicorn/prefer-starts-ends-with
 foo.startsWith('bar');
+
+// prefer-spread: disable
+const args = [];
+foo.apply(undefined, args);
