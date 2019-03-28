@@ -22,3 +22,6 @@ comma(
   1,
   2,
 );
+
+// unicorn/prefer-includes
+[].includes('foo');
