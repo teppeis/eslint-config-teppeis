@@ -28,7 +28,7 @@ var foo_ = 0;
 // allow both `{'foo': 1}` and `{foo: 1}`
 var obj = {
   foo: 1,
-  'bar': 2
+  'bar': 2,
 };
 
 // eslint-plugin-jsdoc
