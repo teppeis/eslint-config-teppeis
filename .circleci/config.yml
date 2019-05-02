@@ -2,10 +2,9 @@ workflows:
   version: 2
   node-multi-build:
     jobs:
-      - node-v6
       - node-v8
       - node-v10
-      - node-v11
+      - node-v12
 
 version: 2
 jobs:
@@ -38,10 +37,6 @@ jobs:
           paths:
             - ~/.npm/_cacache
 
-  node-v6:
-    <<: *node-base
-    docker:
-      - image: node:6@sha256:8008153e3020015feaba9a2e59434bec10243bb182f2001c5ca61cb40a09a053
   node-v8:
     <<: *node-base
     docker:
@@ -50,7 +45,7 @@ jobs:
     <<: *node-base
     docker:
       - image: node:10@sha256:dbe1830d4a8b5ec8226b1cb4a760f9e53696130f76bd4c2e5785e13eba19993b
-  node-v11:
+  node-v12:
     <<: *node-base
     docker:
-      - image: node:11
+      - image: node:12
