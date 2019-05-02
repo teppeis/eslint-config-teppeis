@@ -4,7 +4,7 @@
   "version": "9.6.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 6.6"
+    "node": ">= 8.10"
   },
   "main": "es2018.js",
   "files": [
