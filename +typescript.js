@@ -11,6 +11,9 @@ module.exports = {
     // ES2019 available in TypeScript
     'node/no-unsupported-features/es-syntax': 0,
 
+    // allow special triple slashes comment: "/// <reference />"
+    'spaced-comment': [2, 'always', {line: {markers: ['/']}, block: {balanced: true}}],
+
     // allow overload
     'no-dupe-class-members': 0,
 
