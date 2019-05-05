@@ -1,6 +1,6 @@
 'use strict';
 
-const version = '>=11.0.0';
+const version = '>=12.0.0';
 
 module.exports = {
   extends: [
@@ -10,6 +10,7 @@ module.exports = {
     './lib/es2016.js',
     './lib/es2017.js',
     './lib/es2018.js',
+    './lib/es2019.js',
   ],
   rules: {
     'node/no-unsupported-features/es-builtins': [2, {version}],
