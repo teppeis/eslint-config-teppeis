@@ -20,7 +20,7 @@ Only additional or orverwritten rules are specified.
 
 ## Usage
 
-`npm i -D eslint-config-teppeis` and specify in your `.eslintrc.json`:
+`npm i -D eslint eslint-config-teppeis` and specify in your `.eslintrc.json`:
 
 ```json
 {
@@ -96,8 +96,6 @@ Install `prettier` with `--save-exact` ([recommended](https://prettier.io/docs/e
 
 ```console
 $ npm i -D -E prettier
-# or
-$ yarn add -D -E prettier
 ```
 
 Override dupulicated or conflicted rules with `teppeis/+prettier`.
