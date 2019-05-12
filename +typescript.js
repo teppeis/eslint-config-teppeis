@@ -7,6 +7,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
+  extends: ['plugin:@typescript-eslint/eslintRecommended'],
   rules: {
     // ES2019 available in TypeScript
     'node/no-unsupported-features/es-syntax': 0,
