@@ -2,7 +2,7 @@
 'use strict';
 
 // async/await
-const foo = async a => {
+let foo = async a => {
   await fetch(a);
 };
 
@@ -12,16 +12,29 @@ async function wrap() {
   }
 }
 
-// comma-dangle for "functions"
-function comma(
+// comma-dangle
+foo = {
+  bar: 'baz',
+  qux: 'quux',
+};
+foo = {bar: 'baz', qux: 'quux'};
+foo = [1, 2];
+foo = [1,
+  2];
+foo = [
+  1,
+  2,
+];
+console.log('baz', 'quux');
+console.log(
+  'baz',
+  'quux',
+);
+function paramsComma1(a, b) {}
+function paramsComma2(
   a,
   b,
 ) {}
-
-comma(
-  1,
-  2,
-);
 
 // unicorn/prefer-includes
 [].includes('foo');

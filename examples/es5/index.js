@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars, no-undef */
 'use strict';
 
 /**
@@ -34,6 +34,30 @@ function foo() {}
 /**
  */
 function noparam(a, b) {}
+
+// comma-dangle
+var foo2 = {
+  bar: 'baz',
+  qux: 'quux',
+};
+foo2 = {bar: 'baz', qux: 'quux'};
+foo2 = [1, 2];
+foo2 = [1,
+  2];
+foo2 = [
+  1,
+  2,
+];
+console.log('baz', 'quux');
+console.log(
+  'baz',
+  'quux'
+);
+function paramsComma1(a, b) {}
+function paramsComma2(
+  a,
+  b
+) {}
 
 // unicorn
 var s = '\u001B';
