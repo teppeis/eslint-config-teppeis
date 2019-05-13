@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  extends: ['plugin:@typescript-eslint/eslintRecommended'],
+  extends: ['plugin:@typescript-eslint/eslint-recommended'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
