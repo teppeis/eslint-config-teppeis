@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-const path = require('path');
-const glob = require('glob');
-const eslint = require('eslint');
+const path = require("path");
+const glob = require("glob");
+const eslint = require("eslint");
 
-const {CLIEngine} = eslint;
-const generateTest = require('./lib/generateTest');
+const { CLIEngine } = eslint;
+const generateTest = require("./lib/generateTest");
 
 function verify(configName, useModule = false, configFile = `${__dirname}/../${configName}.js`) {
   const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`);
@@ -17,7 +17,7 @@ function verify(configName, useModule = false, configFile = `${__dirname}/../${c
   };
   if (useModule) {
     options.parserOptions = {
-      sourceType: 'module',
+      sourceType: "module",
     };
   }
   const engine = new CLIEngine(options);
@@ -31,14 +31,14 @@ function describeVerify(configName, useModule = false, configFile) {
   });
 }
 
-describe('eslint-config-teppeis', () => {
-  describeVerify('es5');
-  describeVerify('es2015', true);
-  describeVerify('es2016', true);
-  describeVerify('es2017', true);
-  describeVerify('+closure', false, path.join(__dirname, 'fixtures/.closure.eslintrc.json'));
-  describeVerify('node-v8');
-  describeVerify('node-v10');
-  describeVerify('+prettier', false, path.join(__dirname, 'fixtures/.prettier.eslintrc.json'));
-  describeVerify('typescript', true, path.join(__dirname, 'fixtures/.typescript.eslintrc.json'));
+describe("eslint-config-teppeis", () => {
+  describeVerify("es5");
+  describeVerify("es2015", true);
+  describeVerify("es2016", true);
+  describeVerify("es2017", true);
+  describeVerify("+closure", false, path.join(__dirname, "fixtures/.closure.eslintrc.json"));
+  describeVerify("node-v8");
+  describeVerify("node-v10");
+  describeVerify("+prettier", false, path.join(__dirname, "fixtures/.prettier.eslintrc.json"));
+  describeVerify("typescript", true, path.join(__dirname, "fixtures/.typescript.eslintrc.json"));
 });

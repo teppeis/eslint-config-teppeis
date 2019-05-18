@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  extends: ['./lib/closure.js'],
+  extends: ["./lib/closure.js"],
 };
