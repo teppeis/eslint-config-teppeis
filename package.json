@@ -14,7 +14,7 @@
     "lib"
   ],
   "scripts": {
-    "lint:js": "eslint '**/*.js' '**/.*.js'",
+    "lint:js": "eslint '**/*.js' '**/.*.js' '**/*.ts'",
     "lint:json": "prettier --list-different '**/*.json'",
     "lint:json:fix": "prettier --write '**/*.json'",
     "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",

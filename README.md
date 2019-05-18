@@ -102,7 +102,7 @@ Override dupulicated or conflicted rules with `teppeis/+prettier`.
 }
 ```
 
-### Use Mocha for test
+### Use Mocha for testing
 
 This enables mocha globals like `describe` or `it` in `**/test/*.js`.
 
@@ -132,7 +132,12 @@ This adds `browser` to `env`.
 }
 ```
 
-### TypeScript (experimental)
+### For TypeScript
+
+Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
+
+- `teppeis/+typescript`: Enable rules that don't require type information
+- `teppeis/+typescript-with-type`: Require type information (slow)
 
 ```json
 {

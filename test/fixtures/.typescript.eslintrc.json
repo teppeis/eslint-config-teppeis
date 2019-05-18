@@ -1,3 +1,4 @@
 {
+  "root": true,
   "extends": ["../../es2019.js", "../../+node.js", "../../+typescript.js"]
 }
