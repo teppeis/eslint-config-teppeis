@@ -92,11 +92,7 @@ Available ES features depend on the base config.
 
 ### Use Prettier
 
-Install `prettier` with `--save-exact` ([recommended](https://prettier.io/docs/en/install.html)).
-
-```console
-$ npm i -D -E prettier
-```
+This plugin includes `prettier` itself.
 
 Override dupulicated or conflicted rules with `teppeis/+prettier`.
 
@@ -150,7 +146,7 @@ This adds `browser` to `env`.
 }
 ```
 
-It enables ES Modules.
+It also enables ES Modules.
 
 ## License
 
