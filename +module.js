@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 module.exports = {
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
   },
 };

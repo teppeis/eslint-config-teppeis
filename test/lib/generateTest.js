@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const assert = require('assert');
-const path = require('path');
+const assert = require("assert");
+const path = require("path");
 
 function formatMessages(messages) {
   return messages.map(
@@ -12,13 +12,13 @@ function formatMessages(messages) {
 
 function generateTest(result) {
   const filePath = path.basename(result.filePath);
-  const {messages} = result;
+  const { messages } = result;
   const fatals = messages.filter(_ => !!_.fatal);
   if (fatals.length) {
     fatals.forEach(fatal => {
       console.error(`${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`);
     });
-    throw new Error('Fatal error');
+    throw new Error("Fatal error");
   }
 
   const match = /([^.]*)\.(pass|fail)\.(?:js|ts)$/.exec(filePath);
@@ -26,20 +26,20 @@ function generateTest(result) {
     throw new Error(`Invalid filePath: ${filePath}`);
   }
   // Support rules from plugins
-  const ruleAndTestCase = match[1].split('%');
-  const rule = ruleAndTestCase[0].replace(/#/g, '/');
+  const ruleAndTestCase = match[1].split("%");
+  const rule = ruleAndTestCase[0].replace(/#/g, "/");
   const testCase = ruleAndTestCase[1];
   const expected = match[2];
 
-  it(`${rule}${testCase ? ` (${testCase})` : ''}: ${expected}`, () => {
+  it(`${rule}${testCase ? ` (${testCase})` : ""}: ${expected}`, () => {
     const messagesForTheRule = messages.filter(m => m.ruleId === rule);
-    if (expected === 'pass' && messagesForTheRule.length > 0) {
-      assert.fail(null, null, formatMessages(messagesForTheRule).join('\n'));
-    } else if (expected === 'fail' && messagesForTheRule.length === 0) {
+    if (expected === "pass" && messagesForTheRule.length > 0) {
+      assert.fail(null, null, formatMessages(messagesForTheRule).join("\n"));
+    } else if (expected === "fail" && messagesForTheRule.length === 0) {
       if (messages.length > 0) {
-        assert.fail(null, null, `${rule} passed, but: \n${formatMessages(messages).join('\n')}`);
+        assert.fail(null, null, `${rule} passed, but: \n${formatMessages(messages).join("\n")}`);
       } else {
-        assert.fail(null, null, 'No errors despite your expectation');
+        assert.fail(null, null, "No errors despite your expectation");
       }
     }
   });

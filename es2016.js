@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  extends: ['./lib/base.js', './lib/es2015.js', './lib/es2016.js'],
+  extends: ["./lib/base.js", "./lib/es2015.js", "./lib/es2016.js"],
 };
