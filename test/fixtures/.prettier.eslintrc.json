@@ -1,3 +1,4 @@
 {
+  "root": true,
   "extends": ["../../es2018.js", "../../+prettier.js"]
 }

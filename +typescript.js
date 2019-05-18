@@ -1,25 +1,29 @@
 "use strict";
 
+const { configs } = require("@typescript-eslint/eslint-plugin");
+const tsEslintRecommended = configs["eslint-recommended"];
+
 module.exports = {
-  extends: ["plugin:@typescript-eslint/eslint-recommended"],
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
       parser: require.resolve("@typescript-eslint/parser"),
       parserOptions: {
-        project: "./tsconfig.json",
         sourceType: "module",
       },
       plugins: ["@typescript-eslint"],
       rules: {
+        ...tsEslintRecommended.overrides[0].rules,
+
+        // allow overload
+        // see https://github.com/typescript-eslint/typescript-eslint/issues/291
+        "no-dupe-class-members": 0,
+
         // ES2019 available in TypeScript
         "node/no-unsupported-features/es-syntax": 0,
 
         // allow special triple slashes comment: "/// <reference />"
         "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
-
-        // allow overload
-        "no-dupe-class-members": 0,
 
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
         "no-unused-vars": 0,
@@ -36,10 +40,6 @@ module.exports = {
         // '@typescript-eslint/no-require-imports': 2,
         "@typescript-eslint/no-var-requires": 2,
         "@typescript-eslint/no-object-literal-type-assertion": 2,
-        "@typescript-eslint/no-unnecessary-type-assertion": 2,
-        // opinionated
-        // '@typescript-eslint/promise-function-async': 2,
-        "@typescript-eslint/restrict-plus-operands": 2,
       },
       settings: {
         node: {

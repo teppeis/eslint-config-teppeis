@@ -1,3 +1,4 @@
 {
+  "root": true,
   "extends": ["../../es5.js", "../../+closure.js"]
 }

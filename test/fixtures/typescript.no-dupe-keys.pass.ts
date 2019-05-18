@@ -1,5 +1,5 @@
-// This rule is disabled in @typescript-eslint/eslint-recommended.
+// This ESLint rule should be disabled in @typescript-eslint.
 const foo = {
-  bar: 'baz',
-  bar: 'qux',
+  bar: "baz",
+  bar: "qux",
 };
