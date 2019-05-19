@@ -1,9 +1,7 @@
 "use strict";
 
-const { configs } = require("@typescript-eslint/eslint-plugin");
-const tsEslintRecommended = configs["eslint-recommended"];
-
 module.exports = {
+  extends: "plugin:@typescript-eslint/eslint-recommended",
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
@@ -13,8 +11,6 @@ module.exports = {
       },
       plugins: ["@typescript-eslint"],
       rules: {
-        ...tsEslintRecommended.overrides[0].rules,
-
         // allow overload
         // see https://github.com/typescript-eslint/typescript-eslint/issues/291
         "no-dupe-class-members": 0,

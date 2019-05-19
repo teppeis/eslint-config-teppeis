@@ -5,12 +5,9 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
-      parser: require.resolve("@typescript-eslint/parser"),
       parserOptions: {
         project: "./tsconfig.json",
-        sourceType: "module",
       },
-      plugins: ["@typescript-eslint"],
       rules: {
         "@typescript-eslint/no-unnecessary-type-assertion": 2,
         "@typescript-eslint/restrict-plus-operands": 2,
