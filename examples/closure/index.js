@@ -42,9 +42,16 @@ function params(foo) {
 }
 
 /**
- * require-param: allowOverrideWithoutParam: true
+ * require-param: overrideReplacesDocs: true
  * @override
  */
 function overrides(foo) {
+}
+
+/**
+ * require-param: augmentsExtendsReplacesDocs: true
+ * @extends {Error}
+ */
+function ext(foo) {
 }
 /* eslint-enable no-unused-vars */
