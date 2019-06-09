@@ -11,10 +11,6 @@ module.exports = {
       },
       plugins: ["@typescript-eslint"],
       rules: {
-        // allow overload
-        // see https://github.com/typescript-eslint/typescript-eslint/issues/291
-        "no-dupe-class-members": 0,
-
         // ES2019 available in TypeScript
         "node/no-unsupported-features/es-syntax": 0,
 
