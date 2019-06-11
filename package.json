@@ -21,8 +21,8 @@
     "unit": "mocha test"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.1",
-    "@typescript-eslint/parser": "^1.10.1",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-eslint-comments": "^3.1.1",
     "eslint-plugin-jsdoc": "^7.2.3",
