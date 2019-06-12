@@ -59,5 +59,21 @@ function paramsComma2(
   b
 ) {}
 
-// unicorn
+// eslint-plugin-unicorn
 var s = '\u001B';
+
+// eslint-plugin-jsdoc
+/**
+ * "jsdoc/check-types": [2, { unifyParentAndChildTypeChecks: true }]
+ * @param {Object<Object<Array<string[]>>>} foo
+ * @return {bbbb}
+ */
+function quux(foo) {
+  return 1;
+}
+
+/**
+ * NOTE: Not function expression/declaration are not applied.
+ * @type {Array.<string>}
+ */
+var nonFunction;
