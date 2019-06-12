@@ -28,7 +28,7 @@
     "eslint-plugin-jsdoc": "^7.2.3",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-unicorn": "^9.0.0",
+    "eslint-plugin-unicorn": "^9.1.0",
     "prettier": "~1.18.2"
   },
   "devDependencies": {
