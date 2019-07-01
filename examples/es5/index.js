@@ -73,7 +73,6 @@ function quux(foo) {
 }
 
 /**
- * NOTE: Not function expression/declaration are not applied.
- * @type {Array.<string>}
+ * @type {Array<string>}
  */
 var nonFunction;
