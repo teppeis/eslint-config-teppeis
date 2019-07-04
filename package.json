@@ -18,7 +18,9 @@
     "lint:json": "prettier --list-different '**/*.json'",
     "lint:json:fix": "prettier --write '**/*.json'",
     "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",
-    "unit": "mocha test"
+    "unit": "mocha test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.11.0",
@@ -29,7 +31,8 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-unicorn": "^9.1.1",
-    "prettier": "~1.18.2"
+    "prettier": "~1.18.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
@@ -51,5 +54,6 @@
     "eslint-config",
     "prettier"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
