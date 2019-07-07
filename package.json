@@ -25,7 +25,7 @@
     "@typescript-eslint/parser": "^1.11.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-jsdoc": "^10.0.3",
+    "eslint-plugin-jsdoc": "^11.2.1",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-unicorn": "^9.1.1",
