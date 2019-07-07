@@ -41,6 +41,9 @@ function params(foo) {
   return true;
 }
 
+/** @define {boolean} */
+var definedConstantValue = true;
+
 /**
  * require-param: overrideReplacesDocs: true
  * @override
