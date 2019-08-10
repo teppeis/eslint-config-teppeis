@@ -31,7 +31,7 @@ module.exports = {
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
         "@typescript-eslint/no-var-requires": 2,
-        "@typescript-eslint/no-object-literal-type-assertion": 2,
+        "@typescript-eslint/consistent-type-assertions": 2,
       },
       settings: {
         node: {
