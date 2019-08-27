@@ -39,7 +39,13 @@
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
-    "eslint": "^6.2.2"
+    "eslint": "^6.2.2",
+    "typescript": "~3.5.3"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
