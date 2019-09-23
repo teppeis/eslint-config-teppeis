@@ -26,9 +26,9 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-jsdoc": "^15.9.2",
-    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-unicorn": "^10.0.0",
+    "eslint-plugin-unicorn": "^11.0.2",
     "prettier": "~1.18.2"
   },
   "devDependencies": {
