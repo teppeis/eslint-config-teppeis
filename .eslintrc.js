@@ -1,5 +1,5 @@
 "use strict";
 
 module.exports = {
-  extends: ["./node-v8.js", "./+prettier.js", "./+mocha.js"],
+  extends: ["./node-v10.js", "./+prettier.js", "./+mocha.js"],
 };
