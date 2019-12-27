@@ -1,7 +1,8 @@
 "use strict";
 
-// fs.promises or dns.promises are supported in v10.17.0
-const version = ">=10.17.0";
+// fs.promises or dns.promises are supported in v10.17.0.
+// "<11" is needed because some feature are backported.
+const version = ">=10.17.0 <11";
 
 module.exports = {
   extends: [
