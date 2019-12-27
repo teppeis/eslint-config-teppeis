@@ -13,7 +13,9 @@ module.exports = {
     "./lib/es2017.js",
     "./lib/es2018.js",
     "./lib/es2019.js",
+    "./lib/es2020.js",
   ],
+  // Node v12 doesn't support optional chaining and nullish coalescing (ES2020)
   rules: {
     "node/no-unsupported-features/es-builtins": [2, { version }],
     "node/no-unsupported-features/es-syntax": [2, { version }],

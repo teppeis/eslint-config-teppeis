@@ -1,3 +1,1 @@
-'use strict';
-
-new URL('https://example.com');
+require("worker_threads");
