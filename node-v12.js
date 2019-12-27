@@ -1,6 +1,8 @@
 "use strict";
 
-const version = ">=12.0.0";
+// worker_threads is supported in v12.11.0
+// module.syncBuiltinESMExports() is supported in v12.12.0
+const version = ">=12.12.0";
 
 module.exports = {
   extends: [

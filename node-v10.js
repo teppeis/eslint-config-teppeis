@@ -1,7 +1,7 @@
 "use strict";
 
-// crypto.generateKeyPair is supported in v10.12.0
-const version = ">=10.12.0";
+// fs.promises or dns.promises are supported in v10.17.0
+const version = ">=10.17.0";
 
 module.exports = {
   extends: [

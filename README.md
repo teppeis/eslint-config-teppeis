@@ -69,8 +69,8 @@ Chose config for specific Node version
 }
 ```
 
-- `teppeis/node-v10` (v10.12+ for `crypto.generateKeyPair`)
-- `teppeis/node-v12` (v12.0+ for many globals)
+- `teppeis/node-v10` (v10.17+ for `crypto.generateKeyPair`)
+- `teppeis/node-v12` (v12.12+ for many globals)
 
 #### With Babel or other transpilers
 
