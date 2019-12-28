@@ -34,12 +34,12 @@ function generateTest(result) {
   it(`${rule}${testCase ? ` (${testCase})` : ""}: ${expected}`, () => {
     const messagesForTheRule = messages.filter(m => m.ruleId === rule);
     if (expected === "pass" && messagesForTheRule.length > 0) {
-      assert.fail(null, null, formatMessages(messagesForTheRule).join("\n"));
+      assert.fail(formatMessages(messagesForTheRule).join("\n"));
     } else if (expected === "fail" && messagesForTheRule.length === 0) {
       if (messages.length > 0) {
-        assert.fail(null, null, `${rule} passed, but: \n${formatMessages(messages).join("\n")}`);
+        assert.fail(`${rule} passed, but: \n${formatMessages(messages).join("\n")}`);
       } else {
-        assert.fail(null, null, "No errors despite your expectation");
+        assert.fail("No errors despite your expectation");
       }
     }
   });
