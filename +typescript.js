@@ -34,6 +34,9 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": 2,
       },
       settings: {
+        jsdoc: {
+          mode: "typescript",
+        },
         node: {
           tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"],
         },
