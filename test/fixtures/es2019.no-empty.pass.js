@@ -1,4 +1,0 @@
-try {
-  Math.random();
-} catch {
-}
