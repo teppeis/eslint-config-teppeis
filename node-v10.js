@@ -12,10 +12,11 @@ module.exports = {
     "./lib/es2016.js",
     "./lib/es2017.js",
     "./lib/es2018.js",
+    // NOTE: Not all ES2019 features are supported
     "./lib/es2019.js",
   ],
-  // Node v10 support optional catch binding (ES2019) and BigInt (ES2020)
   parserOptions: {
+    // to support BigInt literal
     ecmaVersion: 2020,
   },
   globals: {
