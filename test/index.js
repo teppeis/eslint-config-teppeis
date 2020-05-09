@@ -30,7 +30,7 @@ function describeVerify(configName, useModule = false, configFile) {
   }
   describe(configName, () => {
     const results = verify(configName, useModule, configFile);
-    results.forEach(result => generateTest(result));
+    results.forEach((result) => generateTest(result));
   });
 }
 
