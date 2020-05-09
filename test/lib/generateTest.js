@@ -5,7 +5,7 @@ const path = require("path");
 
 function formatMessages(messages) {
   return messages.map(
-    message =>
+    (message) =>
       `${message.line}:${message.column} ${message.message.slice(0, -1)} - ${message.ruleId}`
   );
 }
@@ -13,9 +13,9 @@ function formatMessages(messages) {
 function generateTest(result) {
   const filePath = path.basename(result.filePath);
   const { messages } = result;
-  const fatals = messages.filter(_ => !!_.fatal);
+  const fatals = messages.filter((_) => !!_.fatal);
   if (fatals.length) {
-    fatals.forEach(fatal => {
+    fatals.forEach((fatal) => {
       console.error(`${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`);
     });
     throw new Error("Fatal error");
@@ -32,7 +32,7 @@ function generateTest(result) {
   const expected = match[2];
 
   it(`${rule}${testCase ? ` (${testCase})` : ""}: ${expected}`, () => {
-    const messagesForTheRule = messages.filter(m => m.ruleId === rule);
+    const messagesForTheRule = messages.filter((m) => m.ruleId === rule);
     if (expected === "pass" && messagesForTheRule.length > 0) {
       assert.fail(formatMessages(messagesForTheRule).join("\n"));
     } else if (expected === "fail" && messagesForTheRule.length === 0) {
