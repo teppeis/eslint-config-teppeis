@@ -73,6 +73,7 @@ Chose config for specific Node version
 
 - `teppeis/node-v10` (v10.17+ for `fs.promises`, etc)
 - `teppeis/node-v12` (v12.12+ for `module.syncBuiltinESMExports()`)
+- `teppeis/node-v14` (v14.0+)
 
 #### With Babel or other transpilers
 
@@ -157,7 +158,7 @@ It also enables ES Modules.
 ## License
 
 Licensed under the MIT license.
-Copyright (c) 2018, Teppei Sato
+Copyright (c) 2020, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
@@ -168,7 +169,7 @@ Copyright (c) 2018, Teppei Sato
 [circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
-[node-version]: https://img.shields.io/badge/Node.js%20support-v10,v12,v13-brightgreen.svg
+[node-version]: https://img.shields.io/badge/Node.js%20support-v10,v12,v14-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
