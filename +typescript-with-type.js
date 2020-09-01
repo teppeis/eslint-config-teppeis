@@ -12,6 +12,7 @@ module.exports = {
         "@typescript-eslint/no-floating-promises": 2,
         "@typescript-eslint/no-unnecessary-type-assertion": 2,
         "@typescript-eslint/restrict-plus-operands": 2,
+        "@typescript-eslint/restrict-template-expressions": 2,
         // too opinionated
         // "@typescript-eslint/promise-function-async": 2,
       },
