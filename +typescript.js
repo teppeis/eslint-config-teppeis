@@ -38,6 +38,7 @@ module.exports = {
           },
         ],
         "@typescript-eslint/consistent-type-assertions": 2,
+        "@typescript-eslint/consistent-type-imports": 2,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
         "@typescript-eslint/no-non-null-asserted-optional-chain": 2,
         // allow require for power-assert
