@@ -1,10 +1,14 @@
 "use strict";
 
 module.exports = {
-  extends: "plugin:@typescript-eslint/eslint-recommended",
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
+      extends: [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "./+module.js",
+        "plugin:import/typescript",
+      ],
       parser: require.resolve("@typescript-eslint/parser"),
       parserOptions: {
         sourceType: "module",
