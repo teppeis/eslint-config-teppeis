@@ -1,3 +1,3 @@
-import foo from './foo.js';
+import mod from './mod.js';
 
-foo();
+mod();
