@@ -83,7 +83,7 @@ const method = {
 const a = /^[abc]$/;
 const b = /^[👍]$/u;
 
-// unicorn/prefer-starts-ends-with
+// unicorn/prefer-string-starts-ends-with
 foo.startsWith('bar');
 
 // prefer-spread: disable
