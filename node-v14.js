@@ -14,7 +14,7 @@ module.exports = {
     "./lib/es2020.js",
   ],
   rules: {
-    // eslint-node-plugin has not been updated for Node v14
+    // eslint-plugin-node has not been updated for Node v14
     "node/no-unsupported-features/es-builtins": [0, { version }],
     "node/no-unsupported-features/es-syntax": [0, { version }],
     "node/no-unsupported-features/node-builtins": [2, { version }],
