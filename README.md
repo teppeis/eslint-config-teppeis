@@ -4,7 +4,7 @@ ESLint config set for me!
 
 [![NPM version][npm-image]][npm-url]
 ![Node.js Version Support][node-version]
-[![Build Status][circleci-image]][circleci-url]
+[![Build Status][ci-image]][ci-url]
 [![Dependency Status][deps-image]][deps-url]
 ![License][license]
 
@@ -160,16 +160,15 @@ It also enables ES Modules.
 Licensed under the MIT license.
 Copyright (c) 2021, Teppei Sato
 
-[npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
+[npm-image]: https://badgen.net/npm/v/eslint-config-teppeis?icon=npm&label=
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
 [npm-downloads-image]: https://img.shields.io/npm/dm/eslint-config-teppeis.svg
-[travis-image]: https://img.shields.io/travis/teppeis/eslint-config-teppeis/master.svg
-[travis-url]: https://travis-ci.org/teppeis/eslint-config-teppeis
-[circleci-image]: https://circleci.com/gh/teppeis/eslint-config-teppeis.svg?style=shield
-[circleci-url]: https://circleci.com/gh/teppeis/eslint-config-teppeis
+[ci-image]: https://github.com/teppeis/eslint-config-teppeis/workflows/Node.js%20CI/badge.svg
+[ci-url]: https://github.com/teppeis/eslint-config-teppeis/actions?query=workflow%3A%22Node.js+CI%22
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
 [node-version]: https://img.shields.io/badge/Node.js%20support-v10,v12,v14-brightgreen.svg
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
+
