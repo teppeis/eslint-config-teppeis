@@ -14,6 +14,7 @@ module.exports = {
     "./lib/es2018.js",
     "./lib/es2019.js",
     "./lib/es2020.js",
+    "./lib/es2021-numeric-separators.js",
   ],
   // Node v12 doesn't support optional chaining and nullish coalescing (ES2020)
   rules: {
