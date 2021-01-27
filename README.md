@@ -73,7 +73,7 @@ Chose config for specific Node version
 
 - `teppeis/node-v10` (v10.17+ for `fs.promises`, etc)
 - `teppeis/node-v12` (v12.12+ for `module.syncBuiltinESMExports()`)
-- `teppeis/node-v14` (v14.0+)
+- `teppeis/node-v14` (v14.15+ LTS)
 
 #### With Babel or other transpilers
 
@@ -158,7 +158,7 @@ It also enables ES Modules.
 ## License
 
 Licensed under the MIT license.
-Copyright (c) 2020, Teppei Sato
+Copyright (c) 2021, Teppei Sato
 
 [npm-image]: https://img.shields.io/npm/v/eslint-config-teppeis.svg
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
