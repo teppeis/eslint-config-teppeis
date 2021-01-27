@@ -12,6 +12,7 @@ module.exports = {
     "./lib/es2017.js",
     "./lib/es2018.js",
     "./lib/es2019.js",
+    "./lib/es2020.js",
     "./lib/es2021-numeric-separators.js",
   ],
   rules: {
