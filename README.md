@@ -20,7 +20,9 @@ Only additional or orverwritten rules are specified.
 
 ## Usage
 
-`npm i -D eslint eslint-config-teppeis` and specify in your `.eslintrc.json`:
+for npm v7
+
+`npm i -D eslint-config-teppeis` and specify in your `.eslintrc.json`:
 
 ```json
 {
@@ -94,7 +96,7 @@ Available ES features depend on the base config.
 
 ### Use Prettier
 
-This plugin includes `prettier` itself.
+This plugin includes `prettier` itself in `peerDependencies`.
 
 Override dupulicated or conflicted rules with `teppeis/+prettier`.
 
@@ -102,6 +104,12 @@ Override dupulicated or conflicted rules with `teppeis/+prettier`.
 {
   "extends": ["teppeis/es2018", "teppeis/+prettier"]
 }
+```
+
+and symlink Prettier config file to your project root.
+
+```console
+$ ln -is node_modules/eslint-config-teppeis/.prettierrc.json .
 ```
 
 ### Use Mocha for testing
@@ -171,4 +179,3 @@ Copyright (c) 2021, Teppei Sato
 [coverage-image]: https://img.shields.io/coveralls/teppeis/eslint-config-teppeis/master.svg
 [coverage-url]: https://coveralls.io/github/teppeis/eslint-config-teppeis?branch=master
 [license]: https://img.shields.io/npm/l/eslint-config-teppeis.svg
-
