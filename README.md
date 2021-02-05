@@ -171,8 +171,8 @@ Copyright (c) 2021, Teppei Sato
 [npm-image]: https://badgen.net/npm/v/eslint-config-teppeis?icon=npm&label=
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
 [npm-downloads-image]: https://img.shields.io/npm/dm/eslint-config-teppeis.svg
-[ci-image]: https://github.com/teppeis/eslint-config-teppeis/workflows/Node.js%20CI/badge.svg
-[ci-url]: https://github.com/teppeis/eslint-config-teppeis/actions?query=workflow%3A%22Node.js+CI%22
+[ci-image]: https://github.com/teppeis/eslint-config-teppeis/workflows/ci/badge.svg
+[ci-url]: https://github.com/teppeis/eslint-config-teppeis/actions?query=workflow%3A%22ci%22
 [deps-image]: https://img.shields.io/david/teppeis/eslint-config-teppeis.svg
 [deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
 [node-version]: https://img.shields.io/badge/Node.js%20support-v10,v12,v14-brightgreen.svg
