@@ -21,7 +21,6 @@
     "lint:js": "eslint '**/*.js' '**/.*.js' '**/*.mjs' '**/*.ts'",
     "lint:json": "prettier --list-different '**/*.json'",
     "lint:json:fix": "prettier --write '**/*.json'",
-    "postinstall": "bin/link-prettierrc.mjs",
     "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",
     "unit": "mocha test"
   },
