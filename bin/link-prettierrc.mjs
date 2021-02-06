@@ -13,4 +13,10 @@ const targetUrl = new URL(`../${filename}`, import.meta.url);
 const target = path.relative(cwd, fileURLToPath(targetUrl));
 const dest = path.join(cwd, filename);
 // console.log({ target, dest });
-fs.symlinkSync(target, dest);
+try {
+  fs.symlinkSync(target, dest);
+} catch (e) {
+  if (e.code !== "EEXIST") {
+    throw e;
+  }
+}
