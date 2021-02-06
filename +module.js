@@ -22,7 +22,7 @@ module.exports = {
   overrides: [
     {
       // for non-TypeScript files
-      files: ["*.js", "*.jsx"],
+      files: ["*.js", "*.jsx", "*.mjs"],
       rules: {
         // ** Static analysis **
         "import/default": 2,
