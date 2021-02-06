@@ -109,7 +109,7 @@ Override dupulicated or conflicted rules with `teppeis/+prettier`.
 and symlink Prettier config file to your project root.
 
 ```console
-$ ln -is node_modules/eslint-config-teppeis/.prettierrc.json .
+$ npx link-prettierrc
 ```
 
 ### Use Mocha for testing
