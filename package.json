@@ -11,10 +11,14 @@
     "*.js",
     ".prettierrc.json",
     ".prettierignore",
+    "bin",
     "lib"
   ],
+  "bin": {
+    "link-prettierrc": "bin/link-prettierrc.mjs"
+  },
   "scripts": {
-    "lint:js": "eslint '**/*.js' '**/.*.js' '**/*.ts'",
+    "lint:js": "eslint '**/*.js' '**/.*.js' '**/*.mjs' '**/*.ts'",
     "lint:json": "prettier --list-different '**/*.json'",
     "lint:json:fix": "prettier --write '**/*.json'",
     "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",
