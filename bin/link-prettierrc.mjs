@@ -5,9 +5,12 @@
 
 import path from "path";
 import fs from "fs";
+import { fileURLToPath } from "url";
 
 const filename = ".prettierrc.json";
-const target = new URL(`../${filename}`, import.meta.url);
-const dest = path.join(process.cwd(), filename);
+const cwd = process.cwd();
+const targetUrl = new URL(`../${filename}`, import.meta.url);
+const target = path.relative(cwd, fileURLToPath(targetUrl));
+const dest = path.join(cwd, filename);
 // console.log({ target, dest });
 fs.symlinkSync(target, dest);
