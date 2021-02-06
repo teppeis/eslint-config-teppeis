@@ -3,8 +3,8 @@
 // Run at your project root with Node v12+
 // $ npx link-prettierrc
 
-import path from "path";
 import fs from "fs";
+import path from "path";
 import { fileURLToPath } from "url";
 
 const filename = ".prettierrc.json";
