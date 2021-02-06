@@ -1,5 +1,6 @@
 "use strict";
 
+// LTS 'Dubnium' from v10.13.0
 // fs.promises or dns.promises are supported in v10.17.0.
 // "<11" is needed because some feature are backported.
 const version = ">=10.17.0 <11";

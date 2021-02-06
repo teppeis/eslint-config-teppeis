@@ -1,8 +1,7 @@
 "use strict";
 
-// worker_threads is supported in v12.11.0
-// module.syncBuiltinESMExports() is supported in v12.12.0
-const version = ">=12.12.0 <13";
+// LTS 'Erbium' from v12.13.0
+const version = ">=12.13.0 <13";
 
 module.exports = {
   extends: [
@@ -16,10 +15,11 @@ module.exports = {
     "./lib/es2020.js",
     "./lib/es2021-numeric-separators.js",
   ],
-  // Node v12 doesn't support optional chaining and nullish coalescing (ES2020)
   rules: {
-    "node/no-unsupported-features/es-builtins": [2, { version }],
-    "node/no-unsupported-features/es-syntax": [2, { version }],
-    "node/no-unsupported-features/node-builtins": [2, { version }],
+    // Node v12 doesn't support optional chaining and nullish coalescing (ES2020).
+    // But eslint-plugin-node has not been updated since 2020.
+    "node/no-unsupported-features/es-builtins": [0, { version }],
+    "node/no-unsupported-features/es-syntax": [0, { version }],
+    "node/no-unsupported-features/node-builtins": [0, { version }],
   },
 };
