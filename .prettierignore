@@ -1,3 +1,4 @@
 /test/fixtures
+/examples
 package-lock.json
 tsconfig.json
