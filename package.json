@@ -18,10 +18,13 @@
     "link-prettierrc": "bin/link-prettierrc.mjs"
   },
   "scripts": {
-    "lint:js": "eslint '**/*.js' '**/.*.js' '**/*.mjs' '**/*.ts'",
-    "lint:json": "prettier --list-different '**/*.json'",
-    "lint:json:fix": "prettier --write '**/*.json'",
-    "test": "run-p -l -n -c --aggregate-output lint:js lint:json unit",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint --ext .js,.mjs,.ts .",
+    "lint:prettier": "prettier --check .",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "test": "run-p -l -n -c --aggregate-output lint unit",
     "unit": "mocha test"
   },
   "dependencies": {

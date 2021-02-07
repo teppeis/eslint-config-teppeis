@@ -48,13 +48,11 @@ var definedConstantValue = true;
  * require-param: overrideReplacesDocs: true
  * @override
  */
-function overrides(foo) {
-}
+function overrides(foo) {}
 
 /**
  * require-param: augmentsExtendsReplacesDocs: true
  * @extends {Error}
  */
-function ext(foo) {
-}
+function ext(foo) {}
 /* eslint-enable no-unused-vars */
