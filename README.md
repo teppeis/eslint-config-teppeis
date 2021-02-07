@@ -20,9 +20,25 @@ Only additional or orverwritten rules are specified.
 
 ## Usage
 
-for npm v7
+### Install
 
-`npm i -D eslint-config-teppeis` and specify in your `.eslintrc.json`:
+#### for npm v6
+
+```console
+$ npm i -D eslint-config-teppeis eslint prettier
+```
+
+#### for npm v7+
+
+```console
+$ npm i -D eslint-config-teppeis
+```
+
+`eslint` and `prettier` are installed as peer dependencies.
+
+### Configure
+
+Specify in your `.eslintrc.json`:
 
 ```json
 {
