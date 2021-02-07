@@ -19,7 +19,7 @@
   },
   "scripts": {
     "lint": "run-p -l -c --aggregate-output lint:*",
-    "lint:eslint": "eslint --ext .js,.mjs,.ts .",
+    "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
