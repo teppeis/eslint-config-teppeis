@@ -6,4 +6,4 @@ var id = 1;
  * @constructor
  * @template T
  */
-var Container = function(t) {};
+var Container = function (t) {};

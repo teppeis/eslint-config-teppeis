@@ -1,3 +1,3 @@
 if (test) {
-    function doSomething() { }
+  function doSomething() {}
 }
