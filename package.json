@@ -9,7 +9,7 @@
   "main": "es2018.js",
   "files": [
     "*.js",
-    ".prettierrc.json",
+    ".prettierrc*.json",
     ".prettierignore",
     "bin",
     "lib"
