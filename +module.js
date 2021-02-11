@@ -17,7 +17,16 @@ module.exports = {
     "import/first": 2,
     "import/newline-after-import": 2,
     "import/no-duplicates": 2,
-    "import/order": [2, { alphabetize: { order: "asc", caseInsensitive: true } }],
+    "import/order": [
+      2,
+      {
+        groups: [
+          ["builtin", "external", "internal"],
+          ["index", "parent", "sibling"],
+        ],
+        alphabetize: { order: "asc", caseInsensitive: true },
+      },
+    ],
   },
   overrides: [
     {
