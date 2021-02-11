@@ -17,7 +17,7 @@ module.exports = {
     "import/first": 2,
     "import/newline-after-import": 2,
     "import/no-duplicates": 2,
-    "import/order": [2, { alphabetize: { order: "asc" } }],
+    "import/order": [2, { alphabetize: { order: "asc", caseInsensitive: true } }],
   },
   overrides: [
     {
