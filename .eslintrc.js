@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  extends: ["./node-v10.js", "./+prettier.js", "./+mocha.js"],
+  extends: ["./node-v12.js", "./+prettier.js", "./+mocha.js"],
   overrides: [
     {
       files: ["*.mjs"],

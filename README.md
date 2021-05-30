@@ -89,7 +89,6 @@ Chose config for specific Node version
 }
 ```
 
-- `teppeis/node-v10` (v10.17+ for `fs.promises`, etc)
 - `teppeis/node-v12` (v12.12+ for `module.syncBuiltinESMExports()`)
 - `teppeis/node-v14` (v14.15+ LTS)
 
