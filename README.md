@@ -85,7 +85,7 @@ Chose config for specific Node version
 
 ```json
 {
-  "extends": ["teppeis/node-v10"]
+  "extends": ["teppeis/node-v12"]
 }
 ```
 
