@@ -4,15 +4,19 @@ const path = require("path");
 const glob = require("glob");
 const eslint = require("eslint");
 
-const { CLIEngine } = eslint;
+const { ESLint } = eslint;
 const generateTest = require("./lib/generateTest");
 
-function verify(configName, useModule = false, configFile = `${__dirname}/../${configName}.js`) {
+async function verify(
+  configName,
+  useModule = false,
+  configFile = `${__dirname}/../${configName}.js`
+) {
   const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`);
   const options = {
-    configFile,
+    overrideConfigFile: configFile,
     ignore: false,
-    reportUnusedDisableDirectives: true,
+    reportUnusedDisableDirectives: "error",
     useEslintrc: false,
   };
   if (useModule) {
@@ -20,16 +24,16 @@ function verify(configName, useModule = false, configFile = `${__dirname}/../${c
       sourceType: "module",
     };
   }
-  const engine = new CLIEngine(options);
-  return engine.executeOnFiles(paths).results;
+  const engine = new ESLint(options);
+  return engine.lintFiles(paths);
 }
 
 function describeVerify(configName, useModule = false, configFile) {
   if (configFile) {
     configFile = path.join(__dirname, configFile);
   }
-  describe(configName, () => {
-    const results = verify(configName, useModule, configFile);
+  describe(configName, async () => {
+    const results = await verify(configName, useModule, configFile);
     results.forEach((result) => generateTest(result));
   });
 }
