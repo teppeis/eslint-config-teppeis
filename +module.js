@@ -39,7 +39,7 @@ module.exports = {
         "import/namespace": 2,
         "import/no-absolute-path": 2,
         "import/no-self-import": 2,
-        "import/no-unresolved": 2,
+        "import/no-unresolved": [2, { caseSensitiveStrict: true }],
 
         // ** Helpful warnings **
         "import/export": 2,
