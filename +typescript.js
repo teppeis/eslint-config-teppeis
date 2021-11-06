@@ -21,12 +21,25 @@ module.exports = {
         // allow special triple slashes comment: "/// <reference />"
         "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
 
-        // override original rules
-        "no-unused-vars": 0,
-        "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
+        // Extend ESLint rules
+        // Skip extending stylistic rules that are overrided by prettier
         "no-array-constructor": 0,
         "@typescript-eslint/no-array-constructor": 2,
+        "no-loss-of-precision": 0,
+        "@typescript-eslint/no-loss-of-precision": 2,
+        "no-invalid-this": 2,
+        "@typescript-eslint/no-invalid-this": 2,
+        "no-loop-func": 2,
+        "@typescript-eslint/no-loop-func": 2,
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": [
+          2,
+          { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
+        ],
 
+        // rules
         "@typescript-eslint/adjacent-overload-signatures": 2,
         "@typescript-eslint/array-type": [2, { default: "array-simple" }],
         "@typescript-eslint/ban-ts-comment": [

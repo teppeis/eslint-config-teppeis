@@ -9,6 +9,10 @@ module.exports = {
         project: "./tsconfig.json",
       },
       rules: {
+        // Extend ESLint rules
+        "no-throw-literal": "off",
+        "@typescript-eslint/no-throw-literal": 2,
+
         "@typescript-eslint/await-thenable": 2,
         // TS3.8+
         "@typescript-eslint/consistent-type-exports": 2,
