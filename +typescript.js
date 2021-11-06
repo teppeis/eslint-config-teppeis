@@ -5,47 +5,43 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx"],
       extends: [
-        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
         "./+module.js",
         "plugin:import/typescript",
       ],
-      parser: require.resolve("@typescript-eslint/parser"),
-      parserOptions: {
-        sourceType: "module",
-      },
-      plugins: ["@typescript-eslint"],
       rules: {
         // ES2019 available in TypeScript
         "node/no-unsupported-features/es-syntax": 0,
 
-        // allow special triple slashes comment: "/// <reference />"
+        // Allow special triple slashes comment: "/// <reference />"
         "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
 
-        // override original rules
-        "no-unused-vars": 0,
-        "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
-        "no-array-constructor": 0,
-        "@typescript-eslint/no-array-constructor": 2,
-
-        "@typescript-eslint/adjacent-overload-signatures": 2,
-        "@typescript-eslint/ban-ts-comment": [
+        // Extend ESLint rules
+        // skip extending stylistic rules that are overrided by prettier
+        "no-invalid-this": 2,
+        "@typescript-eslint/no-invalid-this": 2,
+        "no-loop-func": 2,
+        "@typescript-eslint/no-loop-func": 2,
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": [
           2,
-          {
-            "ts-expect-error": false,
-            "ts-ignore": true,
-            "ts-nocheck": false,
-            "ts-check": false,
-          },
+          { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
         ],
+
+        // Override recommended rules
+        "@typescript-eslint/array-type": [2, { default: "array-simple" }],
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
+        "@typescript-eslint/no-non-null-assertion": 2,
+        "@typescript-eslint/no-unused-vars": 2,
+
+        // Additional rules
         "@typescript-eslint/consistent-type-assertions": 2,
         "@typescript-eslint/consistent-type-imports": 2,
-        "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
-        "@typescript-eslint/no-non-null-asserted-optional-chain": 2,
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
-        "@typescript-eslint/no-var-requires": 2,
         "@typescript-eslint/prefer-literal-enum-member": 2,
-        "@typescript-eslint/prefer-namespace-keyword": 2,
+        "@typescript-eslint/prefer-ts-expect-error": 2,
       },
       settings: {
         jsdoc: {
