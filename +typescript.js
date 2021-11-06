@@ -28,6 +28,7 @@ module.exports = {
         "@typescript-eslint/no-array-constructor": 2,
 
         "@typescript-eslint/adjacent-overload-signatures": 2,
+        "@typescript-eslint/array-type": [2, { default: "array-simple" }],
         "@typescript-eslint/ban-ts-comment": [
           2,
           {
@@ -37,15 +38,24 @@ module.exports = {
             "ts-check": false,
           },
         ],
+        "@typescript-eslint/ban-types": 2,
         "@typescript-eslint/consistent-type-assertions": 2,
         "@typescript-eslint/consistent-type-imports": 2,
+        "@typescript-eslint/no-extra-non-null-assertion": 2,
+        "@typescript-eslint/no-inferrable-types": 2,
+        "@typescript-eslint/no-misused-new": 2,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
         "@typescript-eslint/no-non-null-asserted-optional-chain": 2,
+        "@typescript-eslint/no-non-null-assertion": 2,
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
+        "@typescript-eslint/no-unnecessary-type-constraint": 2,
         "@typescript-eslint/no-var-requires": 2,
+        "@typescript-eslint/prefer-as-const": 2,
         "@typescript-eslint/prefer-literal-enum-member": 2,
         "@typescript-eslint/prefer-namespace-keyword": 2,
+        "@typescript-eslint/prefer-ts-expect-error": 2,
+        "@typescript-eslint/triple-slash-reference": 2,
       },
       settings: {
         jsdoc: {
