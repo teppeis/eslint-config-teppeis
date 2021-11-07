@@ -29,11 +29,10 @@ module.exports = {
         ],
 
         // Override recommended rules
-        "@typescript-eslint/array-type": [2, { default: "array-simple" }],
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
         "@typescript-eslint/no-non-null-assertion": 2,
-        "@typescript-eslint/no-unused-vars": 2,
+        "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
         // Additional rules
         "@typescript-eslint/consistent-type-assertions": 2,
