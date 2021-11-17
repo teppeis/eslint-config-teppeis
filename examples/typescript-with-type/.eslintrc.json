@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["../../es2019.js", "../../+typescript-with-type.js"]
+  "extends": ["../../es2022.js", "../../+typescript-with-type.js"]
 }

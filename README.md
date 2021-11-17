@@ -64,6 +64,7 @@ Default config equals to `teppeis/es2018`.
 - `teppeis/es2019`
 - `teppeis/es2020`
 - `teppeis/es2021`
+- `teppeis/es2022`
 
 ### For Closure Compiler coding style
 
