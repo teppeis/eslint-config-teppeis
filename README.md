@@ -91,6 +91,7 @@ Chose config for specific Node version
 
 - `teppeis/node-v12` (v12.12+ for `module.syncBuiltinESMExports()`)
 - `teppeis/node-v14` (v14.15+ LTS)
+- `teppeis/node-v16` (v16.13+ LTS)
 
 #### With Babel or other transpilers
 
