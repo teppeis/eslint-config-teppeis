@@ -9,8 +9,8 @@ class C {
   // Private class fields (Node v14.6+)
   #x = 'x';
   static check(obj) {
-    // Ergonomic brand checks (Node v16.4+, but ESLint not yet supported)
-    // return #x in obj;
+    // Ergonomic brand checks (Node v16.4+)
+    return #x in obj;
   }
   static {
     // Static initialization blocks (Node v16.11+)
