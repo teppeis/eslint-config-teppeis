@@ -36,7 +36,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^38.1.6",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-unicorn": "^40.1.0"
+    "eslint-plugin-unicorn": "^42.0.0"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
