@@ -1,7 +1,11 @@
-/* eslint-disable no-unused-vars, no-undef */
+/* eslint-disable no-unused-vars, eslint-comments/disable-enable-pair */
 'use strict';
 
-// async/await
+// ES2017 new globals: SharedArrayBuffer
+new SharedArrayBuffer(1024);
+
+/* eslint-disable no-undef */
+// ES2017 new syntax: async/await
 let foo = async a => {
   await fetch(a);
 };
