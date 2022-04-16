@@ -86,11 +86,10 @@ Chose config for specific Node version
 
 ```json
 {
-  "extends": ["teppeis/node-v12"]
+  "extends": ["teppeis/node-v14"]
 }
 ```
 
-- `teppeis/node-v12` (v12.12+ for `module.syncBuiltinESMExports()`)
 - `teppeis/node-v14` (v14.15+ LTS)
 - `teppeis/node-v16` (v16.13+ LTS)
 
