@@ -4,7 +4,7 @@
   "version": "15.0.1",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 12.12"
+    "node": ">= 14.15"
   },
   "main": "es2018.js",
   "files": [
