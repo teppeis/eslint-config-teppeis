@@ -37,6 +37,7 @@ module.exports = {
         // Additional rules
         "@typescript-eslint/consistent-type-assertions": 2,
         "@typescript-eslint/consistent-type-imports": 2,
+        "@typescript-eslint/no-duplicate-enum-values": 2,
         "@typescript-eslint/no-useless-empty-export": 2,
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
