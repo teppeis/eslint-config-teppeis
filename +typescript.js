@@ -18,11 +18,11 @@ module.exports = {
 
         // Extend ESLint rules
         // skip extending stylistic rules that are overrided by prettier
-        "no-invalid-this": 2,
+        "no-invalid-this": 0,
         "@typescript-eslint/no-invalid-this": 2,
-        "no-loop-func": 2,
+        "no-loop-func": 0,
         "@typescript-eslint/no-loop-func": 2,
-        "no-unused-expressions": "off",
+        "no-unused-expressions": 0,
         "@typescript-eslint/no-unused-expressions": [
           2,
           { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
