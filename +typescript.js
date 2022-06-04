@@ -3,7 +3,7 @@
 module.exports = {
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
+      files: ["*.ts", "*.tsx", ".mts", ".cts"],
       extends: [
         "plugin:@typescript-eslint/recommended",
         "./+module.js",
@@ -49,7 +49,18 @@ module.exports = {
           mode: "typescript",
         },
         node: {
-          tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"],
+          tryExtensions: [
+            ".ts",
+            ".mts",
+            ".cts",
+            ".tsx",
+            ".js",
+            ".mjs",
+            ".cjs",
+            ".jsx",
+            ".json",
+            ".node",
+          ],
         },
         "import/resolver": {
           typescript: {},
