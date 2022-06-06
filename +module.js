@@ -9,7 +9,14 @@ module.exports = {
     // for both TypeScript and non-TypeScript rules
 
     // ** Static analysis **
+    "import/no-absolute-path": 2,
     "import/no-useless-path-segments": 2,
+    // for monorepo
+    "import/no-relative-packages": 2,
+
+    // ** Helpful warnings **
+    "import/no-deprecated": 2,
+    "import/no-mutable-exports": 2,
 
     // ** Style guide **
     // "always" for Native ESM, "never" for CJS/TS
@@ -37,7 +44,6 @@ module.exports = {
         "import/default": 2,
         "import/named": 2,
         "import/namespace": 2,
-        "import/no-absolute-path": 2,
         "import/no-self-import": 2,
         "import/no-unresolved": [2, { caseSensitiveStrict: true }],
 
