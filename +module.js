@@ -34,6 +34,9 @@ module.exports = {
       },
     ],
   },
+  settings: {
+    "import/extensions": [".js", ".jsx", ".mjs"],
+  },
   overrides: [
     {
       // for non-TypeScript files

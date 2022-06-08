@@ -1,14 +1,12 @@
 "use strict";
 
+const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
+
 module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx", ".mts", ".cts"],
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "./+module.js",
-        "plugin:import/typescript",
-      ],
+      extends: ["plugin:@typescript-eslint/recommended", "./+module.js"],
       rules: {
         // ES2019 available in TypeScript
         "node/no-unsupported-features/es-syntax": 0,
@@ -62,8 +60,12 @@ module.exports = {
             ".node",
           ],
         },
+        "import/external-module-folders": ["node_modules", "node_modules/@types"],
+        "import/parsers": {
+          "@typescript-eslint/parser": TS_EXTENSIONS,
+        },
         "import/resolver": {
-          typescript: {},
+          typescript: TS_EXTENSIONS,
         },
       },
     },
