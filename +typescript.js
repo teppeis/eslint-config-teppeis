@@ -1,14 +1,12 @@
 "use strict";
 
+const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
+
 module.exports = {
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "./+module.js",
-        "plugin:import/typescript",
-      ],
+      files: ["*.ts", "*.tsx", ".mts", ".cts"],
+      extends: ["plugin:@typescript-eslint/recommended", "./+module.js"],
       rules: {
         // ES2019 available in TypeScript
         "node/no-unsupported-features/es-syntax": 0,
@@ -18,11 +16,11 @@ module.exports = {
 
         // Extend ESLint rules
         // skip extending stylistic rules that are overrided by prettier
-        "no-invalid-this": 2,
+        "no-invalid-this": 0,
         "@typescript-eslint/no-invalid-this": 2,
-        "no-loop-func": 2,
+        "no-loop-func": 0,
         "@typescript-eslint/no-loop-func": 2,
-        "no-unused-expressions": "off",
+        "no-unused-expressions": 0,
         "@typescript-eslint/no-unused-expressions": [
           2,
           { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
@@ -31,12 +29,13 @@ module.exports = {
         // Override recommended rules
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
-        "@typescript-eslint/no-non-null-assertion": 2,
+        "@typescript-eslint/no-non-null-assertion": 2, // warn to error
         "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
         // Additional rules
         "@typescript-eslint/consistent-type-assertions": 2,
         "@typescript-eslint/consistent-type-imports": 2,
+        "@typescript-eslint/no-duplicate-enum-values": 2,
         "@typescript-eslint/no-useless-empty-export": 2,
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
@@ -48,10 +47,25 @@ module.exports = {
           mode: "typescript",
         },
         node: {
-          tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"],
+          tryExtensions: [
+            ".ts",
+            ".mts",
+            ".cts",
+            ".tsx",
+            ".js",
+            ".mjs",
+            ".cjs",
+            ".jsx",
+            ".json",
+            ".node",
+          ],
+        },
+        "import/external-module-folders": ["node_modules", "node_modules/@types"],
+        "import/parsers": {
+          "@typescript-eslint/parser": TS_EXTENSIONS,
         },
         "import/resolver": {
-          typescript: {},
+          typescript: TS_EXTENSIONS,
         },
       },
     },

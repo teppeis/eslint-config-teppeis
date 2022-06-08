@@ -9,11 +9,17 @@ module.exports = {
     // for both TypeScript and non-TypeScript rules
 
     // ** Static analysis **
+    "import/no-absolute-path": 2,
     "import/no-useless-path-segments": 2,
+    // for monorepo
+    "import/no-relative-packages": 2,
+
+    // ** Helpful warnings **
+    "import/no-deprecated": 2,
+    "import/no-mutable-exports": 2,
 
     // ** Style guide **
     // "always" for Native ESM, "never" for CJS/TS
-    // "import/extensions": 2,
     "import/first": 2,
     "import/newline-after-import": 2,
     "import/no-duplicates": 2,
@@ -28,6 +34,9 @@ module.exports = {
       },
     ],
   },
+  settings: {
+    "import/extensions": [".js", ".jsx", ".mjs"],
+  },
   overrides: [
     {
       // for non-TypeScript files
@@ -37,7 +46,6 @@ module.exports = {
         "import/default": 2,
         "import/named": 2,
         "import/namespace": 2,
-        "import/no-absolute-path": 2,
         "import/no-self-import": 2,
         "import/no-unresolved": [2, { caseSensitiveStrict: true }],
 
@@ -45,6 +53,9 @@ module.exports = {
         "import/export": 2,
         "import/no-named-as-default": 2,
         // "import/no-named-as-default-member": 2,
+
+        // ** Style guide **
+        "import/extensions": [2, "always"],
       },
     },
   ],
