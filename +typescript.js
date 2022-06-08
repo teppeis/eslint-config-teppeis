@@ -9,7 +9,7 @@ module.exports = {
       extends: ["plugin:@typescript-eslint/recommended", "./+module.js"],
       rules: {
         // ES2019 available in TypeScript
-        "node/no-unsupported-features/es-syntax": 0,
+        "n/no-unsupported-features/es-syntax": 0,
 
         // Allow special triple slashes comment: "/// <reference />"
         "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],

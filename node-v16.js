@@ -17,9 +17,9 @@ module.exports = {
     "./lib/es2022.js",
   ],
   rules: {
-    // eslint-plugin-node has not been updated for Node v16
-    "node/no-unsupported-features/es-builtins": [0, { version }],
-    "node/no-unsupported-features/es-syntax": [0, { version }],
-    "node/no-unsupported-features/node-builtins": [0, { version }],
+    // eslint-plugin-n has not been updated for Node v16
+    "n/no-unsupported-features/es-builtins": [0, { version }],
+    "n/no-unsupported-features/es-syntax": [0, { version }],
+    "n/no-unsupported-features/node-builtins": [0, { version }],
   },
 };

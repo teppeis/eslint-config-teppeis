@@ -78,7 +78,7 @@ Extends `teppeis/+closure` after base config.
 
 ### For Node.js
 
-They include [eslint-plugin-node](https://www.npmjs.com/package/eslint-plugin-node).
+They include [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n).
 
 #### With specific version
 
@@ -104,10 +104,10 @@ Extends `teppeis/+node` after base config.
 }
 ```
 
-In `teppeis/+node`, [node/no-unsupported-features/es-syntax](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md) is disabled.
+In `teppeis/+node`, [n/no-unsupported-features/es-syntax](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md) is disabled.
 Available ES features depend on the base config.
 
-[node/no-unsupported-features/es-builtins](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md) and [node/no-unsupported-features/node-builtins](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md) are enabled. It is assumed that polyfill is not used.
+[n/no-unsupported-features/es-builtins](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md) and [n/no-unsupported-features/node-builtins](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md) are enabled. It is assumed that polyfill is not used.
 
 ## Customize
 
