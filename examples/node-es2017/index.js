@@ -1,6 +1,6 @@
 'use strict';
 
-require('eslint-plugin-node');
+require('eslint-plugin-import');
 require('./');
 // require('./missing');
 
