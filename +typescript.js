@@ -5,10 +5,10 @@ const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
 module.exports = {
   overrides: [
     {
-      files: ["*.ts", "*.tsx", ".mts", ".cts"],
+      files: TS_EXTENSIONS.map((ext) => `*${ext}`),
       extends: ["plugin:@typescript-eslint/recommended", "./+module.js"],
       rules: {
-        // ES2019 available in TypeScript
+        // ES2019+ available in TypeScript
         "n/no-unsupported-features/es-syntax": 0,
 
         // Allow special triple slashes comment: "/// <reference />"
