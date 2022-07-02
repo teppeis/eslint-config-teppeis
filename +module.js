@@ -19,7 +19,6 @@ module.exports = {
     "import/no-mutable-exports": 2,
 
     // ** Style guide **
-    // "always" for Native ESM, "never" for CJS/TS
     "import/first": 2,
     "import/newline-after-import": 2,
     "import/no-duplicates": 2,

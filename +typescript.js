@@ -29,7 +29,7 @@ module.exports = {
         // Override recommended rules
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
-        "@typescript-eslint/no-non-null-assertion": 2, // warn to error
+        "@typescript-eslint/no-non-null-assertion": 2, // warn -> error
         "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
         // Additional rules
