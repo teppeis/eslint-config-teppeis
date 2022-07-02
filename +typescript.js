@@ -2,6 +2,7 @@
 
 const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
 
+/** @type {import("@typescript-eslint/utils").TSESLint.Linter.Config} */
 module.exports = {
   overrides: [
     {
