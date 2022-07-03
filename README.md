@@ -129,23 +129,35 @@ and symlink Prettier config file to your project root.
 $ npx link-prettierrc
 ```
 
-### Use Mocha for testing
+### For TypeScript
 
-This enables mocha globals like `describe` or `it` in `**/test/*.js`.
+Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
+
+- `teppeis/+typescript`: Enable rules that don't require type information
+- `teppeis/+typescript-with-type`: Require type information (slow)
 
 ```json
 {
-  "extends": ["teppeis/es2018", "teppeis/+mocha"]
+  "extends": ["teppeis/node-v14", "teppeis/+typescript", "teppeis/+prettier"]
 }
 ```
 
 ### For ES Modules
 
-This overrides `parserOptions.sourceType`.
+By default, only `*.mjs` and `*.mts` are treated as ES Modules in configs for Node.js.
+If you use `type:module` in package.json, use `teppeis/+module` like:
 
 ```json
 {
-  "extends": ["teppeis/es2018", "teppeis/+module"]
+  "extends": ["teppeis/node-v16", "teppeis/+module"]
+}
+```
+
+or for TypeScript like:
+
+```json
+{
+  "extends": ["teppeis/node-v16", "teppeis/+typescript", "teppeis/+module"]
 }
 ```
 
@@ -159,26 +171,15 @@ This adds `browser` to `env`.
 }
 ```
 
-### For TypeScript
+### Use Mocha for testing
 
-Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
-
-- `teppeis/+typescript`: Enable rules that don't require type information
-- `teppeis/+typescript-with-type`: Require type information (slow)
+This enables mocha globals like `describe` or `it` in `**/test/*.js`.
 
 ```json
 {
-  "extends": [
-    "teppeis/es2019",
-    "teppeis/+node",
-    "teppeis/+typescript",
-    "teppeis/+prettier",
-    "teppeis/+mocha"
-  ]
+  "extends": ["teppeis/es2018", "teppeis/+mocha"]
 }
 ```
-
-It also enables ES Modules.
 
 ## License
 
