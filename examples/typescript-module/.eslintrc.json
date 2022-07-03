@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["../../node-v16.js", "../../+typescript.js", "../../+module.js"]
+}

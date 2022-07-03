@@ -1,13 +1,13 @@
 "use strict";
 
-const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
+const TS_EXTENSIONS = require("./lib/ts-extensions");
 
 /** @type {import("@typescript-eslint/utils").TSESLint.Linter.Config} */
 module.exports = {
   overrides: [
     {
       files: TS_EXTENSIONS.map((ext) => `*${ext}`),
-      extends: ["plugin:@typescript-eslint/recommended", "./+module.js"],
+      extends: ["plugin:@typescript-eslint/recommended", "./lib/module-base.js"],
       rules: {
         // ES2019+ available in TypeScript
         "n/no-unsupported-features/es-syntax": 0,
@@ -47,6 +47,7 @@ module.exports = {
         jsdoc: {
           mode: "typescript",
         },
+        "import/extensions": [".mjs", ...TS_EXTENSIONS],
         "import/external-module-folders": ["node_modules", "node_modules/@types"],
         "import/parsers": {
           "@typescript-eslint/parser": TS_EXTENSIONS,
@@ -55,6 +56,10 @@ module.exports = {
           typescript: TS_EXTENSIONS,
         },
       },
+    },
+    {
+      files: ["*.mts"],
+      extends: ["./lib/module-globals.js"],
     },
   ],
 };

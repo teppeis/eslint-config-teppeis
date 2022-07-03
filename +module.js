@@ -1,60 +1,28 @@
 "use strict";
 
+/**
+ * @fileoverview Additional config for type:module in package.json
+ */
+
+const TS_EXTENSIONS = require("./lib/ts-extensions");
+
 module.exports = {
-  parserOptions: {
-    sourceType: "module",
-  },
-  plugins: ["import"],
-  rules: {
-    // for both TypeScript and non-TypeScript rules
-
-    // ** Static analysis **
-    "import/no-absolute-path": 2,
-    // for monorepo
-    "import/no-relative-packages": 2,
-    "import/no-self-import": 2,
-    "import/no-useless-path-segments": 2,
-
-    // ** Helpful warnings **
-    "import/no-deprecated": 2,
-    "import/no-mutable-exports": 2,
-
-    // ** Style guide **
-    "import/first": 2,
-    "import/newline-after-import": 2,
-    "import/no-duplicates": 2,
-    "import/order": [
-      2,
-      {
-        groups: [
-          ["builtin", "external", "internal"],
-          ["index", "parent", "sibling"],
-        ],
-        alphabetize: { order: "asc", caseInsensitive: true },
-      },
-    ],
-  },
   settings: {
     "import/extensions": [".js", ".jsx", ".mjs"],
   },
   overrides: [
     {
-      // for non-TypeScript files
-      files: ["*.js", "*.jsx", "*.mjs"],
-      rules: {
-        // ** Static analysis **
-        "import/default": 2,
-        "import/named": 2,
-        "import/namespace": 2,
-        "import/no-unresolved": [2, { caseSensitiveStrict: true }],
-
-        // ** Helpful warnings **
-        "import/export": 2,
-        "import/no-named-as-default": 2,
-        // "import/no-named-as-default-member": 2,
-
-        // ** Style guide **
-        "import/extensions": [2, "always"],
+      files: ["*.js", "*.jsx"],
+      extends: ["./lib/module-js.js"],
+      settings: {
+        "import/extensions": [".js", ".jsx", ".mjs"],
+      },
+    },
+    {
+      files: ["*.ts", "*.tsx"],
+      extends: ["./lib/module-globals.js"],
+      settings: {
+        "import/extensions": [".js", ".jsx", ".mjs", ...TS_EXTENSIONS],
       },
     },
   ],
