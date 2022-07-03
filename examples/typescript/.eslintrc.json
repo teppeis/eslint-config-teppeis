@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["../../es2022.js", "../../+typescript.js"]
+  "extends": ["../../node-v16.js", "../../+typescript.js"]
 }
