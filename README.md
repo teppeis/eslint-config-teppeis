@@ -80,7 +80,7 @@ Chose config for specific Node version
 }
 ```
 
-- `teppeis/node-v14` (v14.15+ Maintenance)
+- `teppeis/node-v14` (v14.18+ Maintenance)
 - `teppeis/node-v16` (v16.13+ Active LTS)
 - `teppeis/node-v18` (v18.0+ Current)
 

@@ -1,7 +1,7 @@
 "use strict";
 
-// LTS 'Fermium' from v14.15.0
-const version = ">=14.15.0 <15";
+// LTS 'Fermium' maintenance from v14.18.0
+const version = ">=14.18.0 <15";
 
 module.exports = {
   extends: [
