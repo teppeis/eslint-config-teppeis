@@ -6,7 +6,7 @@
   "engines": {
     "node": ">= 14.15"
   },
-  "main": "es2018.js",
+  "main": "es2021.js",
   "files": [
     "*.js",
     ".prettierrc*.json",

@@ -60,21 +60,11 @@ Default config equals to `teppeis/es2018`.
 - `teppeis/es2015`
 - `teppeis/es2016`
 - `teppeis/es2017`
-- `teppeis/es2018`: equals to `teppeis`
+- `teppeis/es2018`
 - `teppeis/es2019`
 - `teppeis/es2020`
-- `teppeis/es2021`
+- `teppeis/es2021`: equals to `teppeis`
 - `teppeis/es2022`
-
-### For Closure Compiler coding style
-
-Extends `teppeis/+closure` after base config.
-
-```json
-{
-  "extends": ["teppeis/es2015", "teppeis/+closure"]
-}
-```
 
 ### For Node.js
 
@@ -168,6 +158,16 @@ This adds `browser` to `env`.
 ```json
 {
   "extends": ["teppeis/es2018", "teppeis/+browser"]
+}
+```
+
+### For Closure Compiler coding style
+
+Extends `teppeis/+closure` after base config.
+
+```json
+{
+  "extends": ["teppeis/es2015", "teppeis/+closure"]
 }
 ```
 
