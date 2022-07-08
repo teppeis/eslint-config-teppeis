@@ -36,7 +36,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-unicorn": "^43.0.0"
+    "eslint-plugin-unicorn": "^43.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.18.21",
