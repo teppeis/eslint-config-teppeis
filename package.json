@@ -34,7 +34,7 @@
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.3.24",
+    "eslint-plugin-jsdoc": "^39.3.25",
     "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-unicorn": "^43.0.2"
   },
