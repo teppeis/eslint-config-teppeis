@@ -1,7 +1,8 @@
 "use strict";
 
 // LTS 'Gallium' from v16.13.0
-const version = ">=16.13.0 <17";
+// Maintenance from v16.18.0
+const version = ">=16.18.0 <17";
 
 module.exports = {
   extends: [

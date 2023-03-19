@@ -76,13 +76,12 @@ Chose config for specific Node version
 
 ```json
 {
-  "extends": ["teppeis/node-v14"]
+  "extends": ["teppeis/node-v16"]
 }
 ```
 
-- `teppeis/node-v14` (v14.18+ Maintenance)
-- `teppeis/node-v16` (v16.13+ Active LTS)
-- `teppeis/node-v18` (v18.0+ Current)
+- `teppeis/node-v16` (v16.18+ Maintenance)
+- `teppeis/node-v18` (v18.12+ Active LTS)
 
 #### With Babel or other transpilers
 
@@ -128,7 +127,7 @@ Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
 
 ```json
 {
-  "extends": ["teppeis/node-v14", "teppeis/+typescript", "teppeis/+prettier"]
+  "extends": ["teppeis/node-v16", "teppeis/+typescript", "teppeis/+prettier"]
 }
 ```
 
