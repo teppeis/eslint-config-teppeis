@@ -83,6 +83,7 @@ Chose config for specific Node version
 
 - `teppeis/node-v16` (v16.18+ Maintenance)
 - `teppeis/node-v18` (v18.12+ Active LTS)
+- `teppeis/node-v19` (v19.0+ Current)
 
 #### With Babel or other transpilers
 
