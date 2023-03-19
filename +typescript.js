@@ -38,9 +38,9 @@ module.exports = {
         "@typescript-eslint/consistent-type-imports": 2,
         "@typescript-eslint/no-duplicate-enum-values": 2,
         "@typescript-eslint/no-import-type-side-effects": 2,
-        "@typescript-eslint/no-useless-empty-export": 2,
         // allow require for power-assert
         // '@typescript-eslint/no-require-imports': 2,
+        "@typescript-eslint/no-useless-empty-export": 2,
         "@typescript-eslint/prefer-literal-enum-member": 2,
         "@typescript-eslint/prefer-ts-expect-error": 2,
       },
