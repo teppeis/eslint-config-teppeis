@@ -9,14 +9,8 @@
   "main": "es2021.js",
   "files": [
     "*.js",
-    ".prettierrc*.json",
-    ".prettierignore",
-    "bin",
     "lib"
   ],
-  "bin": {
-    "link-prettierrc": "bin/link-prettierrc.mjs"
-  },
   "scripts": {
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint .",

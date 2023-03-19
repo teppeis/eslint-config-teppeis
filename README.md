@@ -114,12 +114,6 @@ Override dupulicated or conflicted rules with `teppeis/+prettier`.
 }
 ```
 
-and symlink Prettier config file to your project root.
-
-```console
-$ npx link-prettierrc
-```
-
 ### For TypeScript
 
 Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
