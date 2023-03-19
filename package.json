@@ -4,7 +4,7 @@
   "version": "16.0.1",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 14.18"
+    "node": ">= 16.18"
   },
   "main": "es2021.js",
   "files": [
@@ -39,7 +39,7 @@
     "eslint-plugin-unicorn": "^46.0.0"
   },
   "devDependencies": {
-    "@types/node": "^14.18.38",
+    "@types/node": "^16.18.16",
     "eslint": "^8.36.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",

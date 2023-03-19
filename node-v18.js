@@ -1,6 +1,7 @@
 "use strict";
 
-const version = ">=18";
+// LTS 'Hydrogen' from v18.12.0
+const version = ">=18.12.0";
 
 module.exports = {
   extends: [
