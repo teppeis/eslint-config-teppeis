@@ -5,7 +5,6 @@ ESLint config set for me!
 [![npm version][npm-image]][npm-url]
 ![supported node.js version][node-version]
 [![build status][ci-image]][ci-url]
-[![dependency status][deps-image]][deps-url]
 ![license][license]
 
 ## Priority
@@ -185,7 +184,7 @@ Copyright (c) 2021, Teppei Sato
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis
 [ci-image]: https://github.com/teppeis/eslint-config-teppeis/workflows/ci/badge.svg
 [ci-url]: https://github.com/teppeis/eslint-config-teppeis/actions?query=workflow%3A%22ci%22
-[deps-image]: https://badgen.net/david/dep/teppeis/eslint-config-teppeis
-[deps-url]: https://david-dm.org/teppeis/eslint-config-teppeis
+[deps-image]: https://img.shields.io/librariesio/release/npm/eslint-config-teppeis
+[deps-url]: https://libraries.io/npm/eslint-config-teppeis
 [node-version]: https://badgen.net/npm/node/eslint-config-teppeis
 [license]: https://badgen.net/npm/license/eslint-config-teppeis
