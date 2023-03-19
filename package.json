@@ -4,7 +4,7 @@
   "version": "16.0.1",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 14.18"
+    "node": ">= 16.18"
   },
   "main": "es2021.js",
   "files": [
