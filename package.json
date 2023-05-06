@@ -33,7 +33,7 @@
     "eslint-plugin-unicorn": "^46.0.0"
   },
   "devDependencies": {
-    "@types/node": "^16.18.25",
+    "@types/node": "^16.18.26",
     "eslint": "^8.39.0",
     "glob": "^10.2.2",
     "mocha": "^10.2.0",
