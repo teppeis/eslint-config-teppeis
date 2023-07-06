@@ -6,7 +6,7 @@ const path = require("path");
 function formatMessages(messages) {
   return messages.map(
     (message) =>
-      `${message.line}:${message.column} ${message.message.slice(0, -1)} - ${message.ruleId}`
+      `${message.line}:${message.column} ${message.message.slice(0, -1)} - ${message.ruleId}`,
   );
 }
 
