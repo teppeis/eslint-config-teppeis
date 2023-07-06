@@ -10,7 +10,7 @@ const generateTest = require("./lib/generateTest");
 async function verify(
   configName,
   useModule = false,
-  configFile = `${__dirname}/../${configName}.js`
+  configFile = `${__dirname}/../${configName}.js`,
 ) {
   const paths = glob.sync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`);
   const options = {
