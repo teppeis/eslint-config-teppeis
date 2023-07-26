@@ -15,8 +15,10 @@ module.exports = {
         // Allow special triple slashes comment: "/// <reference />"
         "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
 
-        // Extend ESLint rules
-        // skip extending stylistic rules that are overrided by prettier
+        // Extend ESLint rules (enabled in lib/base.js)
+        // NOTE: skip extending stylistic rules that are overrided by prettier
+        "no-extra-semi": 0,
+        "@typescript-eslint/no-extra-semi": 2,
         "no-invalid-this": 0,
         "@typescript-eslint/no-invalid-this": 2,
         "no-loop-func": 0,
@@ -30,17 +32,20 @@ module.exports = {
         // Override recommended rules
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
-        "@typescript-eslint/no-non-null-assertion": 2, // warn -> error
         "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
-        // Additional rules
+        // Stylistic rules
+        "@typescript-eslint/adjacent-overload-signatures": 2,
         "@typescript-eslint/consistent-type-assertions": 2,
+        "@typescript-eslint/no-empty-interface": 2,
+        "@typescript-eslint/no-non-null-assertion": 2,
+        "@typescript-eslint/no-inferrable-types": 2,
+
+        // Additional rules
         "@typescript-eslint/consistent-type-imports": 2,
-        "@typescript-eslint/no-duplicate-enum-values": 2,
         "@typescript-eslint/no-import-type-side-effects": 2,
-        // allow require for power-assert
+        // allow require for power-assert and verbatimModuleSyntax
         // '@typescript-eslint/no-require-imports': 2,
-        "@typescript-eslint/no-useless-empty-export": 2,
         "@typescript-eslint/prefer-literal-enum-member": 2,
         "@typescript-eslint/prefer-ts-expect-error": 2,
       },
