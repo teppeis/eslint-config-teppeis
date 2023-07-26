@@ -24,7 +24,7 @@ module.exports = {
         // only for strictNullChecks enabled
         "@typescript-eslint/no-unnecessary-condition": 2,
         "@typescript-eslint/no-unnecessary-type-assertion": 2,
-        "@typescript-eslint/restrict-plus-operands": [2, { checkCompoundAssignments: true }],
+        "@typescript-eslint/restrict-plus-operands": 2,
         "@typescript-eslint/restrict-template-expressions": 2,
         "@typescript-eslint/switch-exhaustiveness-check": 2,
         // override with jest/unbound-method for testing
