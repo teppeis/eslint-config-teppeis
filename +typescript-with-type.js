@@ -21,7 +21,6 @@ module.exports = {
         "@typescript-eslint/no-for-in-array": 2,
         "@typescript-eslint/no-misused-promises": 2,
         "@typescript-eslint/no-mixed-enums": 2,
-        // only for strictNullChecks enabled
         "@typescript-eslint/no-unnecessary-condition": 2,
         "@typescript-eslint/no-unnecessary-type-assertion": 2,
         "@typescript-eslint/restrict-plus-operands": 2,
