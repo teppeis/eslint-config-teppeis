@@ -2,5 +2,5 @@
 
 module.exports = {
   root: true,
-  extends: ["./node-v16.js", "./+prettier.js", "./+mocha.js"],
+  extends: ["./node-v18.js", "./+prettier.js", "./+mocha.js"],
 };

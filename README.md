@@ -76,11 +76,10 @@ Chose config for specific Node version
 
 ```json
 {
-  "extends": ["teppeis/node-v16"]
+  "extends": ["teppeis/node-v18"]
 }
 ```
 
-- `teppeis/node-v16` (v16.18+ Maintenance)
 - `teppeis/node-v18` (v18.12+ Active LTS)
 - `teppeis/node-v20` (v20.0+ Current)
 
@@ -122,7 +121,7 @@ Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
 
 ```json
 {
-  "extends": ["teppeis/node-v16", "teppeis/+typescript", "teppeis/+prettier"]
+  "extends": ["teppeis/node-v18", "teppeis/+typescript", "teppeis/+prettier"]
 }
 ```
 
@@ -133,7 +132,7 @@ If you use `type:module` in package.json, use `teppeis/+module` like:
 
 ```json
 {
-  "extends": ["teppeis/node-v16", "teppeis/+module"]
+  "extends": ["teppeis/node-v18", "teppeis/+module"]
 }
 ```
 
@@ -141,7 +140,7 @@ or for TypeScript like:
 
 ```json
 {
-  "extends": ["teppeis/node-v16", "teppeis/+typescript", "teppeis/+module"]
+  "extends": ["teppeis/node-v18", "teppeis/+typescript", "teppeis/+module"]
 }
 ```
 

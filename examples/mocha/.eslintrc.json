@@ -1,3 +1,3 @@
 {
-  "extends": ["../../node-v16.js", "../../+mocha.js"]
+  "extends": ["../../node-v18.js", "../../+mocha.js"]
 }
