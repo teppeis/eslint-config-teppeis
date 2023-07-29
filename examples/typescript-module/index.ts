@@ -7,13 +7,13 @@ export const assertOk = assert.ok;
 import('./index.js');
 
 // module-globals: unavailable in Node ESM
-// eslint-disable-next-line no-restricted-globals
+// eslint-disable-next-line unicorn/prefer-module
 require('node:assert');
-// eslint-disable-next-line no-restricted-globals
+// eslint-disable-next-line unicorn/prefer-module
 console.log(__filename);
-// eslint-disable-next-line no-restricted-globals
+// eslint-disable-next-line unicorn/prefer-module
 exports.foo = 1;
-// eslint-disable-next-line no-restricted-properties
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = 1;
 
 // module-js is not loaded, but tsc throws an error
