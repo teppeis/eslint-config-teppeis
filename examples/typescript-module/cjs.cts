@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from 'node:assert';
 
 export const assertOk = assert.ok;
 
@@ -7,4 +7,8 @@ export const assertOk = assert.ok;
 import('./cjs.cjs');
 
 // module-globals is not loaded
-require('assert');
+require('node:assert');
+
+console.log(__filename);
+exports.foo = 1;
+module.exports = 1;

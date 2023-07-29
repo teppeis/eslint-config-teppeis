@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from 'node:assert';
 
 export const assertOk = assert.ok;
 
@@ -7,11 +7,11 @@ export const assertOk = assert.ok;
 import('./esm.mjs');
 
 // module-globals
-// `require` is not available in ESM
-// eslint-disable-next-line no-restricted-globals
-require('assert');
-
-// module-globals
-// `module.exports` is not available in ESM
-// eslint-disable-next-line no-restricted-properties
+// eslint-disable-next-line unicorn/prefer-module
+require('node:assert');
+// eslint-disable-next-line unicorn/prefer-module
+console.log(__filename);
+// eslint-disable-next-line unicorn/prefer-module
+exports.foo = 1;
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = 1;

@@ -1,7 +1,7 @@
 "use strict";
 
-const assert = require("assert");
-const path = require("path");
+const assert = require("node:assert");
+const path = require("node:path");
 
 function formatMessages(messages) {
   return messages.map(
@@ -27,7 +27,7 @@ function generateTest(result) {
   }
   // Support rules from plugins
   const ruleAndTestCase = match[1].split("%");
-  const rule = ruleAndTestCase[0].replace(/#/g, "/");
+  const rule = ruleAndTestCase[0].replaceAll("#", "/");
   const testCase = ruleAndTestCase[1];
   const expected = match[2];
 
