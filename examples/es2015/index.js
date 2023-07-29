@@ -80,7 +80,7 @@ const method = {
 };
 
 // no-misleading-character-class
-const a = /^[a-c]$/;
+const a = /^[abc]$/;
 const b = /^[👍]$/u;
 
 // unicorn/prefer-string-starts-ends-with
