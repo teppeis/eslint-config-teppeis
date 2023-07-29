@@ -1,4 +1,4 @@
-import assert from 'assert';
+import assert from 'node:assert';
 
 export const assertOk = assert.ok;
 
@@ -9,7 +9,7 @@ import('./esm.mjs');
 // module-globals
 // `require` is not available in ESM
 // eslint-disable-next-line no-restricted-globals
-require('assert');
+require('node:assert');
 
 // module-globals
 // `module.exports` is not available in ESM

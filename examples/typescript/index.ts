@@ -20,4 +20,4 @@ console.log(three, foo);
 import('./index');
 
 // module-globals is not loaded
-require('assert');
+require('node:assert');
