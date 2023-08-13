@@ -62,9 +62,9 @@ Default config equals to `teppeis/es2018`.
 - `teppeis/es2018`
 - `teppeis/es2019`
 - `teppeis/es2020`
-- `teppeis/es2021`: equals to `teppeis`
+- `teppeis/es2021`
 - `teppeis/es2022`
-- `teppeis/es2023`
+- `teppeis/es2023`: equals to `teppeis`
 
 ### For Node.js
 

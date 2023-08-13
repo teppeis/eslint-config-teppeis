@@ -6,7 +6,7 @@
   "engines": {
     "node": ">= 18.12"
   },
-  "main": "es2021.js",
+  "main": "es2023.js",
   "files": [
     "*.js",
     "lib"
