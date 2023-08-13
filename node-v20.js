@@ -1,6 +1,7 @@
 "use strict";
 
-const version = ">=20";
+// LTS 'Iodine' from v20.x.0
+const version = ">=20.5.0";
 
 module.exports = {
   extends: [

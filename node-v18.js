@@ -1,7 +1,8 @@
 "use strict";
 
 // LTS 'Hydrogen' from v18.12.0
-const version = ">=18.12.0";
+// Maintenance Start from v18.1x.0
+const version = ">=18.15.0";
 
 module.exports = {
   extends: [
@@ -15,6 +16,7 @@ module.exports = {
     "./lib/es2020.js",
     "./lib/es2021.js",
     "./lib/es2022.js",
+    "./lib/es2023.js",
   ],
   rules: {
     // eslint-plugin-n has not been updated for Node v18

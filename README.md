@@ -80,8 +80,8 @@ Chose config for specific Node version
 }
 ```
 
-- `teppeis/node-v18` (v18.12+ Active LTS)
-- `teppeis/node-v20` (v20.0+ Current)
+- `teppeis/node-v18` (v18.17+ Active LTS)
+- `teppeis/node-v20` (v20.5+ Current)
 
 #### With Babel or other transpilers
 

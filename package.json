@@ -4,7 +4,7 @@
   "version": "18.0.0-2",
   "author": "Teppei Sato <teppeis@gmail.com>",
   "engines": {
-    "node": ">= 18.12"
+    "node": "^18.17.0 || >=20.5.0"
   },
   "main": "es2023.js",
   "files": [
