@@ -9,6 +9,7 @@
   "main": "es2023.js",
   "files": [
     "*.js",
+    "!eslint.config.js",
     "lib"
   ],
   "scripts": {
@@ -33,9 +34,12 @@
     "eslint-plugin-unicorn": "^48.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^8.49.0",
+    "@types/eslint": "^8.44.2",
     "@types/node": "^18.17.15",
     "eslint": "^8.49.0",
     "glob": "^10.3.4",
+    "globals": "^13.21.0",
     "mocha": "^10.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.3",
