@@ -21,14 +21,6 @@ Only additional or orverwritten rules are specified.
 
 ### Install
 
-#### for npm v6
-
-```console
-$ npm i -D eslint-config-teppeis eslint prettier
-```
-
-#### for npm v7+
-
 ```console
 $ npm i -D eslint-config-teppeis
 ```
@@ -151,16 +143,6 @@ This adds `browser` to `env`.
 ```json
 {
   "extends": ["teppeis/es2018", "teppeis/+browser"]
-}
-```
-
-### For Closure Compiler coding style
-
-Extends `teppeis/+closure` after base config.
-
-```json
-{
-  "extends": ["teppeis/es2015", "teppeis/+closure"]
 }
 ```
 
