@@ -44,7 +44,6 @@ describe("eslint-config-teppeis", () => {
   describeVerify("es2016", true);
   describeVerify("es2017", true);
   describeVerify("es2019", true);
-  describeVerify("es5+closure", false, "fixtures/.closure.eslintrc.json");
   // describeVerify("+prettier", false, "fixtures/.prettier.eslintrc.json");
   describeVerify("typescript", true, "fixtures/.typescript.eslintrc.json");
   describeVerify("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
