@@ -1,9 +1,12 @@
 import js from "@eslint/js";
 import globals from "globals";
+import { es2022, prettier } from "./index.mjs";
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
   js.configs.recommended,
+  ...es2022,
+  prettier,
   {
     ignores: ["test/fixtures", "examples"],
   },
