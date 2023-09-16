@@ -1,3 +1,2 @@
-'use strict';
-
+// disabled rule
 alert('no warning');
