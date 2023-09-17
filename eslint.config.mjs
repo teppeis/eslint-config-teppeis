@@ -1,12 +1,14 @@
-import { es2022, mocha, node, prettier } from "./index.mjs";
+import { mocha, prettier } from "./index.mjs";
+import { build } from "./lib/build.mjs";
+
+const configs = await build({ base: "node18" });
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [
-  ...es2022,
-  ...node,
-  prettier,
+  ...configs,
   {
     ignores: ["test/fixtures", "examples"],
   },
+  prettier,
   mocha,
 ];

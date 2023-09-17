@@ -4,7 +4,6 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import * as configs from "../index.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
@@ -19,19 +18,17 @@ testConfig("es2021");
 function testConfig(configName) {
   describe(configName, async () => {
     const fixtures = globSync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`).sort();
-    // eslint-disable-next-line import/namespace
-    const config = configs[configName];
     for (const fixture of fixtures) {
-      testFile(fixture, config);
+      testFile(fixture, configName);
     }
   });
 }
 
 /**
  * @param {string} filePath
- * @param {import("eslint").Linter.FlatConfig[]} config
+ * @param {string} configName
  */
-function testFile(filePath, config) {
+function testFile(filePath, configName) {
   const match = /([^.]*)\.(pass|fail)\.(?:js|ts)$/.exec(filePath);
   if (!match) {
     throw new Error(`Invalid filePath: ${filePath}`);
@@ -43,7 +40,7 @@ function testFile(filePath, config) {
   const expected = match[2];
 
   it(`${rule}${testCase ? ` (${testCase})` : ""}: ${expected}`, async () => {
-    const messages = await verify(filePath, config);
+    const messages = await verify(filePath, configName);
 
     const fatals = messages.filter((msg) => !!msg.fatal);
     if (fatals.length) {
@@ -72,12 +69,13 @@ function testFile(filePath, config) {
 
 /**
  * @param {string} file
- * @param {import("eslint").Linter.FlatConfig[]} config
+ * @param {string} configName
  */
-async function verify(file, config) {
+async function verify(file, configName) {
   const linter = new Linter({ configType: "flat" });
   const code = await readFile(file, "utf8");
-  return linter.verify(code, [...config], path.basename(file));
+  const config = (await import(`../lib/configs/${configName}.mjs`)).default;
+  return linter.verify(code, [config], path.basename(file));
 }
 
 /**

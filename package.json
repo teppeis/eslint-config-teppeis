@@ -26,6 +26,7 @@
     "@eslint/js": "^8.49.0",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
+    "deepmerge": "^4.3.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -36,6 +37,7 @@
     "globals": "^13.21.0"
   },
   "devDependencies": {
+    "@types/deepmerge": "^2.2.0",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.17.15",
     "eslint": "^8.49.0",
