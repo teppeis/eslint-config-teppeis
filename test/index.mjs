@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 testConfig("es2021");
+testConfig("typescript");
 // testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
 // testConfig("typescript", true, "fixtures/.typescript.eslintrc.json");
 // testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
