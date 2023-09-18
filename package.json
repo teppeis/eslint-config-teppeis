@@ -19,8 +19,9 @@
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "test": "run-p -l -c --aggregate-output lint:* unit",
-    "unit": "mocha test"
+    "test": "run-p -l -c --aggregate-output lint:* test:*",
+    "test:examples": "./examples/lint-all.sh",
+    "test:unit": "mocha test"
   },
   "dependencies": {
     "@eslint/eslintrc": "^2.1.2",

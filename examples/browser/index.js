@@ -1,3 +1,6 @@
-'use strict';
+"use strict";
 
-alert('foo');
+alert("foo");
+
+// eslint-disable-next-line unicorn/prefer-dom-node-append, no-undef
+foo.appendChild(bar);
