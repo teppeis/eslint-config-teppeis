@@ -1,13 +1,19 @@
 /* eslint-disable no-unused-vars */
-'use strict';
+import fs from "node:fs";
 
-// ES2022 Class fields
+// eslint-disable-next-line n/no-deprecated-api
+fs.exists("./foo", () => {});
+
+// eslint-disable-next-line unicorn/prefer-module
+require("node:assert/strict");
+
+// ES2022 new syntax: class fields
 class C {
   // Public instance and static fields (Node v12.0+)
   static foo;
 
   // Private class fields (Node v14.6+)
-  #x = 'x';
+  #x = "x";
   static check(obj) {
     // Ergonomic brand checks (Node v16.4+)
     return #x in obj;
@@ -17,7 +23,3 @@ class C {
     C.foo = 2;
   }
 }
-
-// .at() method on the built-in indexables (Node v16.6+)
-// https://node.green/#ES2022-features--at---method-on-the-built-in-indexables
-[0, 1, 2].at(2);
