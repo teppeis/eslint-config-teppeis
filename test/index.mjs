@@ -4,33 +4,37 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import es2021 from "../lib/configs/es2021.mjs";
+import typescript from "../lib/configs/typescript.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-testConfig("es2021");
-testConfig("typescript");
+describe("es2021 config", () => {
+  testConfig(es2021, "es2021");
+});
+describe("typescript config", () => {
+  testConfig(typescript, "typescript");
+});
 // TODO: test prettier (after remove stylistic rules from base)
 // testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
-// testConfig("typescript", true, "fixtures/.typescript.eslintrc.json");
 // testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
 
 /**
+ * @param {import("eslint").Linter.FlatConfig} config
  * @param {string} configName
  */
-function testConfig(configName) {
-  describe(configName, async () => {
-    const fixtures = globSync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`).sort();
-    for (const fixture of fixtures) {
-      testFile(fixture, configName);
-    }
-  });
+function testConfig(config, configName) {
+  const fixtures = globSync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`).sort();
+  for (const fixture of fixtures) {
+    testFile(fixture, config);
+  }
 }
 
 /**
  * @param {string} filePath
- * @param {string} configName
+ * @param {import("eslint").Linter.FlatConfig} config
  */
-function testFile(filePath, configName) {
+async function testFile(filePath, config) {
   const match = /([^.]*)\.(pass|fail)\.(?:js|ts)$/.exec(filePath);
   if (!match) {
     throw new Error(`Invalid filePath: ${filePath}`);
@@ -42,8 +46,7 @@ function testFile(filePath, configName) {
   const expected = match[2];
 
   it(`${rule}${testCase ? ` (${testCase})` : ""}: ${expected}`, async () => {
-    const messages = await verify(filePath, configName);
-
+    const messages = await verify(filePath, config);
     const fatals = messages.filter((msg) => !!msg.fatal);
     if (fatals.length) {
       fatals.forEach((fatal) => {
@@ -71,13 +74,11 @@ function testFile(filePath, configName) {
 
 /**
  * @param {string} file
- * @param {string} configName
+ * @param {import("eslint").Linter.FlatConfig} config
  */
-async function verify(file, configName) {
+async function verify(file, config) {
   const linter = new Linter({ configType: "flat" });
   const code = await readFile(file, "utf8");
-  // TODO: static import (this may leads timeout in the first no-cache case)
-  const config = (await import(`../lib/configs/${configName}.mjs`)).default;
   return linter.verify(code, [config], path.basename(file));
 }
 
