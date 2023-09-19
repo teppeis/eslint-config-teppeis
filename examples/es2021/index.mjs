@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-"use strict";
 
 // ES2021: unicorn/numeric-separators-style
 const num1 = 100000000; // onlyIfContainsSeparator: true

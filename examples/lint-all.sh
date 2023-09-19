@@ -20,6 +20,8 @@ lint() {
 
 echo "Linting examples..."
 lint "es2021"
+lint "es2022"
+lint "es2023"
 lint "node18"
 lint "node20"
 lint "mocha"
