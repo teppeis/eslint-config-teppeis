@@ -1,5 +1,7 @@
 "use strict";
 
+// TODO: move to configs/ and remove this file
+
 /** @type {import("@typescript-eslint/utils").TSESLint.Linter.Config} */
 module.exports = {
   extends: ["./+typescript.js"],

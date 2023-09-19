@@ -9,6 +9,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 testConfig("es2021");
 testConfig("typescript");
+// TODO: test prettier (after remove stylistic rules from base)
 // testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
 // testConfig("typescript", true, "fixtures/.typescript.eslintrc.json");
 // testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
@@ -75,6 +76,7 @@ function testFile(filePath, configName) {
 async function verify(file, configName) {
   const linter = new Linter({ configType: "flat" });
   const code = await readFile(file, "utf8");
+  // TODO: static import (this may leads timeout in the first no-cache case)
   const config = (await import(`../lib/configs/${configName}.mjs`)).default;
   return linter.verify(code, [config], path.basename(file));
 }

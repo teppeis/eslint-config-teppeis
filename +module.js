@@ -1,9 +1,12 @@
 "use strict";
 
+// TODO: investigate `settings.import/*` and remove this file
+
 /**
  * @fileoverview Additional config for type:module in package.json
  */
 
+// eslint-disable-next-line n/no-missing-require
 const TS_EXTENSIONS = require("./lib/ts-extensions");
 
 module.exports = {
