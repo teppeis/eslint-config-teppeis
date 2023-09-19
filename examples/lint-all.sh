@@ -19,9 +19,10 @@ lint() {
 }
 
 echo "Linting examples..."
-lint "browser"
 lint "es2021"
-lint "mocha"
 lint "node18"
+lint "node20"
+lint "mocha"
+lint "browser"
 
 exit $error
