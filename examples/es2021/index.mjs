@@ -10,12 +10,6 @@ new WeakRef();
 new FinalizationRegistry();
 new AggregateError();
 
-// ES2017: comma-dangle
-const foo = {
-  bar: "baz",
-  qux: "quux",
-};
-
 // base
 const x = 0;
 // eslint-disable-next-line no-compare-neg-zero

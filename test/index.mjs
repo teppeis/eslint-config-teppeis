@@ -1,4 +1,5 @@
 import { Linter } from "eslint";
+import prettierConfig from "eslint-config-prettier";
 import { globSync } from "glob";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -11,13 +12,38 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 describe("es2021 config", () => {
   testConfig(es2021, "es2021");
+  // TODO: run in es2023
+  it("should not enable rules that are overridden by prettier", () => {
+    const es2021rules = new Set(Object.keys(es2021.rules));
+    const commonRules = Object.keys(prettierConfig.rules).filter(
+      (rule) => es2021rules.has(rule) && isEnabledRule(es2021.rules[rule]),
+    );
+    assert.deepEqual(commonRules, []);
+  });
 });
+
 describe("typescript config", () => {
   testConfig(typescript, "typescript");
 });
-// TODO: test prettier (after remove stylistic rules from base)
+
 // testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
 // testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
+
+/**
+ * @param {*} ruleLevel 0/1/2/"off"/"warn"/"error" or [0, ]
+ * @return {boolean}
+ */
+function isEnabledRule(ruleLevel) {
+  assert(ruleLevel != null);
+  const level = Array.isArray(ruleLevel) ? ruleLevel[0] : ruleLevel;
+  if (level === 0 || level === "off") {
+    return false;
+  } else if (level === 1 || level === 2 || level === "warn" || level === "error") {
+    return true;
+  } else {
+    throw new TypeError(`Unexpected rule level: ${ruleLevel}`);
+  }
+}
 
 /**
  * @param {import("eslint").Linter.FlatConfig} config
