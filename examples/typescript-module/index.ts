@@ -1,14 +1,14 @@
-import assert from 'node:assert';
+import assert from "node:assert";
 
 export const assertOk = assert.ok;
 
 // module-base
 // eslint-disable-next-line import/no-self-import
-import('./index.js');
+import("./index.js");
 
 // module-globals: unavailable in Node ESM
 // eslint-disable-next-line unicorn/prefer-module
-require('node:assert');
+require("node:assert");
 // eslint-disable-next-line unicorn/prefer-module
 console.log(__filename);
 // eslint-disable-next-line unicorn/prefer-module
@@ -18,4 +18,4 @@ module.exports = 1;
 
 // module-js is not loaded, but tsc throws an error
 // @ts-expect-error ts(2835) require extension
-import('./esm');
+import("./esm");

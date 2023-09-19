@@ -1,6 +1,6 @@
-import type {Foo} from './mod';
-import {Bar, Baz} from './mod';
-import Bar2 = require('./mod2');
+import type { Foo } from "./mod";
+import { Bar, Baz } from "./mod";
+import Bar2 = require("./mod2");
 
 type Three = 3;
 // A recommended rule
@@ -8,7 +8,7 @@ type Three = 3;
 const three = <Three>3;
 
 const foo: Foo = {
-  foo: '',
+  foo: "",
 };
 new Bar();
 new Baz();
@@ -17,7 +17,7 @@ console.log(three, foo);
 
 // module-base is loaded
 // eslint-disable-next-line import/no-self-import
-import('./index');
+import("./index");
 
 // module-globals is not loaded
-require('node:assert');
+require("node:assert");

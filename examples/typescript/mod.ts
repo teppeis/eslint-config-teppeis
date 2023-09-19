@@ -1,5 +1,5 @@
 export interface Foo {
-  foo: string
+  foo: string;
 }
 export class Bar {}
 export class Baz {}
