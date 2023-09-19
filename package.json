@@ -6,10 +6,8 @@
   "engines": {
     "node": "^18.17.0 || >=20.5.0"
   },
-  "main": "index.mjs",
+  "main": "lib/index.mjs",
   "files": [
-    "*.js",
-    "!eslint.config.js",
     "lib"
   ],
   "scripts": {

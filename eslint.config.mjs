@@ -1,5 +1,5 @@
-import { mocha, prettier } from "./index.mjs";
 import { build } from "./lib/build.mjs";
+import { mocha } from "./lib/index.mjs";
 
 const configs = await build({ base: "node18", typescript: true });
 
@@ -9,6 +9,5 @@ export default [
   {
     ignores: ["test/fixtures", "examples"],
   },
-  prettier,
   mocha,
 ];
