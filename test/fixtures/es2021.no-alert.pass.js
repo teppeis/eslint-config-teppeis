@@ -1,2 +1,2 @@
 // disabled rule
-alert('no warning');
+alert("no warning");

@@ -1,1 +1,1 @@
-var foo = '\x1B';
+var foo = "\x1B";
