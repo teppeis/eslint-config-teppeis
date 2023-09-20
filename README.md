@@ -18,7 +18,7 @@ ESLint config set for me!
 ### Install
 
 ```console
-$ npm i -D eslint-config-teppeis eslint prettier
+$ npm i -D eslint eslint-config-teppeis
 ```
 
 ### Configure
@@ -75,15 +75,10 @@ export default [es2023, node];
 
 ## Customize
 
-### Use Prettier
+### Use with Prettier
 
-Override dupulicated or conflicted rules with `prettier`.
-
-```js
-import { node, prettier } from "eslint-config-teppeis";
-
-export default [node, prettier];
-```
+Just intall `prettier` and use it with `eslint-config-teppeis``.
+This config doen't include rule settings that conflict with Pretteir.
 
 ### For TypeScript
 

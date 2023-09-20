@@ -52,6 +52,11 @@
     "eslint": "^8.49.0",
     "prettier": "^3.0.3"
   },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
   "bugs": {
