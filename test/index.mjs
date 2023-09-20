@@ -24,6 +24,13 @@ describe("es2021 config", () => {
 
 describe("typescript config", () => {
   testConfig(typescript, "typescript");
+  it("should not enable rules that are overridden by prettier", () => {
+    const tsRules = new Set(Object.keys(typescript.rules));
+    const commonRules = Object.keys(prettierConfig.rules).filter(
+      (rule) => tsRules.has(rule) && isEnabledRule(typescript.rules[rule]),
+    );
+    assert.deepEqual(commonRules, []);
+  });
 });
 
 // testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
