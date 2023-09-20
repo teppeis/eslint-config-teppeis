@@ -26,10 +26,12 @@ $ npm i -D eslint eslint-config-teppeis
 Load and export in `eslint.config.js`:
 
 ```js
-import { node18 } from "eslint-config-teppeis";
+import { build } from "eslint-config-teppeis";
 
-export default [node18];
+export default build({ base: "node18", typescript: true });
 ```
+
+TODO: describe `build(options)`
 
 ### For pure ECMAScript
 
@@ -59,33 +61,20 @@ import { node18 } from "eslint-config-teppeis";
 export default [node18];
 ```
 
-- `node` (non version specific)
 - `node18` (v18.17+ Active LTS)
 - `node20` (v20.5+ Current)
 
-#### With Babel or other transpilers
-
-Merge `es2023` and `node`
-
-```js
-import { es2023, node } from "eslint-config-teppeis";
-
-export default [es2023, node];
-```
-
-## Customize
-
-### Use with Prettier
+## Use with Prettier
 
 Just intall `prettier` and use it with `eslint-config-teppeis``.
 This config doen't include rule settings that conflict with Pretteir.
 
-### For TypeScript
+## Use with TypeScript
 
-Configs for TypeScript (applied only for `.ts`, `.cts`, `.mts` and `.tsx`).
+Configs for TypeScript.
 
 - `typescript`: Enable rules that don't require type information
-- `typescriptWithType`: Require type information (slow)
+- `typescriptTypeChecked`: Require type information (slow)
 
 ```js
 import { node, typescript, prettier } from "eslint-config-teppeis";
@@ -96,20 +85,20 @@ export default [node, typescript, prettier];
 ### For ES Modules
 
 By default, only `*.mjs` and `*.mts` are treated as ES Modules in configs for Node.js.
-If you use `type:module` in package.json, use `esm` like:
+If you use `type:module` in package.json, use `esm: true` like:
 
 ```js
-import { node, esm } from "eslint-config-teppeis";
+import { build } from "eslint-config-teppeis";
 
-export default [node, esm];
+export default build({ base: "node18", esm: true });
 ```
 
 For TypeScript:
 
 ```js
-import { node, typescript, esm } from "eslint-config-teppeis";
+import { build } from "eslint-config-teppeis";
 
-export default [node, typescript, esm];
+export default build({ base: "node18", typescript: true, esm: true });
 ```
 
 ### For browsers
