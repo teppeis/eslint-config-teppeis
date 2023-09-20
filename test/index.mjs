@@ -24,6 +24,13 @@ describe("es2021 config", () => {
 
 describe("typescript config", () => {
   testConfig(typescript, "typescript");
+  // TODO: organize test cases
+  // - moduleBase
+  // - @typescript-eslint:eslint-recommended
+  // - @typescript-eslint:recommended
+  // - custom rules
+  // - plugins:import
+  // - plugins:jsdoc
   it("should not enable rules that are overridden by prettier", () => {
     const tsRules = new Set(Object.keys(typescript.rules));
     const commonRules = Object.keys(prettierConfig.rules).filter(
@@ -33,7 +40,6 @@ describe("typescript config", () => {
   });
 });
 
-// testConfig("+prettier", false, "fixtures/.prettier.eslintrc.json");
 // testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
 
 /**

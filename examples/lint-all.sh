@@ -10,7 +10,7 @@ lint() {
   echo "- $1"
   cd "$target_dir"
   set +e
-  npx eslint .
+  npx eslint --max-warnings 0 .
   if [ $? -ne 0 ]; then
     error=1
   fi
@@ -24,6 +24,8 @@ lint "es2022"
 lint "es2023"
 lint "node18"
 lint "node20"
+lint "typescript"
+lint "typescript-type-checked"
 lint "mocha"
 lint "browser"
 

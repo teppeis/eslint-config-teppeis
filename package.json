@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "lint": "run-p -l -c --aggregate-output lint:*",
-    "lint:eslint": "eslint .",
+    "lint:eslint": "eslint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
@@ -39,6 +39,7 @@
     "@types/deepmerge": "^2.2.0",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.17.15",
+    "@types/react": "^18.2.22",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "glob": "^10.3.4",
@@ -59,7 +60,8 @@
   "keywords": [
     "eslint",
     "eslint-config",
-    "prettier"
+    "prettier",
+    "typescript"
   ],
   "license": "MIT"
 }
