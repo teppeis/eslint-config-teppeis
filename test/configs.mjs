@@ -6,17 +6,29 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import es2021 from "../lib/configs/es2021.mjs";
+import es2022 from "../lib/configs/es2022.mjs";
+import es2023 from "../lib/configs/es2023.mjs";
+import typescriptTypeChecked from "../lib/configs/typescript-type-checked.mjs";
 import typescript from "../lib/configs/typescript.mjs";
+import { merge } from "../lib/merge.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 describe("es2021 config", () => {
   testConfig(es2021, "es2021");
-  // TODO: run in es2023
+});
+
+describe("es2022 config", () => {
+  testConfig(es2022, "es2022");
+});
+
+describe("es2023 config", () => {
+  testConfig(es2022, "es2022");
+
   it("should not enable rules that are overridden by prettier", () => {
-    const es2021rules = new Set(Object.keys(es2021.rules));
+    const es2023rules = new Set(Object.keys(es2023.rules));
     const commonRules = Object.keys(prettierConfig.rules).filter(
-      (rule) => es2021rules.has(rule) && isEnabledRule(es2021.rules[rule]),
+      (rule) => es2023rules.has(rule) && isEnabledRule(es2023.rules[rule]),
     );
     assert.deepEqual(commonRules, []);
   });
@@ -31,6 +43,7 @@ describe("typescript config", () => {
   // - custom rules
   // - plugins:import
   // - plugins:jsdoc
+
   it("should not enable rules that are overridden by prettier", () => {
     const tsRules = new Set(Object.keys(typescript.rules));
     const commonRules = Object.keys(prettierConfig.rules).filter(
@@ -40,7 +53,25 @@ describe("typescript config", () => {
   });
 });
 
-// testConfig("typescript-with-type", true, "fixtures/.typescript-with-type.eslintrc.json");
+describe("typescript-type-checked config", () => {
+  const config = merge(typescriptTypeChecked, {
+    languageOptions: {
+      parserOptions: {
+        project: `${__dirname}fixtures/typescript-type-checked.tsconfig.json`,
+        tsconfigRootDir: `${__dirname}fixtures`,
+      },
+    },
+  });
+  testConfig(config, "typescript-type-checked");
+
+  it("should not enable rules that are overridden by prettier", () => {
+    const tsRules = new Set(Object.keys(typescriptTypeChecked.rules));
+    const commonRules = Object.keys(prettierConfig.rules).filter(
+      (rule) => tsRules.has(rule) && isEnabledRule(typescriptTypeChecked.rules[rule]),
+    );
+    assert.deepEqual(commonRules, []);
+  });
+});
 
 /**
  * @param {*} ruleLevel 0/1/2/"off"/"warn"/"error" or [0, ]
