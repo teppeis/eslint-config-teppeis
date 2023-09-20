@@ -32,3 +32,14 @@ fs.exists("./foo", () => {});
 // configs/typescript is loaded
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Empty {}
+
+/* eslint-disable jsdoc/check-param-names */
+/**
+ * @param {T} notFoo
+ * @return {T}
+ * @template T
+ */
+function id<T>(foo: T): T {
+  return foo;
+}
+/* eslint-enable jsdoc/check-param-names */

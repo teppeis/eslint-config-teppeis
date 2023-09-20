@@ -36,13 +36,6 @@ describe("es2023 config", () => {
 
 describe("typescript config", () => {
   testConfig(typescript, "typescript");
-  // TODO: organize test cases
-  // - moduleBase
-  // - @typescript-eslint:eslint-recommended
-  // - @typescript-eslint:recommended
-  // - custom rules
-  // - plugins:import
-  // - plugins:jsdoc
 
   it("should not enable rules that are overridden by prettier", () => {
     const tsRules = new Set(Object.keys(typescript.rules));
