@@ -1,8 +1,8 @@
+import type { Linter } from "eslint";
 import unicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
-/** @type { import("eslint").Linter.FlatConfig } */
-export default {
+export const browser: Linter.FlatConfig = {
   files: ["**/*.{js,cjs,mjs,jsx,ts,tsx,cts,mts}"],
   languageOptions: {
     globals: {
