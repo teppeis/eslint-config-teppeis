@@ -8,8 +8,13 @@
   },
   "main": "lib/index.mjs",
   "files": [
-    "lib"
+    "bin",
+    "lib",
+    "templates"
   ],
+  "bin": {
+    "eslint-config-teppeis": "bin/eslint-config-teppeis.mjs"
+  },
   "scripts": {
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint --max-warnings 0 .",

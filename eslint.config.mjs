@@ -9,5 +9,11 @@ export default [
   {
     ignores: ["test/fixtures", "examples"],
   },
+  {
+    files: ["templates/*"],
+    rules: {
+      "import/no-unresolved": "off",
+    },
+  },
   mocha,
 ];

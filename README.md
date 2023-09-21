@@ -21,6 +21,8 @@ ESLint config set for me!
 $ npm i -D eslint eslint-config-teppeis
 ```
 
+and run `eslint-config-teppeis --init` to generate initial config file.
+
 ### Configure
 
 Load and export in `eslint.config.js`:
