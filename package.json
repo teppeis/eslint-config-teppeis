@@ -6,6 +6,7 @@
   "engines": {
     "node": "^18.17.0 || >=20.5.0"
   },
+  "type": "module",
   "main": "lib/index.mjs",
   "files": [
     "bin",

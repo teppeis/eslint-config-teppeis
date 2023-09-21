@@ -1,3 +1,19 @@
-"use strict";
+import { build } from "./lib/build.mjs";
+import { mocha } from "./lib/index.mjs";
 
-module.exports = import("./eslint.config.mjs").then((ns) => ns.default);
+const configs = await build({ base: "node18", typescript: true, esm: true });
+
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [
+  ...configs,
+  {
+    ignores: ["test/fixtures", "examples"],
+  },
+  {
+    files: ["templates/*"],
+    rules: {
+      "import/no-unresolved": "off",
+    },
+  },
+  mocha,
+];

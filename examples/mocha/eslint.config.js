@@ -1,3 +1,21 @@
-"use strict";
+import globals from "globals";
+import mocha from "../../lib/configs/mocha.mjs";
 
-module.exports = import("./eslint.config.mjs").then((ns) => ns.default);
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [
+  {
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
+    rules: {
+      "no-undef": 2,
+    },
+  },
+  mocha,
+  {
+    ignores: ["eslint.config.{js,mjs}"],
+  },
+];

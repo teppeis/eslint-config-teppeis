@@ -1,3 +1,11 @@
-"use strict";
+import { build } from "../../lib/build.mjs";
 
-module.exports = import("./eslint.config.mjs").then((ns) => ns.default);
+const configs = await build({ base: "es2022" });
+
+/** @type { import("eslint").Linter.FlatConfig[] } */
+export default [
+  ...configs,
+  {
+    ignores: ["eslint.config.{js,mjs}"],
+  },
+];
