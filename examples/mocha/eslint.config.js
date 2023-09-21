@@ -1,5 +1,5 @@
 import globals from "globals";
-import mocha from "../../lib/configs/mocha.mjs";
+import mocha from "../../dist/configs/mocha.mjs";
 
 /** @type { import("eslint").Linter.FlatConfig[] } */
 export default [

@@ -1,5 +1,5 @@
-import { build } from "./lib/build.mjs";
-import { mocha } from "./lib/index.mjs";
+import { build } from "./dist/build.mjs";
+import { mocha } from "./dist/index.mjs";
 
 const configs = await build({ base: "node18", typescript: true, esm: true });
 
@@ -7,7 +7,7 @@ const configs = await build({ base: "node18", typescript: true, esm: true });
 export default [
   ...configs,
   {
-    ignores: ["test/fixtures", "examples"],
+    ignores: ["dist", "examples", "test/fixtures"],
   },
   {
     files: ["templates/*"],

@@ -42,7 +42,7 @@ export default merge(moduleBase, {
     // Allow special triple slashes comment: "/// <reference />"
     "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
 
-    // Extend ESLint rules (enabled in lib/base.js)
+    // Extend ESLint rules (enabled in base config)
     // NOTE: skip extending stylistic rules that are overrided by prettier
     "no-invalid-this": 0,
     "@typescript-eslint/no-invalid-this": 2,

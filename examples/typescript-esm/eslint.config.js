@@ -1,4 +1,4 @@
-import { build } from "../../lib/build.mjs";
+import { build } from "../../dist/build.mjs";
 
 const configs = await build({ base: "node20", typescript: true, esm: true });
 

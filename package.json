@@ -7,23 +7,24 @@
     "node": "^18.17.0 || >=20.5.0"
   },
   "type": "module",
-  "main": "lib/index.mjs",
+  "main": "dist/index.mjs",
   "files": [
     "bin",
-    "lib",
+    "dist",
     "templates"
   ],
   "bin": {
     "eslint-config-teppeis": "bin/eslint-config-teppeis.mjs"
   },
   "scripts": {
+    "build": "tsc",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "test": "run-p -l -c --aggregate-output lint:* test:*",
+    "test": "npm-run-all -l -c --aggregate-output build -p lint:* test:*",
     "test:examples": "./examples/lint-all.sh",
     "test:unit": "mocha test"
   },

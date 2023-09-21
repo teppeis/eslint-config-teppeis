@@ -5,12 +5,12 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import es2021 from "../lib/configs/es2021.mjs";
-import es2022 from "../lib/configs/es2022.mjs";
-import es2023 from "../lib/configs/es2023.mjs";
-import typescriptTypeChecked from "../lib/configs/typescript-type-checked.mjs";
-import typescript from "../lib/configs/typescript.mjs";
-import { merge } from "../lib/merge.mjs";
+import es2021 from "../dist/configs/es2021.mjs";
+import es2022 from "../dist/configs/es2022.mjs";
+import es2023 from "../dist/configs/es2023.mjs";
+import typescriptTypeChecked from "../dist/configs/typescript-type-checked.mjs";
+import typescript from "../dist/configs/typescript.mjs";
+import { merge } from "../dist/merge.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
