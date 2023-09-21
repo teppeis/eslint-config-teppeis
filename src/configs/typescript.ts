@@ -1,6 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsEslintParser from "@typescript-eslint/parser";
+import type { Linter } from "eslint";
 import { fileURLToPath } from "node:url";
 import { merge } from "../merge.js";
 import { moduleBase } from "../module-base.js";
@@ -19,10 +20,10 @@ const tsEsEslintRecomRules = tsEsEslintRecom[0].rules;
 
 const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
 
-/** @type {import("eslint").Linter.FlatConfig} */
-export default merge(moduleBase, {
+export const typescript: Linter.FlatConfig = merge(moduleBase, {
   files: ["**/*.{ts,tsx,mts,cts}"],
   languageOptions: {
+    // @ts-expect-error TSESLint doesn't support flat config typings yet
     parser: tsEslintParser,
     parserOptions: {
       sourceType: "module",
@@ -30,6 +31,7 @@ export default merge(moduleBase, {
     },
   },
   plugins: {
+    // @ts-expect-error TSESLint doesn't support flat config typings yet
     "@typescript-eslint": tsEslintPlugin,
   },
   rules: {

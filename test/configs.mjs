@@ -8,8 +8,8 @@ import { fileURLToPath } from "node:url";
 import { es2021 } from "../dist/configs/es2021.js";
 import { es2022 } from "../dist/configs/es2022.js";
 import { es2023 } from "../dist/configs/es2023.js";
-import typescriptTypeChecked from "../dist/configs/typescript-type-checked.mjs";
-import typescript from "../dist/configs/typescript.mjs";
+import { typescriptTypeChecked } from "../dist/configs/typescript-type-checked.js";
+import { typescript } from "../dist/configs/typescript.js";
 import { merge } from "../dist/merge.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));

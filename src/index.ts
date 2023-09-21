@@ -6,8 +6,8 @@ export { es2023 } from "./configs/es2023.js";
 export { default as mocha } from "./configs/mocha.mjs";
 export { node18 } from "./configs/node18.js";
 export { node20 } from "./configs/node20.js";
-export { default as typescriptTypeChecked } from "./configs/typescript-type-checked.mjs";
-export { default as typescript } from "./configs/typescript.mjs";
+export { typescriptTypeChecked } from "./configs/typescript-type-checked.js";
+export { typescript } from "./configs/typescript.js";
 export { merge } from "./merge.js";
 
 // TODO: provide typings d.ts or convert to typescript

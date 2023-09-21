@@ -1,6 +1,6 @@
 import type { Linter } from "eslint";
 import assert from "node:assert/strict";
-import jsEsm from "./configs/js-esm.mjs";
+import { jsEsm } from "./configs/js-esm.js";
 import { merge } from "./merge.js";
 
 interface BuildOptions {
@@ -19,17 +19,18 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
   }
   const baseConfig = (await import(`./configs/${base}.js`))[base];
 
-  let nodeEsm = {};
+  let nodeEsmConfig = {};
   const nodeConfigNames = ["node18", "node20"];
   if (nodeConfigNames.includes(base)) {
-    nodeEsm = (await import("./configs/node-esm.mjs")).default;
+    const { nodeEsm } = await import("./configs/node-esm.js");
+    nodeEsmConfig = nodeEsm;
   }
 
   let tsConfig;
   if (typescript) {
     if (project) {
       if (typeof project === "boolean" || typeof project === "string" || Array.isArray(project)) {
-        tsConfig = (await import("./configs/typescript-type-checked.mjs")).default;
+        tsConfig = (await import("./configs/typescript-type-checked.js")).typescriptTypeChecked;
         const { languageOptions } = tsConfig;
         assert(languageOptions);
         const { parserOptions } = languageOptions;
@@ -39,7 +40,7 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
         throw new TypeError(`project is unexpected: ${project}`);
       }
     } else {
-      tsConfig = (await import("./configs/typescript.mjs")).default;
+      tsConfig = (await import("./configs/typescript.js")).typescript;
     }
   } else if (project) {
     throw new TypeError("Specify both `typescript` and `project`.");
@@ -61,7 +62,7 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
       files: [cjsExtensions],
     },
     {
-      ...merge(baseConfig, jsEsm, nodeEsm),
+      ...merge(baseConfig, jsEsm, nodeEsmConfig),
       files: [esmExtensions],
     },
   ];
@@ -72,7 +73,7 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
         files: [cjsTsExtensions],
       },
       {
-        ...merge(baseConfig, nodeEsm, tsConfig),
+        ...merge(baseConfig, nodeEsmConfig, tsConfig),
         files: [esmTsExtensions],
       },
     );

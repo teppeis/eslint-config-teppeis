@@ -1,11 +1,11 @@
 /**
  * @fileoverview Config for Node ESM in JS (not TS, tsc checks them instead)
  */
+import type { Linter } from "eslint";
 import { merge } from "../merge.js";
 import { moduleBase } from "../module-base.js";
 
-/** @type { import("eslint").Linter.FlatConfig } */
-export default merge(moduleBase, {
+export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
   rules: {
     // ** Static analysis **
     "import/default": 2,
