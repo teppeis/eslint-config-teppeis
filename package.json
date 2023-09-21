@@ -14,7 +14,7 @@
     "templates"
   ],
   "bin": {
-    "eslint-config-teppeis": "bin/eslint-config-teppeis.mjs"
+    "eslint-config-teppeis": "bin/cli.js"
   },
   "scripts": {
     "build": "tsc",
