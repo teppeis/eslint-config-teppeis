@@ -1,10 +1,10 @@
 /**
  * @fileoverview Base config for TS and Node ESM JS
  */
+import type { Linter } from "eslint";
 import importPlugin from "eslint-plugin-import";
 
-/** @type { import("eslint").Linter.FlatConfig } */
-export default {
+export const moduleBase: Linter.FlatConfig = {
   languageOptions: {
     sourceType: "module",
   },

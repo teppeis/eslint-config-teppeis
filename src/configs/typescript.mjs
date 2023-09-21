@@ -3,7 +3,7 @@ import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsEslintParser from "@typescript-eslint/parser";
 import { fileURLToPath } from "node:url";
 import { merge } from "../merge.js";
-import moduleBase from "../module-base.mjs";
+import { moduleBase } from "../module-base.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const compat = new FlatCompat({
