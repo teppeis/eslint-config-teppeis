@@ -1,4 +1,4 @@
-import { build } from "../../dist/build.js";
+import { build } from "../../dist/index.js";
 
 const configs = await build({ base: "node20", typescript: true, project: true });
 
