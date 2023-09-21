@@ -1,8 +1,8 @@
+import type { Linter } from "eslint";
 import { merge } from "../merge.js";
-import prev from "./es2022.mjs";
+import { es2022 } from "./es2022.js";
 
-/** @type { import("eslint").Linter.FlatConfig } */
-export default merge(prev, {
+export const es2023: Linter.FlatConfig = merge(es2022, {
   languageOptions: {
     parserOptions: {
       ecmaVersion: 2023,

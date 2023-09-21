@@ -17,7 +17,7 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
   if (!baseConfigNames.includes(base)) {
     throw new TypeError(`Unexpected base: ${base}`);
   }
-  const baseConfig = (await import(`./configs/${base}.mjs`)).default;
+  const baseConfig = (await import(`./configs/${base}.js`))[base];
 
   let nodeEsm = {};
   const nodeConfigNames = ["node18", "node20"];

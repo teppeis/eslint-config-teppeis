@@ -1,9 +1,9 @@
+import type { Linter } from "eslint";
 import globals from "globals";
 import { merge } from "../merge.js";
-import prev from "./base.mjs";
+import { base } from "./base.js";
 
-/** @type { import("eslint").Linter.FlatConfig } */
-export default merge(prev, {
+export const es2021: Linter.FlatConfig = merge(base, {
   languageOptions: {
     parserOptions: {
       // NOTE: ES2021 doesn't support top-level await.
