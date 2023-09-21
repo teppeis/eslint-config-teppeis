@@ -2,7 +2,7 @@ import js from "@eslint/js";
 import comments from "eslint-plugin-eslint-comments";
 import jsdoc from "eslint-plugin-jsdoc";
 import unicorn from "eslint-plugin-unicorn";
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 
 /** @type { import("eslint").Linter.FlatConfig } */
 export default merge(js.configs.recommended, {

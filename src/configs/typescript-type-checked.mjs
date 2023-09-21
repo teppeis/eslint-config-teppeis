@@ -1,4 +1,4 @@
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 import typescriptConfig from "./typescript.mjs";
 
 /** @type {import("eslint").Linter.FlatConfig} */

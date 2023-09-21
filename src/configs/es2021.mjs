@@ -1,5 +1,5 @@
 import globals from "globals";
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 import prev from "./base.mjs";
 
 /** @type { import("eslint").Linter.FlatConfig } */

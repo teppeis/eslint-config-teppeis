@@ -1,7 +1,7 @@
 /**
  * @fileoverview Config for Node ESM in JS (not TS, tsc checks them instead)
  */
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 import moduleBase from "../module-base.mjs";
 
 /** @type { import("eslint").Linter.FlatConfig } */

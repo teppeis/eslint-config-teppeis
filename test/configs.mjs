@@ -10,7 +10,7 @@ import es2022 from "../dist/configs/es2022.mjs";
 import es2023 from "../dist/configs/es2023.mjs";
 import typescriptTypeChecked from "../dist/configs/typescript-type-checked.mjs";
 import typescript from "../dist/configs/typescript.mjs";
-import { merge } from "../dist/merge.mjs";
+import { merge } from "../dist/merge.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 

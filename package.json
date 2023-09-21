@@ -7,7 +7,7 @@
     "node": "^18.17.0 || >=20.5.0"
   },
   "type": "module",
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "files": [
     "bin",
     "dist",
@@ -18,19 +18,21 @@
   },
   "scripts": {
     "build": "tsc",
+    "clean": "rm -rf dist",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "test": "npm-run-all -l -c --aggregate-output build -p lint:* test:*",
+    "test": "npm-run-all -l -c --aggregate-output clean build -p lint:* test:*",
     "test:examples": "./examples/lint-all.sh",
     "test:unit": "mocha test"
   },
   "dependencies": {
     "@eslint/eslintrc": "^2.1.2",
     "@eslint/js": "^8.49.0",
+    "@types/eslint": "^8.44.2",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "deepmerge": "^4.3.1",
@@ -44,7 +46,6 @@
   },
   "devDependencies": {
     "@types/deepmerge": "^2.2.0",
-    "@types/eslint": "^8.44.2",
     "@types/node": "^18.17.15",
     "@types/react": "^18.2.22",
     "eslint": "^8.49.0",

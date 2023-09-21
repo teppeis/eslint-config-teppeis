@@ -8,6 +8,6 @@ export { default as node18 } from "./configs/node18.mjs";
 export { default as node20 } from "./configs/node20.mjs";
 export { default as typescriptTypeChecked } from "./configs/typescript-type-checked.mjs";
 export { default as typescript } from "./configs/typescript.mjs";
-export { merge } from "./merge.mjs";
+export { merge } from "./merge.js";
 
 // TODO: provide typings d.ts or convert to typescript

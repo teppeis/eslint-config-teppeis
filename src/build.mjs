@@ -1,5 +1,5 @@
 import jsEsm from "./configs/js-esm.mjs";
-import { merge } from "./merge.mjs";
+import { merge } from "./merge.js";
 
 /**
  * @param {*} options

@@ -1,5 +1,5 @@
 import { build } from "./dist/build.mjs";
-import { mocha } from "./dist/index.mjs";
+import { mocha } from "./dist/index.js";
 
 const configs = await build({ base: "node18", typescript: true, esm: true });
 
@@ -8,6 +8,11 @@ export default [
   ...configs,
   {
     ignores: ["dist", "examples", "test/fixtures"],
+  },
+  {
+    rules: {
+      "import/no-unresolved": "off",
+    },
   },
   {
     files: ["templates/*"],

@@ -1,12 +1,10 @@
+import type { ArrayMergeOptions } from "deepmerge";
 import deepmerge from "deepmerge";
+import type { Linter } from "eslint";
 
-/**
- * @param {Partial<import("eslint").Linter.FlatConfig>} first
- * @param {Partial<import("eslint").Linter.FlatConfig>} second
- * @param {Partial<import("eslint").Linter.FlatConfig>[]} rest
- * @return {import("eslint").Linter.FlatConfig}
- */
-export function merge(first, second, ...rest) {
+type FlatConfig = Linter.FlatConfig;
+
+export function merge(first: FlatConfig, second: FlatConfig, ...rest: FlatConfig[]): FlatConfig {
   const merged = {
     ...first,
     ...second,
@@ -35,19 +33,14 @@ export function merge(first, second, ...rest) {
   };
 
   if (rest.length > 0) {
-    return merge(merged, ...rest);
+    return merge(merged, rest[0], ...rest.slice(1));
   } else {
     return merged;
   }
 }
 
-const overwriteMerge = (destinationArray, sourceArray, options) => sourceArray;
-
-/**
- * @param {*} first
- * @param {*} second
- */
-function deepObjectMerge(first, second) {
+const overwriteMerge = (dest: any[], src: any[], options?: ArrayMergeOptions) => src;
+function deepObjectMerge<T>(first: Partial<T>, second: Partial<T>): T {
   return deepmerge(first, second, {
     arrayMerge: overwriteMerge,
   });

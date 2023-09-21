@@ -1,4 +1,4 @@
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 import es2023 from "./es2023.mjs";
 import node from "./node.mjs";
 

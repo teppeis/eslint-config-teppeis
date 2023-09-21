@@ -1,11 +1,8 @@
 import { FlatCompat } from "@eslint/eslintrc";
-// TODO: fix import/no-unresolved that doesn't support exports
-// eslint-disable-next-line import/no-unresolved
 import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
-// eslint-disable-next-line import/no-unresolved
 import tsEslintParser from "@typescript-eslint/parser";
 import { fileURLToPath } from "node:url";
-import { merge } from "../merge.mjs";
+import { merge } from "../merge.js";
 import moduleBase from "../module-base.mjs";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
