@@ -1,11 +1,16 @@
+import type { Linter } from "eslint";
+import assert from "node:assert/strict";
 import jsEsm from "./configs/js-esm.mjs";
 import { merge } from "./merge.js";
 
-/**
- * @param {*} options
- * @return {Promise<import("eslint").Linter.FlatConfig[]>}
- */
-export async function build(options) {
+interface BuildOptions {
+  base: "es2021" | "es2022" | "es2023" | "node18" | "node20";
+  esm?: boolean;
+  typescript?: boolean;
+  project?: boolean | string | string[];
+}
+
+export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]> {
   const { base, typescript, project, esm } = options;
 
   const baseConfigNames = ["es2021", "es2022", "es2023", "node18", "node20"];
@@ -25,7 +30,11 @@ export async function build(options) {
     if (project) {
       if (typeof project === "boolean" || typeof project === "string" || Array.isArray(project)) {
         tsConfig = (await import("./configs/typescript-type-checked.mjs")).default;
-        tsConfig.languageOptions.parserOptions.project = project;
+        const { languageOptions } = tsConfig;
+        assert(languageOptions);
+        const { parserOptions } = languageOptions;
+        assert(parserOptions);
+        parserOptions.project = project;
       } else {
         throw new TypeError(`project is unexpected: ${project}`);
       }

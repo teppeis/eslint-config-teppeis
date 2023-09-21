@@ -1,4 +1,4 @@
-export { build } from "./build.mjs";
+export { build } from "./build.js";
 export { default as browser } from "./configs/browser.mjs";
 export { default as es2021 } from "./configs/es2021.mjs";
 export { default as es2022 } from "./configs/es2022.mjs";

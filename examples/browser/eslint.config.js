@@ -1,4 +1,4 @@
-import { build } from "../../dist/build.mjs";
+import { build } from "../../dist/build.js";
 import browser from "../../dist/configs/browser.mjs";
 
 const configs = await build({ base: "node18" });

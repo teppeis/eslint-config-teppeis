@@ -1,4 +1,4 @@
-import { build } from "../../dist/build.mjs";
+import { build } from "../../dist/build.js";
 
 const configs = await build({ base: "es2023" });
 
