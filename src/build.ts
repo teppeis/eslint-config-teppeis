@@ -1,7 +1,7 @@
 import type { Linter } from "eslint";
-import assert from "node:assert/strict";
 import { jsEsm } from "./configs/js-esm.js";
 import { merge } from "./merge.js";
+import { nonNull } from "./utils.js";
 
 interface BuildOptions {
   base: "es2021" | "es2022" | "es2023" | "node18" | "node20";
@@ -39,11 +39,8 @@ export async function build(
       ) {
         tsConfig = (await import("./configs/typescript-type-checked.js"))
           .typescriptTypeChecked;
-        const { languageOptions } = tsConfig;
-        assert(languageOptions);
-        const { parserOptions } = languageOptions;
-        assert(parserOptions);
-        parserOptions.project = project;
+        nonNull(nonNull(tsConfig.languageOptions).parserOptions).project =
+          project;
       } else {
         throw new TypeError(`project is unexpected: ${project}`);
       }

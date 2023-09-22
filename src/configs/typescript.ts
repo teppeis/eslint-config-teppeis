@@ -1,24 +1,13 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsEslintParser from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
-import { fileURLToPath } from "node:url";
 import { merge } from "../merge.js";
 import { moduleBase } from "../module-base.js";
+import { nonNull } from "../utils.js";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-const tsEsEslintRecom = compat.extends(
-  "plugin:@typescript-eslint/eslint-recommended",
+const tsEsEslintRecomRules = nonNull(
+  nonNull(tsEslintPlugin.configs["eslint-recommended"].overrides)[0].rules,
 );
-if (tsEsEslintRecom.length !== 1) {
-  throw new TypeError(
-    `Unexpected @typescript-eslint/eslint-recommended config array length: ${tsEsEslintRecom.length}`,
-  );
-}
-const tsEsEslintRecomRules = tsEsEslintRecom[0].rules;
 
 const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
 
