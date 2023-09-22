@@ -10,7 +10,9 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
-const tsEsEslintRecom = compat.extends("plugin:@typescript-eslint/eslint-recommended");
+const tsEsEslintRecom = compat.extends(
+  "plugin:@typescript-eslint/eslint-recommended",
+);
 if (tsEsEslintRecom.length !== 1) {
   throw new TypeError(
     `Unexpected @typescript-eslint/eslint-recommended config array length: ${tsEsEslintRecom.length}`,
@@ -39,7 +41,11 @@ export const typescript: Linter.FlatConfig = merge(moduleBase, {
     ...tsEslintPlugin.configs.recommended.rules,
 
     // Allow special triple slashes comment: "/// <reference />"
-    "spaced-comment": [2, "always", { line: { markers: ["/"] }, block: { balanced: true } }],
+    "spaced-comment": [
+      2,
+      "always",
+      { line: { markers: ["/"] }, block: { balanced: true } },
+    ],
 
     // Extend ESLint rules (enabled in base config)
     // NOTE: skip extending stylistic rules that are overrided by prettier
@@ -50,7 +56,11 @@ export const typescript: Linter.FlatConfig = merge(moduleBase, {
     "no-unused-expressions": 0,
     "@typescript-eslint/no-unused-expressions": [
       2,
-      { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+        allowTaggedTemplates: true,
+      },
     ],
 
     // Override recommended rules

@@ -10,7 +10,9 @@ interface BuildOptions {
   project?: boolean | string | string[];
 }
 
-export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]> {
+export async function build(
+  options: BuildOptions,
+): Promise<Linter.FlatConfig[]> {
   const { base, typescript, project, esm } = options;
 
   const baseConfigNames = ["es2021", "es2022", "es2023", "node18", "node20"];
@@ -29,8 +31,13 @@ export async function build(options: BuildOptions): Promise<Linter.FlatConfig[]>
   let tsConfig;
   if (typescript) {
     if (project) {
-      if (typeof project === "boolean" || typeof project === "string" || Array.isArray(project)) {
-        tsConfig = (await import("./configs/typescript-type-checked.js")).typescriptTypeChecked;
+      if (
+        typeof project === "boolean" ||
+        typeof project === "string" ||
+        Array.isArray(project)
+      ) {
+        tsConfig = (await import("./configs/typescript-type-checked.js"))
+          .typescriptTypeChecked;
         const { languageOptions } = tsConfig;
         assert(languageOptions);
         const { parserOptions } = languageOptions;

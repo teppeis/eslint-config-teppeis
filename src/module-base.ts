@@ -30,7 +30,13 @@ export const moduleBase: Linter.FlatConfig = {
     "import/order": [
       2,
       {
-        groups: [["builtin", "external"], "internal", "index", "parent", "sibling"],
+        groups: [
+          ["builtin", "external"],
+          "internal",
+          "index",
+          "parent",
+          "sibling",
+        ],
       },
     ],
   },

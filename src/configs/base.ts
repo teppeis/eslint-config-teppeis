@@ -89,7 +89,11 @@ export const base: Linter.FlatConfig = merge(js.configs.recommended, {
     "no-unneeded-ternary": 2,
     "no-unused-expressions": [
       2,
-      { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+        allowTaggedTemplates: true,
+      },
     ],
     "no-useless-call": 2,
     "no-useless-computed-key": 2,

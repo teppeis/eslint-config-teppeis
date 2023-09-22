@@ -3,6 +3,5 @@
   "singleQuote": true,
   "quoteProps": "preserve",
   "bracketSpacing": false,
-  "arrowParens": "avoid",
-  "printWidth": 100
+  "arrowParens": "avoid"
 }

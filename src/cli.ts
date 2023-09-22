@@ -15,7 +15,9 @@ export function run() {
 
   const { type } = findUpPackageJson();
   const isTypeEsm = type === "module";
-  const templateFile = isTypeEsm ? "eslint.config-esm.mjs" : "eslint.config.mjs";
+  const templateFile = isTypeEsm
+    ? "eslint.config-esm.mjs"
+    : "eslint.config.mjs";
   const templateUrl = resolveUrl(`../templates/${templateFile}`);
   const cjsProxyUrl = resolveUrl(`../templates/eslint.config.cjs`);
 

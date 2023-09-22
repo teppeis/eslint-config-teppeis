@@ -4,7 +4,11 @@ import type { Linter } from "eslint";
 
 type FlatConfig = Linter.FlatConfig;
 
-export function merge(first: FlatConfig, second: FlatConfig, ...rest: FlatConfig[]): FlatConfig {
+export function merge(
+  first: FlatConfig,
+  second: FlatConfig,
+  ...rest: FlatConfig[]
+): FlatConfig {
   const merged = {
     ...first,
     ...second,
@@ -39,7 +43,8 @@ export function merge(first: FlatConfig, second: FlatConfig, ...rest: FlatConfig
   }
 }
 
-const overwriteMerge = (dest: any[], src: any[], options?: ArrayMergeOptions) => src;
+const overwriteMerge = (dest: any[], src: any[], options?: ArrayMergeOptions) =>
+  src;
 function deepObjectMerge<T>(first: Partial<T>, second: Partial<T>): T {
   return deepmerge(first, second, {
     arrayMerge: overwriteMerge,

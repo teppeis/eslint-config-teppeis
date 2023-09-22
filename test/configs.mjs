@@ -60,7 +60,8 @@ describe("typescript-type-checked config", () => {
   it("should not enable rules that are overridden by prettier", () => {
     const tsRules = new Set(Object.keys(typescriptTypeChecked.rules));
     const commonRules = Object.keys(prettierConfig.rules).filter(
-      (rule) => tsRules.has(rule) && isEnabledRule(typescriptTypeChecked.rules[rule]),
+      (rule) =>
+        tsRules.has(rule) && isEnabledRule(typescriptTypeChecked.rules[rule]),
     );
     assert.deepEqual(commonRules, []);
   });
@@ -75,7 +76,12 @@ function isEnabledRule(ruleLevel) {
   const level = Array.isArray(ruleLevel) ? ruleLevel[0] : ruleLevel;
   if (level === 0 || level === "off") {
     return false;
-  } else if (level === 1 || level === 2 || level === "warn" || level === "error") {
+  } else if (
+    level === 1 ||
+    level === 2 ||
+    level === "warn" ||
+    level === "error"
+  ) {
     return true;
   } else {
     throw new TypeError(`Unexpected rule level: ${ruleLevel}`);
@@ -87,7 +93,9 @@ function isEnabledRule(ruleLevel) {
  * @param {string} configName
  */
 function testConfig(config, configName) {
-  const fixtures = globSync(`${__dirname}/fixtures/${configName}.*.@(js|ts)`).sort();
+  const fixtures = globSync(
+    `${__dirname}/fixtures/${configName}.*.@(js|ts)`,
+  ).sort();
   for (const fixture of fixtures) {
     testFile(fixture, config);
   }
@@ -113,7 +121,9 @@ async function testFile(filePath, config) {
     const fatals = messages.filter((msg) => !!msg.fatal);
     if (fatals.length) {
       fatals.forEach((fatal) => {
-        console.error(`${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`);
+        console.error(
+          `${filePath}:${fatal.line}:${fatal.column} ${fatal.message}`,
+        );
       });
       throw new Error("Fatal error");
     }
@@ -124,9 +134,9 @@ async function testFile(filePath, config) {
     } else if (expected === "fail" && messagesForTheRule.length === 0) {
       if (messages.length > 0) {
         assert.fail(
-          `Passed the rule unexpectedly and failed other rules:\n${formatMessages(messages).join(
-            "\n",
-          )}`,
+          `Passed the rule unexpectedly and failed other rules:\n${formatMessages(
+            messages,
+          ).join("\n")}`,
         );
       } else {
         assert.fail("Passed the rule unexpectedly.");
@@ -150,6 +160,7 @@ async function verify(file, config) {
  */
 function formatMessages(messages) {
   return messages.map(
-    (msg) => `${msg.line}:${msg.column} ${msg.message.slice(0, -1)} - ${msg.ruleId}`,
+    (msg) =>
+      `${msg.line}:${msg.column} ${msg.message.slice(0, -1)} - ${msg.ruleId}`,
   );
 }
