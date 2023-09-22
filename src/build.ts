@@ -12,6 +12,7 @@ interface BuildOptions {
 
 export async function build(
   options: BuildOptions,
+  ...additionalConfigs: Linter.FlatConfig[]
 ): Promise<Linter.FlatConfig[]> {
   const { base, typescript, project, esm } = options;
 
@@ -85,5 +86,6 @@ export async function build(
       },
     );
   }
+  configArray.push(...additionalConfigs);
   return configArray;
 }

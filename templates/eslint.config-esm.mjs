@@ -1,11 +1,8 @@
 import { build } from "eslint-config-teppeis";
 
-const configs = await build({ base: "node18", typescript: true, esm: true });
-
-/** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-  ...configs,
+export default await build(
+  { base: "node18", typescript: true, esm: true },
   {
     ignores: ["dist"],
   },
-];
+);

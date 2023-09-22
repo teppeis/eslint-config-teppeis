@@ -9,3 +9,5 @@ export { node20 } from "./configs/node20.js";
 export { typescriptTypeChecked } from "./configs/typescript-type-checked.js";
 export { typescript } from "./configs/typescript.js";
 export { merge } from "./merge.js";
+
+// TODO: remove @eslint/eslintrc
