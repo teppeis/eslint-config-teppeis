@@ -2,8 +2,8 @@ import tsEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsEslintParser from "@typescript-eslint/parser";
 import type { Linter } from "eslint";
 import { merge } from "../merge.js";
-import { moduleBase } from "../module-base.js";
 import { nonNull } from "../utils.js";
+import { moduleBase } from "./module-base.js";
 
 const tsEsEslintRecomRules = nonNull(
   nonNull(tsEslintPlugin.configs["eslint-recommended"].overrides)[0].rules,

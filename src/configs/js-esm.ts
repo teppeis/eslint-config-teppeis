@@ -3,7 +3,7 @@
  */
 import type { Linter } from "eslint";
 import { merge } from "../merge.js";
-import { moduleBase } from "../module-base.js";
+import { moduleBase } from "./module-base.js";
 
 export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
   rules: {
