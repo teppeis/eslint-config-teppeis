@@ -22,4 +22,10 @@ export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
     // ** Style guide **
     "import/extensions": [2, "always"],
   },
+  settings: {
+    "import/extensions": [".js", ".mjs", ".jsx"],
+    "import/parsers": {
+      espree: [".js", ".cjs", ".mjs", ".jsx"],
+    },
+  },
 });

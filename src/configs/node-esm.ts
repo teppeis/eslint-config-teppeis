@@ -12,9 +12,4 @@ export const nodeEsm: Linter.FlatConfig = {
   rules: {
     "unicorn/prefer-module": 2,
   },
-  settings: {
-    "import/parsers": {
-      espree: [".js", ".cjs", ".mjs", ".jsx"],
-    },
-  },
 };
