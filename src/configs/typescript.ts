@@ -73,9 +73,6 @@ export const typescript: Linter.FlatConfig = merge(moduleBase, {
     "@typescript-eslint/prefer-ts-expect-error": 2,
   },
   settings: {
-    jsdoc: {
-      mode: "typescript",
-    },
     "import/extensions": [".mjs", ...TS_EXTENSIONS],
     "import/external-module-folders": ["node_modules", "node_modules/@types"],
     "import/parsers": {
