@@ -17,8 +17,7 @@ export const node: Linter.FlatConfig = {
     "n/no-deprecated-api": 2,
     "n/no-extraneous-import": 2,
     "n/no-extraneous-require": 2,
-    // use "import/no-unresolved" instead
-    // "n/no-missing-import": 2,
+    "n/no-missing-import": 2,
     "n/no-missing-require": 2,
     "n/no-new-require": 2,
     "n/no-unpublished-bin": 2,

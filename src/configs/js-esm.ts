@@ -11,8 +11,6 @@ export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
     "import/default": 2,
     "import/named": 2,
     "import/namespace": 2,
-    // TODO: use n/no-missing-import or disable? These import/* rules don't support package exports.
-    "import/no-unresolved": [2, { caseSensitiveStrict: true }],
 
     // ** Helpful warnings **
     "import/export": 2,
