@@ -14,13 +14,10 @@ export const moduleBase: Linter.FlatConfig = {
 
     // ** Static analysis **
     "import/no-absolute-path": 2,
-    // for monorepo
-    // "import/no-relative-packages": 2, TODO: remove
     "import/no-self-import": 2,
     "import/no-useless-path-segments": 2,
 
     // ** Helpful warnings **
-    "import/no-deprecated": 2,
     "import/no-mutable-exports": 2,
 
     // ** Style guide **

@@ -9,8 +9,6 @@ const tsEsEslintRecomRules = nonNull(
   nonNull(tsEslintPlugin.configs["eslint-recommended"].overrides)[0].rules,
 );
 
-const TS_EXTENSIONS = [".ts", ".tsx", ".mts", ".cts"];
-
 export const typescript: Linter.FlatConfig = merge(moduleBase, {
   files: ["**/*.{ts,tsx,mts,cts}"],
   languageOptions: {
@@ -73,13 +71,7 @@ export const typescript: Linter.FlatConfig = merge(moduleBase, {
     "@typescript-eslint/prefer-ts-expect-error": 2,
   },
   settings: {
-    "import/extensions": [".mjs", ...TS_EXTENSIONS],
-    "import/external-module-folders": ["node_modules", "node_modules/@types"],
-    "import/parsers": {
-      "@typescript-eslint/parser": TS_EXTENSIONS,
-    },
-    "import/resolver": {
-      typescript: TS_EXTENSIONS,
-    },
+    // Don't enable rules that requires TypeScript parser for perf reasons.
+    "import/resolver": "typescript",
   },
 });
