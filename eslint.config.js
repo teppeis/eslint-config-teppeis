@@ -8,7 +8,7 @@ export default await build(
   {
     files: ["templates/*"],
     rules: {
-      "import/no-unresolved": "off",
+      "n/no-missing-import": "off",
     },
   },
   mocha,

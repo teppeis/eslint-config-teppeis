@@ -33,4 +33,20 @@ export const node: Linter.FlatConfig = {
     "unicorn/no-process-exit": 2,
     "unicorn/prefer-node-protocol": 2,
   },
+  settings: {
+    n: {
+      typescriptExtensionMap: [
+        // Add for CJS (ex: `import "./foo"` -> `./foo.ts`).
+        // These are overridden and ignored in the TS to JS mapping.
+        [".ts", ""],
+        [".tsx", ""],
+        // Default mappings (for react non-preserve)
+        ["", ".js"],
+        [".ts", ".js"],
+        [".cts", ".cjs"],
+        [".mts", ".mjs"],
+        [".tsx", ".js"],
+      ],
+    },
+  },
 };
