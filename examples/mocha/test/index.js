@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const assert = require('node:assert');
+const assert = require("node:assert/strict");
 
-describe('foo', () => {
-  it('bar', () => {
+describe("foo", () => {
+  it("bar", () => {
     assert(true);
   });
-  it('baz', function() {
+  it("baz", function () {
     // https://eslint.org/docs/rules/no-invalid-this
     this.timeout(5000);
   });

@@ -1,2 +1,3 @@
-// This checks that a rule in @typescript-eslint/eslint-plugin is effective.
+// Test that custom rule settings are loaded.
+
 namespace foo {}

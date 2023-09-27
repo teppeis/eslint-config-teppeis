@@ -1,4 +1,5 @@
-// This ESLint rule should be disabled in TypeScript files.
+// Test that @typescript-eslint:eslint-recommended is loaded.
+
 const foo = {
   bar: "baz",
   bar: "qux",

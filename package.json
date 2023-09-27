@@ -6,35 +6,48 @@
   "engines": {
     "node": "^18.17.0 || >=20.5.0"
   },
-  "main": "es2023.js",
+  "type": "module",
+  "main": "dist/index.js",
   "files": [
-    "*.js",
-    "lib"
+    "bin",
+    "dist",
+    "templates"
   ],
+  "bin": {
+    "eslint-config-teppeis": "bin/cli.js"
+  },
   "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
     "lint": "run-p -l -c --aggregate-output lint:*",
-    "lint:eslint": "eslint .",
+    "lint:eslint": "eslint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
     "fix": "run-s fix:prettier fix:eslint",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run lint:prettier -- --write",
-    "test": "run-p -l -c --aggregate-output lint:* unit",
-    "unit": "mocha test"
+    "test": "npm-run-all -l -c --aggregate-output clean build -p lint:* test:*",
+    "test:examples": "./examples/lint-all.sh",
+    "test:unit": "mocha test"
   },
   "dependencies": {
+    "@eslint/js": "^8.49.0",
+    "@types/eslint": "^8.44.2",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "eslint-config-prettier": "^9.0.0",
+    "deepmerge": "^4.3.1",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-n": "^16.1.0",
-    "eslint-plugin-unicorn": "^48.0.1"
+    "eslint-plugin-unicorn": "^48.0.1",
+    "globals": "^13.21.0"
   },
   "devDependencies": {
     "@types/node": "^18.18.0",
+    "@types/react": "^18.2.22",
     "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
     "glob": "^10.3.10",
     "mocha": "^10.2.0",
     "npm-run-all": "^4.1.5",
@@ -45,6 +58,11 @@
     "eslint": "^8.50.0",
     "prettier": "^3.0.3"
   },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
+  },
   "homepage": "https://github.com/teppeis/eslint-config-teppeis",
   "repository": "https://github.com/teppeis/eslint-config-teppeis",
   "bugs": {
@@ -53,7 +71,8 @@
   "keywords": [
     "eslint",
     "eslint-config",
-    "prettier"
+    "prettier",
+    "typescript"
   ],
   "license": "MIT"
 }

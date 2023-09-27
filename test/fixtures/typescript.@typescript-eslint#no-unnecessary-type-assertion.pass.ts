@@ -1,3 +1,4 @@
-// This rule is disabled in `+typescript`, because it requires type information.
-// It is enabled in `+typescript-with-type` config.
-const foo = <3>3;
+// This rule is disabled in `typescript` config, because it requires type information.
+// It is enabled in `typescript-type-checked` config.
+const foo = 3;
+const bar = foo!;

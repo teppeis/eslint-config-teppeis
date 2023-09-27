@@ -1,4 +1,2 @@
-/test/fixtures
-/examples
+dist
 package-lock.json
-tsconfig.json

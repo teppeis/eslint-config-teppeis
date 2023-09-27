@@ -10,156 +10,122 @@ ESLint config set for me!
 ## Priority
 
 1.  Avoid "Possible Errors"
-2.  Keep "Best Practices" if common
-3.  Use "Modern Style (ES2015+)" if available
-4.  Format "Stylistic Issues" if fixable or use Prettier
+2.  Keep "Best Practices" if fixable
+3.  Use Prettier for stylistic formatting
 
-This rules is based on `eslint:recommended`.
-Only additional or orverwritten rules are specified.
+## Install
+
+```console
+$ npm i -D eslint eslint-config-teppeis
+```
+
+and run `npx eslint-config-teppeis --init` to generate initial config files.
 
 ## Usage
 
-### Install
+Load `eslint-config-teppeis` and export default `build()` in your `eslint.config.js`:
 
-```console
-$ npm i -D eslint-config-teppeis
+```js
+import { build, mocha } from "eslint-config-teppeis";
+
+export default await build(
+  { base: "node18", typescript: true, esm: true },
+  mocha,
+  {
+    ignores: ["dist", "test/fixtures"],
+  },
+);
 ```
 
-`eslint` and `prettier` are installed as peer dependencies.
+### Options
 
-### Configure
+- `base` (enum, required): `es2021`, `es2022`, `es2023`, `node18` or `node20`
+- `typescript` (boolean, default false): use TypeScript
+- `project` (boolean|string|srting[], default false): the property of `parserOptions` to enable linting with type information
+- `esm` (boolean, default false): treat `.js` and `.ts` as ESM for a project that configures `type:module` in `package.json`
 
-Specify in your `.eslintrc.json`:
+## Configs for customization
 
-```json
-{
-  "extends": "teppeis"
-}
+### Pure ECMAScript
+
+Chose config for specific ECMAScript version
+
+```js
+import { es2021 } from "eslint-config-teppeis";
+
+export default [es2021];
 ```
 
-Default config equals to `teppeis/es2018`.
+- `es2021`
+- `es2022`
+- `es2023`
 
-### Choose base ECMAScript version
-
-```json
-{
-  "extends": "teppeis/es2015"
-}
-```
-
-- `teppeis/es5`
-- `teppeis/es2015`
-- `teppeis/es2016`
-- `teppeis/es2017`
-- `teppeis/es2018`
-- `teppeis/es2019`
-- `teppeis/es2020`
-- `teppeis/es2021`
-- `teppeis/es2022`
-- `teppeis/es2023`: equals to `teppeis`
-
-### For Node.js
-
-They include [eslint-plugin-n](https://www.npmjs.com/package/eslint-plugin-n).
-
-#### With specific version
+### Node.js
 
 Chose config for specific Node version
 
-```json
-{
-  "extends": ["teppeis/node-v18"]
-}
+- `node18` (v18.17+ Active LTS)
+- `node20` (v20.5+ Current)
+
+```js
+import { node18 } from "eslint-config-teppeis";
+
+export default [node18];
 ```
 
-- `teppeis/node-v18` (v18.17+ Active LTS)
-- `teppeis/node-v20` (v20.5+ Current)
+### TypeScript
 
-#### With Babel or other transpilers
+Configs for TypeScript
 
-Extends `teppeis/+node` after base config.
+- `typescript`: Enable rules that don't require type information
+- `typescriptTypeChecked`: Require type information
 
-```json
-{
-  "extends": ["teppeis/es2018", "teppeis/+node"]
-}
+```js
+import { node18, typescript } from "eslint-config-teppeis";
+
+export default [node18, typescript];
 ```
 
-In `teppeis/+node`, [n/no-unsupported-features/es-syntax](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md) is disabled.
-Available ES features depend on the base config.
-
-[n/no-unsupported-features/es-builtins](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md) and [n/no-unsupported-features/node-builtins](https://github.com/weiran-zsd/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md) are enabled. It is assumed that polyfill is not used.
-
-## Customize
-
-### Use Prettier
-
-This plugin includes `prettier` itself in `peerDependencies`.
-
-Override dupulicated or conflicted rules with `teppeis/+prettier`.
-
-```json
-{
-  "extends": ["teppeis/es2018", "teppeis/+prettier"]
-}
-```
-
-### For TypeScript
-
-Configs for TypeScript (applied only for `*.ts` and `*.tsx`).
-
-- `teppeis/+typescript`: Enable rules that don't require type information
-- `teppeis/+typescript-with-type`: Require type information (slow)
-
-```json
-{
-  "extends": ["teppeis/node-v18", "teppeis/+typescript", "teppeis/+prettier"]
-}
-```
-
-### For ES Modules
+### ES Modules
 
 By default, only `*.mjs` and `*.mts` are treated as ES Modules in configs for Node.js.
-If you use `type:module` in package.json, use `teppeis/+module` like:
+If you use `type:module` in package.json, use `esm: true` like:
 
-```json
-{
-  "extends": ["teppeis/node-v18", "teppeis/+module"]
-}
+```js
+import { build } from "eslint-config-teppeis";
+
+export default build({ base: "node18", esm: true });
 ```
 
-or for TypeScript like:
+### Browsers
 
-```json
-{
-  "extends": ["teppeis/node-v18", "teppeis/+typescript", "teppeis/+module"]
-}
+This enables globals for browsers.
+
+```js
+import { es2023, browser } from "eslint-config-teppeis";
+
+export default [es2023, browser];
 ```
 
-### For browsers
+### Mocha
 
-This adds `browser` to `env`.
+This enables globals for Mocha like `describe` or `it` only in `**/test/*.js`.
 
-```json
-{
-  "extends": ["teppeis/es2018", "teppeis/+browser"]
-}
+```js
+import { es2023, mocha } from "eslint-config-teppeis";
+
+export default [es2023, mocha];
 ```
 
-### Use Mocha for testing
+## Note: Prettier
 
-This enables mocha globals like `describe` or `it` in `**/test/*.js`.
-
-```json
-{
-  "extends": ["teppeis/es2018", "teppeis/+mocha"]
-}
-```
+Just intall `prettier` and use it with `eslint-config-teppeis`.
+These configs don't include rule settings that conflict with Pretteir.
 
 ## License
 
 Licensed under the MIT license.
-Copyright (c) 2021, Teppei Sato
+Copyright (c) 2023, Teppei Sato
 
 [npm-image]: https://badgen.net/npm/v/eslint-config-teppeis?icon=npm&label=
 [npm-url]: https://npmjs.org/package/eslint-config-teppeis

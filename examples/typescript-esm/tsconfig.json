@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 18",
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "es2022",
+    "jsx": "preserve",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  }
+}
