@@ -12,13 +12,13 @@ export const moduleBase: Linter.FlatConfig = {
   rules: {
     // for both TypeScript and non-TypeScript rules
 
+    // ** Helpful warnings **
+    "import/no-mutable-exports": 2,
+
     // ** Static analysis **
     "import/no-absolute-path": 2,
     "import/no-self-import": 2,
     "import/no-useless-path-segments": 2,
-
-    // ** Helpful warnings **
-    "import/no-mutable-exports": 2,
 
     // ** Style guide **
     "import/first": 2,

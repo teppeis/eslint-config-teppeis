@@ -7,15 +7,15 @@ import { moduleBase } from "./module-base.js";
 
 export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
   rules: {
-    // ** Static analysis **
-    "import/default": 2,
-    "import/named": 2,
-    "import/namespace": 2,
-
     // ** Helpful warnings **
     "import/export": 2,
     "import/no-named-as-default": 2,
     // "import/no-named-as-default-member": 2,
+
+    // ** Static analysis **
+    "import/default": 2,
+    "import/named": 2,
+    "import/namespace": 2,
 
     // ** Style guide **
     "import/extensions": [2, "always"],
