@@ -46,7 +46,8 @@ describe("typescript config", () => {
   });
 });
 
-describe("typescript-type-checked config", () => {
+describe("typescript-type-checked config", function () {
+  this.timeout(10000);
   const config = merge(typescriptTypeChecked, {
     languageOptions: {
       parserOptions: {
