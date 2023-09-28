@@ -1,6 +1,7 @@
 import type { ArrayMergeOptions } from "deepmerge";
 import deepmerge from "deepmerge";
 import type { Linter } from "eslint";
+import { nonNull } from "./utils.js";
 
 type FlatConfig = Linter.FlatConfig;
 
@@ -35,6 +36,12 @@ export function merge(
     },
     rules: deepObjectMerge(first.rules ?? {}, second.rules ?? {}),
   };
+
+  // TODO: eslint-plugin-import requires `parserOptions.ecmaVersion` yet
+  if (merged.languageOptions?.ecmaVersion) {
+    nonNull(nonNull(merged.languageOptions).parserOptions).ecmaVersion =
+      merged.languageOptions?.ecmaVersion;
+  }
 
   if (rest.length > 0) {
     return merge(merged, rest[0], ...rest.slice(1));

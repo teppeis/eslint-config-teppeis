@@ -4,9 +4,7 @@ import { es2021 } from "./es2021.js";
 
 export const es2022: Linter.FlatConfig = merge(es2021, {
   languageOptions: {
-    parserOptions: {
-      ecmaVersion: 2022,
-    },
+    ecmaVersion: 2022,
     // no new globals
   },
   rules: {

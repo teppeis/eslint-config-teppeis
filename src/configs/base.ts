@@ -7,8 +7,8 @@ import { merge } from "../merge.js";
 
 export const base: Linter.FlatConfig = merge(js.configs.recommended, {
   languageOptions: {
-    sourceType: "script",
     ecmaVersion: 2020,
+    sourceType: "script",
   },
   plugins: {
     // Be careful when removing these plugins!

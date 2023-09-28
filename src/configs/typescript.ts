@@ -12,12 +12,10 @@ const tsEsEslintRecomRules = nonNull(
 export const typescript: Linter.FlatConfig = merge(moduleBase, {
   files: ["**/*.{ts,tsx,mts,cts}"],
   languageOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
     // @ts-expect-error TSESLint doesn't support flat config typings yet
     parser: tsEslintParser,
-    parserOptions: {
-      sourceType: "module",
-      ecmaVersion: "latest",
-    },
   },
   plugins: {
     // @ts-expect-error TSESLint doesn't support flat config typings yet

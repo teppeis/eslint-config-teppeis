@@ -5,10 +5,8 @@ import { base } from "./base.js";
 
 export const es2021: Linter.FlatConfig = merge(base, {
   languageOptions: {
-    parserOptions: {
-      // NOTE: ES2021 doesn't support top-level await.
-      ecmaVersion: 2021,
-    },
+    // NOTE: ES2021 doesn't support top-level await.
+    ecmaVersion: 2021,
     globals: {
       ...globals.es2021,
     },
