@@ -1,9 +1,8 @@
-import type { Linter } from "eslint";
 import { merge } from "../merge.js";
 import { typescript } from "./typescript.js";
 
 /** @type {import("eslint").Linter.FlatConfig} */
-export const typescriptTypeChecked: Linter.FlatConfig = merge(typescript, {
+export const typescriptTypeChecked = merge(typescript, {
   languageOptions: {
     parserOptions: {
       project: true,

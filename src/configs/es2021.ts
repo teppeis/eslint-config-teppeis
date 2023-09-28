@@ -1,9 +1,8 @@
-import type { Linter } from "eslint";
 import globals from "globals";
 import { merge } from "../merge.js";
 import { base } from "./base.js";
 
-export const es2021: Linter.FlatConfig = merge(base, {
+export const es2021 = merge(base, {
   languageOptions: {
     // NOTE: ES2021 doesn't support top-level await.
     ecmaVersion: 2021,

@@ -1,11 +1,10 @@
 import js from "@eslint/js";
-import type { Linter } from "eslint";
 import comments from "eslint-plugin-eslint-comments";
 import jsdoc from "eslint-plugin-jsdoc";
 import unicorn from "eslint-plugin-unicorn";
 import { merge } from "../merge.js";
 
-export const base: Linter.FlatConfig = merge(js.configs.recommended, {
+export const base = merge(js.configs.recommended, {
   languageOptions: {
     ecmaVersion: 2020,
     sourceType: "script",

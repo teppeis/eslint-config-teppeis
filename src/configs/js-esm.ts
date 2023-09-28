@@ -1,11 +1,10 @@
 /**
  * @fileoverview Config for Node ESM in JS (not TS, tsc checks them instead)
  */
-import type { Linter } from "eslint";
 import { merge } from "../merge.js";
 import { moduleBase } from "./module-base.js";
 
-export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
+export const jsEsm = merge(moduleBase, {
   rules: {
     // ** Helpful warnings **
     "import/export": 2,
