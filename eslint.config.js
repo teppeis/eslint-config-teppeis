@@ -1,4 +1,5 @@
-import { build, mocha } from "./dist/index.js";
+import { build } from "eslint-config-teppeis";
+import { mocha } from "eslint-config-teppeis/configs/mocha";
 
 export default await build(
   { base: "node18", typescript: true, esm: true },

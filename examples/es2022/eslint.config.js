@@ -1,11 +1,8 @@
-import { build } from "../../dist/index.js";
+import { build } from "eslint-config-teppeis";
 
-const configs = await build({ base: "es2022" });
-
-/** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-  ...configs,
+export default await build(
+  { base: "es2022" },
   {
     ignores: ["eslint.config.{js,mjs}"],
   },
-];
+);

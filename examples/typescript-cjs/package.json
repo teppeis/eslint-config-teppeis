@@ -1,0 +1,6 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "eslint-config-teppeis": "file:../.."
+  }
+}

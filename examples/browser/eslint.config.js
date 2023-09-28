@@ -1,17 +1,6 @@
-import { browser, build } from "../../dist/index.js";
+import { build } from "eslint-config-teppeis";
+import { browser } from "eslint-config-teppeis/configs";
 
-const configs = await build({ base: "node18" });
-
-/** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-  ...configs,
-  browser,
-  {
-    rules: {
-      "no-undef": 2,
-    },
-  },
-  {
-    ignores: ["eslint.config.{js,mjs}"],
-  },
-];
+export default await build({ base: "es2023" }, browser, {
+  ignores: ["eslint.config.{js,mjs}"],
+});

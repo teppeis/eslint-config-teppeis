@@ -26,7 +26,8 @@ and run `npx eslint-config-teppeis --init` to generate initial config files.
 Load `eslint-config-teppeis` and export default `build()` in your `eslint.config.js`:
 
 ```js
-import { build, mocha } from "eslint-config-teppeis";
+import { build } from "eslint-config-teppeis";
+import { mocha } from "eslint-config-teppeis/configs/mocha";
 
 export default await build(
   { base: "node18", typescript: true, esm: true },
@@ -51,7 +52,7 @@ export default await build(
 Chose config for specific ECMAScript version
 
 ```js
-import { es2021 } from "eslint-config-teppeis";
+import { es2021 } from "eslint-config-teppeis/configs/es2021";
 
 export default [es2021];
 ```
@@ -68,7 +69,7 @@ Chose config for specific Node version
 - `node20` (v20.5+ Current)
 
 ```js
-import { node18 } from "eslint-config-teppeis";
+import { node18 } from "eslint-config-teppeis/configs/node18";
 
 export default [node18];
 ```
@@ -81,7 +82,7 @@ Configs for TypeScript
 - `typescriptTypeChecked`: Require type information
 
 ```js
-import { node18, typescript } from "eslint-config-teppeis";
+import { node18, typescript } from "eslint-config-teppeis/configs";
 
 export default [node18, typescript];
 ```
@@ -102,7 +103,7 @@ export default build({ base: "node18", esm: true });
 This enables globals for browsers.
 
 ```js
-import { es2023, browser } from "eslint-config-teppeis";
+import { es2023, browser } from "eslint-config-teppeis/configs";
 
 export default [es2023, browser];
 ```

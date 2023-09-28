@@ -1,3 +1,5 @@
+"use strict";
+
 // enabled globals.node
 require();
 // disabled globals.mocha not in test dir

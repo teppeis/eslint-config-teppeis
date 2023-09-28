@@ -1,21 +1,6 @@
-import globals from "globals";
-import { mocha } from "../../dist/index.js";
+import { build } from "eslint-config-teppeis";
+import { mocha } from "eslint-config-teppeis/configs/mocha";
 
-/** @type { import("eslint").Linter.FlatConfig[] } */
-export default [
-  {
-    languageOptions: {
-      globals: { ...globals.node },
-    },
-    linterOptions: {
-      reportUnusedDisableDirectives: true,
-    },
-    rules: {
-      "no-undef": 2,
-    },
-  },
-  mocha,
-  {
-    ignores: ["eslint.config.{js,mjs}"],
-  },
-];
+export default await build({ base: "node20" }, mocha, {
+  ignores: ["eslint.config.{js,mjs}"],
+});
