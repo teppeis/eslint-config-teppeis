@@ -113,8 +113,6 @@ export const base: Linter.FlatConfig = merge(js.configs.recommended, {
     "prefer-rest-params": 2,
     "prefer-template": 2,
     radix: 2,
-    // => es2017
-    // "require-await": 2,
     strict: [2, "global"],
     yoda: [2, "never", { onlyEquality: true }],
 
