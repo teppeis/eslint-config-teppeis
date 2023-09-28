@@ -18,7 +18,7 @@ export const jsEsm: Linter.FlatConfig = merge(moduleBase, {
     "import/namespace": 2,
 
     // ** Style guide **
-    "import/extensions": [2, "always"],
+    "import/extensions": [2, "always", { ignorePackages: true }],
   },
   settings: {
     "import/extensions": [".js", ".mjs", ".jsx"],
