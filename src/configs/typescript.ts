@@ -34,6 +34,9 @@ export const typescript: Linter.FlatConfig = merge(moduleBase, {
       { line: { markers: ["/"] }, block: { balanced: true } },
     ],
 
+    // Check with TSC instead
+    "n/no-missing-import": 0,
+
     // Extend ESLint rules (enabled in base config)
     // NOTE: skip extending stylistic rules that are overrided by prettier
     "no-invalid-this": 0,
