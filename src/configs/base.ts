@@ -73,8 +73,8 @@ export const base = merge(js.configs.recommended, {
     "no-loop-func": 2,
     "no-multi-str": 2,
     "no-new-func": 2,
-    "no-new-object": 2,
     "no-new-wrappers": 2,
+    "no-object-constructor": 2,
     "no-octal-escape": 2,
     // want to warn only props...
     // "no-param-reassign": [2, {"props": true}],
