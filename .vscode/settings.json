@@ -4,6 +4,5 @@
     {
       "mode": "auto"
     }
-  ],
-  "eslint.debug": true
+  ]
 }
