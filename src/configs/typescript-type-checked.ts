@@ -12,6 +12,8 @@ export const typescriptTypeChecked = merge(typescript, {
     // Extend ESLint rules
     "no-throw-literal": 0,
     "@typescript-eslint/no-throw-literal": 2,
+    "prefer-destructuring": 0,
+    "@typescript-eslint/prefer-destructuring": 2,
 
     "@typescript-eslint/await-thenable": 2,
     "@typescript-eslint/consistent-type-exports": 2,
