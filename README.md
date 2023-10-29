@@ -63,10 +63,10 @@ export default [es2021];
 
 ### Node.js
 
-Chose config for specific Node version
+Config for [Node versions](https://github.com/nodejs/Release)
 
-- `node18` (v18.17+ Active LTS)
-- `node20` (v20.5+ Current)
+- `node18` (v18.18+ Maintenance)
+- `node20` (v20.9+ Active LTS)
 
 ```js
 import { node18 } from "eslint-config-teppeis/configs/node18";
