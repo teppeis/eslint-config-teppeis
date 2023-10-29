@@ -49,7 +49,7 @@ export default await build(
 
 ### Pure ECMAScript
 
-Chose config for specific ECMAScript version
+Configs for ECMAScript versions
 
 ```js
 import { es2021 } from "eslint-config-teppeis/configs/es2021";
@@ -63,7 +63,7 @@ export default [es2021];
 
 ### Node.js
 
-Config for [Node versions](https://github.com/nodejs/Release)
+Configs for [Node versions](https://github.com/nodejs/Release)
 
 - `node18` (v18.18+ Maintenance)
 - `node20` (v20.9+ Active LTS)
