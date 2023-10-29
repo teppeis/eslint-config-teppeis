@@ -42,7 +42,7 @@
     "test:unit": "mocha test"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^3.2.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
     "@eslint/js": "^8.52.0",
     "@types/eslint": "^8.44.6",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
