@@ -1,5 +1,5 @@
+import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import js from "@eslint/js";
-import comments from "eslint-plugin-eslint-comments";
 import jsdoc from "eslint-plugin-jsdoc";
 import unicorn from "eslint-plugin-unicorn";
 import { merge } from "../merge.js";
@@ -14,10 +14,10 @@ export const base = merge(js.configs.recommended, {
     // They may be referenced by other config files.
     unicorn,
     jsdoc,
-    "eslint-comments": comments,
+    "@eslint-community/eslint-comments": comments,
   },
   linterOptions: {
-    // replace "eslint-comments/no-unused-disable" but warn only
+    // replace "eslint-comments/no-unused-disable" but warn only now
     reportUnusedDisableDirectives: true,
   },
   rules: {
@@ -127,11 +127,14 @@ export const base = merge(js.configs.recommended, {
     "no-extra-semi": 0,
     "no-mixed-spaces-and-tabs": 0,
 
-    // # eslint-plugin-eslint-comments
-    // https://github.com/mysticatea/eslint-plugin-eslint-comments
-    "eslint-comments/disable-enable-pair": [2, { allowWholeFile: true }],
+    // # @eslint-community/eslint-plugin-eslint-comments
+    // https://github.com/eslint-community/eslint-plugin-eslint-comments
+    "@eslint-community/eslint-comments/disable-enable-pair": [
+      2,
+      { allowWholeFile: true },
+    ],
     // overwrite recommended
-    "eslint-comments/no-unlimited-disable": 0,
+    "@eslint-community/eslint-comments/no-unlimited-disable": 0,
 
     // # eslint-plugin-unicorn
     // https://github.com/sindresorhus/eslint-plugin-unicorn
