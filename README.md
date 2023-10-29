@@ -1,17 +1,20 @@
 # eslint-config-teppeis
 
-ESLint config set for me!
+[ESLint](https://github.com/eslint/eslint) shareable configs for me!
 
 [![npm version][npm-image]][npm-url]
 ![supported node.js version][node-version]
 [![build status][ci-image]][ci-url]
 ![license][license]
 
+> [!IMPORTANT]
+> This config uses [new flat config style](https://eslint.org/docs/latest/use/configure/configuration-files-new) since v19.
+
 ## Priority
 
-1.  Avoid "Possible Errors"
-2.  Keep "Best Practices" if fixable
-3.  Use Prettier for stylistic formatting
+1.  Avoid ["Possible Problems"](https://eslint.org/docs/latest/rules/#possible-problems)
+2.  Enable ["Suggestions"](https://eslint.org/docs/latest/rules/#suggestions) if reasonable or fixable
+3.  Use Prettier for stylistic formatting issues
 
 ## Install
 
