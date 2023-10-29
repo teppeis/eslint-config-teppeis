@@ -122,6 +122,8 @@ export const base = merge(js.configs.recommended, {
     // recommended rules but conflict with prettier
     // https://github.com/prettier/eslint-config-prettier
     "no-unexpected-multiline": 0,
+    // TODO: The following two rules will be deprecated in v8.53.0
+    // and removed from recommended in the future
     "no-extra-semi": 0,
     "no-mixed-spaces-and-tabs": 0,
 
