@@ -58,7 +58,7 @@
   "devDependencies": {
     "@types/node": "^18.18.8",
     "@types/react": "^18.2.34",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "glob": "^10.3.10",
     "mocha": "^10.2.0",
@@ -67,7 +67,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "prettier": "^3.0.3"
   },
   "peerDependenciesMeta": {
