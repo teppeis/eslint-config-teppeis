@@ -3,6 +3,9 @@
   "description": "ESLint config set for me!",
   "version": "19.0.0",
   "author": "Teppei Sato <teppeis@gmail.com>",
+  "publishConfig": {
+    "provenance": true
+  },
   "engines": {
     "node": "^18.18.2 || >=20.9.0"
   },
