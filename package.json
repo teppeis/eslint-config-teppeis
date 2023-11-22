@@ -59,7 +59,7 @@
     "globals": "^13.23.0"
   },
   "devDependencies": {
-    "@types/node": "^18.18.11",
+    "@types/node": "^18.18.12",
     "@types/react": "^18.2.38",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
