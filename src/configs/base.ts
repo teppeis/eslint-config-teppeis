@@ -17,8 +17,8 @@ export const base = merge(js.configs.recommended, {
     "@eslint-community/eslint-comments": comments,
   },
   linterOptions: {
-    // replace "eslint-comments/no-unused-disable" but warn only now
-    reportUnusedDisableDirectives: true,
+    // replace "eslint-comments/no-unused-disable"
+    reportUnusedDisableDirectives: "error",
   },
   rules: {
     ...comments.configs.recommended.rules,
