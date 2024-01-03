@@ -53,9 +53,9 @@
     "deepmerge": "^4.3.1",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^46.10.1",
+    "eslint-plugin-jsdoc": "^48.0.2",
     "eslint-plugin-n": "^16.6.1",
-    "eslint-plugin-unicorn": "^49.0.0",
+    "eslint-plugin-unicorn": "^50.0.1",
     "globals": "^13.24.0"
   },
   "devDependencies": {
