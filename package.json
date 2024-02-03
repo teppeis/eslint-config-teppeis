@@ -60,7 +60,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.19.14",
-    "@types/react": "^18.2.51",
+    "@types/react": "^18.2.52",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "glob": "^10.3.10",
