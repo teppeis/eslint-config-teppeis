@@ -4,11 +4,11 @@ import type { Linter } from "eslint";
 
 type FlatConfig = Linter.FlatConfig;
 
-export function merge(
-  first: FlatConfig,
-  second: FlatConfig,
-  ...rest: FlatConfig[]
-): FlatConfig {
+export function merge(first: FlatConfig, ...rest: FlatConfig[]): FlatConfig {
+  if (rest.length === 0) {
+    return { ...first };
+  }
+  const second = rest[0];
   const merged = {
     ...first,
     ...second,
@@ -42,8 +42,8 @@ export function merge(
       merged.languageOptions.ecmaVersion;
   }
 
-  if (rest.length > 0) {
-    return merge(merged, rest[0], ...rest.slice(1));
+  if (rest.length > 1) {
+    return merge(merged, rest[1], ...rest.slice(2));
   } else {
     return merged;
   }
