@@ -55,7 +55,7 @@
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-unicorn": "^51.0.1",
     "globals": "^14.0.0",
-    "typescript-eslint": "^7.0.1"
+    "typescript-eslint": "^7.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.19.17",
