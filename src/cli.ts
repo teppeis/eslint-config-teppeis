@@ -13,14 +13,6 @@ export function run() {
     process.exit(1);
   }
 
-  const { type } = findUpPackageJson();
-  const isTypeEsm = type === "module";
-  const templateFile = isTypeEsm
-    ? "eslint.config-esm.mjs"
-    : "eslint.config.mjs";
-  const templateUrl = resolveUrl(`../templates/${templateFile}`);
-  const cjsProxyUrl = resolveUrl(`../templates/eslint.config.cjs`);
-
   if (fs.existsSync("eslint.config.js")) {
     throw new Error("eslint.config.js already exists.");
   }
@@ -29,12 +21,13 @@ export function run() {
     throw new Error("eslint.config.mjs already exists.");
   }
 
-  if (isTypeEsm) {
+  const { type } = findUpPackageJson();
+  if (type === "module") {
+    const templateUrl = resolveUrl(`../templates/eslint.config-esm.mjs`);
     fs.copyFileSync(templateUrl, "eslint.config.js");
     console.log("create: eslint.config.js");
   } else {
-    fs.copyFileSync(cjsProxyUrl, "eslint.config.js");
-    console.log("create: eslint.config.js (for CJS Proxy)");
+    const templateUrl = resolveUrl(`../templates/eslint.config-cjs.mjs`);
     fs.copyFileSync(templateUrl, "eslint.config.mjs");
     console.log("create: eslint.config.mjs");
   }
