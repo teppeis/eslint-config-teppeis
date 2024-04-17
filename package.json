@@ -45,7 +45,7 @@
     "test:unit": "mocha test"
   },
   "dependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
     "@eslint/js": "^8.57.0",
     "@types/eslint": "^8.56.9",
     "deepmerge": "^4.3.1",
