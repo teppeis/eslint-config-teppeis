@@ -1,4 +1,4 @@
 {
-  "extends": ["github>teppeis/eslint-config-teppeis"],
+  "extends": ["github>teppeis/renovate-config"],
   "dependencyDashboard": true
 }
