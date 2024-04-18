@@ -1,3 +1,4 @@
 {
-  "extends": ["@teppeis"]
+  "extends": ["github>teppeis/eslint-config-teppeis"],
+  "dependencyDashboard": true
 }
