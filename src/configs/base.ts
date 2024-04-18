@@ -1,10 +1,10 @@
-import comments from "@eslint-community/eslint-plugin-eslint-comments";
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import js from "@eslint/js";
 import jsdoc from "eslint-plugin-jsdoc";
 import unicorn from "eslint-plugin-unicorn";
 import { merge } from "../merge.js";
 
-export const base = merge(js.configs.recommended, {
+export const base = merge(js.configs.recommended, comments.recommended, {
   languageOptions: {
     ecmaVersion: 2020,
     sourceType: "script",
@@ -14,15 +14,12 @@ export const base = merge(js.configs.recommended, {
     // They may be referenced by other config files.
     unicorn,
     jsdoc,
-    "@eslint-community/eslint-comments": comments,
   },
   linterOptions: {
     // replace "eslint-comments/no-unused-disable"
     reportUnusedDisableDirectives: "error",
   },
   rules: {
-    ...comments.configs.recommended.rules,
-
     // ## Possible Problems
     "array-callback-return": 2,
     "no-async-promise-executor": 2,
