@@ -51,12 +51,12 @@ export const typescript = merge(
       "@typescript-eslint/no-inferrable-types": 2,
 
       // Additional rules
+      "@typescript-eslint/ban-ts-comment": 2,
       "@typescript-eslint/consistent-type-imports": 2,
       "@typescript-eslint/no-import-type-side-effects": 2,
       // allow require for power-assert and verbatimModuleSyntax
       // '@typescript-eslint/no-require-imports': 2,
       "@typescript-eslint/prefer-literal-enum-member": 2,
-      "@typescript-eslint/prefer-ts-expect-error": 2,
     },
     settings: {
       // Don't enable rules that requires TypeScript parser for perf reasons.
