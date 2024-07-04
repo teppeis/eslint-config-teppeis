@@ -54,7 +54,7 @@
     "eslint-plugin-jsdoc": "^48.5.0",
     "eslint-plugin-n": "^17.9.0",
     "eslint-plugin-unicorn": "^54.0.0",
-    "globals": "^15.7.0",
+    "globals": "^15.8.0",
     "typescript-eslint": "^7.15.0"
   },
   "devDependencies": {
