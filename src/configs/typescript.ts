@@ -46,13 +46,12 @@ export const typescript = merge(
       // Stylistic rules
       "@typescript-eslint/adjacent-overload-signatures": 2,
       "@typescript-eslint/consistent-type-assertions": 2,
-      "@typescript-eslint/no-non-null-assertion": 2,
       "@typescript-eslint/no-inferrable-types": 2,
 
-      // Additional rules
-      "@typescript-eslint/ban-ts-comment": 2,
+      // Strict rules
       "@typescript-eslint/consistent-type-imports": 2,
       "@typescript-eslint/no-import-type-side-effects": 2,
+      "@typescript-eslint/no-non-null-assertion": 2,
       "@typescript-eslint/prefer-literal-enum-member": 2,
     },
     settings: {
