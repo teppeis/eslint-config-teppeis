@@ -4,7 +4,7 @@ import { typescript } from "./typescript.js";
 export const typescriptTypeChecked = merge(typescript, {
   languageOptions: {
     parserOptions: {
-      projectService: true,
+      project: true,
     },
   },
   rules: {
