@@ -28,7 +28,11 @@ export const typescript = merge(
       "@typescript-eslint/no-invalid-this": 2,
       "no-loop-func": 0,
       "@typescript-eslint/no-loop-func": 2,
-      "no-unused-expressions": 0,
+
+      // Override recommended rules
+      "@typescript-eslint/no-explicit-any": 0,
+      "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
+      "@typescript-eslint/no-require-imports": 0,
       "@typescript-eslint/no-unused-expressions": [
         2,
         {
@@ -37,11 +41,6 @@ export const typescript = merge(
           allowTaggedTemplates: true,
         },
       ],
-
-      // Override recommended rules
-      "@typescript-eslint/no-explicit-any": 0,
-      "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
-      "@typescript-eslint/no-require-imports": 0,
       "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
       // Stylistic rules
