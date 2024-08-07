@@ -41,6 +41,7 @@ export const typescript = merge(
       // Override recommended rules
       "@typescript-eslint/no-explicit-any": 0,
       "@typescript-eslint/no-namespace": [2, { allowDeclarations: true }],
+      "@typescript-eslint/no-require-imports": 0,
       "@typescript-eslint/no-unused-vars": [2, { args: "none" }],
 
       // Stylistic rules
@@ -54,8 +55,6 @@ export const typescript = merge(
       "@typescript-eslint/ban-ts-comment": 2,
       "@typescript-eslint/consistent-type-imports": 2,
       "@typescript-eslint/no-import-type-side-effects": 2,
-      // allow require for power-assert and verbatimModuleSyntax
-      // '@typescript-eslint/no-require-imports': 2,
       "@typescript-eslint/prefer-literal-enum-member": 2,
     },
     settings: {
