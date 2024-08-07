@@ -37,5 +37,5 @@ if (x === -0) {
 fs.exists("./foo", () => {});
 
 // configs/typescript is loaded
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface Empty {}

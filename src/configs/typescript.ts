@@ -47,7 +47,6 @@ export const typescript = merge(
       // Stylistic rules
       "@typescript-eslint/adjacent-overload-signatures": 2,
       "@typescript-eslint/consistent-type-assertions": 2,
-      "@typescript-eslint/no-empty-interface": 2,
       "@typescript-eslint/no-non-null-assertion": 2,
       "@typescript-eslint/no-inferrable-types": 2,
 
