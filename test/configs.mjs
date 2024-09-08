@@ -90,7 +90,7 @@ function isEnabledRule(ruleLevel) {
 }
 
 /**
- * @param {import("eslint").Linter.FlatConfig} config
+ * @param {import("eslint").Linter.Config} config
  * @param {string} configName
  */
 function testConfig(config, configName) {
@@ -104,7 +104,7 @@ function testConfig(config, configName) {
 
 /**
  * @param {string} filePath
- * @param {import("eslint").Linter.FlatConfig} config
+ * @param {import("eslint").Linter.Config} config
  */
 async function testFile(filePath, config) {
   const match = /([^.]*)\.(pass|fail)\.(?:js|ts)$/.exec(filePath);
@@ -148,7 +148,7 @@ async function testFile(filePath, config) {
 
 /**
  * @param {string} file
- * @param {import("eslint").Linter.FlatConfig} config
+ * @param {import("eslint").Linter.Config} config
  */
 async function verify(file, config) {
   const linter = new Linter({ configType: "flat" });

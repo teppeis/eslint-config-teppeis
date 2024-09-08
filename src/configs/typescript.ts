@@ -5,7 +5,7 @@ import { moduleBase } from "./module-base.js";
 
 export const typescript = merge(
   moduleBase,
-  ...(tsEslint.configs.recommended as Linter.FlatConfig[]),
+  ...(tsEslint.configs.recommended as Linter.Config[]),
   {
     files: ["**/*.{ts,tsx,mts,cts}"],
     languageOptions: {

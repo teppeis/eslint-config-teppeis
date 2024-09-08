@@ -3,7 +3,7 @@ import n from "eslint-plugin-n";
 import unicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 
-export const node: Linter.FlatConfig = {
+export const node: Linter.Config = {
   languageOptions: {
     sourceType: "commonjs",
     globals: {

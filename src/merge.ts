@@ -2,7 +2,7 @@ import type { ArrayMergeOptions } from "deepmerge";
 import deepmerge from "deepmerge";
 import type { Linter } from "eslint";
 
-type FlatConfig = Linter.FlatConfig;
+type FlatConfig = Linter.Config;
 
 export function merge(first: FlatConfig, ...rest: FlatConfig[]): FlatConfig {
   if (rest.length === 0) {

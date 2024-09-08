@@ -4,7 +4,7 @@
 import type { Linter } from "eslint";
 import importX from "eslint-plugin-import-x";
 
-export const moduleBase: Linter.FlatConfig = {
+export const moduleBase: Linter.Config = {
   languageOptions: {
     sourceType: "module",
   },

@@ -12,8 +12,8 @@ interface BuildOptions {
 
 export async function build(
   options: BuildOptions,
-  ...additionalConfigs: Linter.FlatConfig[]
-): Promise<Linter.FlatConfig[]> {
+  ...additionalConfigs: Linter.Config[]
+): Promise<Linter.Config[]> {
   const { base, typescript, project, esm } = options;
 
   const baseConfigNames = ["es2021", "es2022", "es2023", "node18", "node20"];
