@@ -15,7 +15,7 @@ import mod = require("./mod");
 require("node:assert");
 
 // module-base is loaded
-// eslint-disable-next-line import/no-self-import
+// eslint-disable-next-line import-x/no-self-import
 import("./cjs");
 
 // configs/base is loaded

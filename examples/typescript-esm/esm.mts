@@ -22,7 +22,7 @@ require("node:assert");
 console.log(__filename);
 
 // module-base is loaded
-// eslint-disable-next-line import/no-self-import
+// eslint-disable-next-line import-x/no-self-import
 import("./esm.mjs");
 
 // configs/base is loaded

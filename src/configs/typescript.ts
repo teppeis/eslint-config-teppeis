@@ -56,7 +56,7 @@ export const typescript = merge(
     },
     settings: {
       // Don't enable rules that requires TypeScript parser for perf reasons.
-      "import/resolver": "typescript",
+      "import-x/resolver": "typescript",
     },
   },
 );
