@@ -2,29 +2,29 @@
  * @fileoverview Base config for TS and Node ESM JS
  */
 import type { Linter } from "eslint";
-import importPlugin from "eslint-plugin-import";
+import importX from "eslint-plugin-import-x";
 
 export const moduleBase: Linter.FlatConfig = {
   languageOptions: {
     sourceType: "module",
   },
-  plugins: { import: importPlugin },
+  plugins: { "import-x": importX as any },
   rules: {
     // for both TypeScript and non-TypeScript rules
 
     // ** Helpful warnings **
-    "import/no-mutable-exports": 2,
+    "import-x/no-mutable-exports": 2,
 
     // ** Static analysis **
-    "import/no-absolute-path": 2,
-    "import/no-self-import": 2,
-    "import/no-useless-path-segments": 2,
+    "import-x/no-absolute-path": 2,
+    "import-x/no-self-import": 2,
+    "import-x/no-useless-path-segments": 2,
 
     // ** Style guide **
-    "import/first": 2,
-    "import/newline-after-import": 2,
-    "import/no-duplicates": 2,
-    "import/order": [
+    "import-x/first": 2,
+    "import-x/newline-after-import": 2,
+    "import-x/no-duplicates": 2,
+    "import-x/order": [
       2,
       {
         groups: [

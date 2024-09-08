@@ -29,7 +29,7 @@ export const base = merge(js.configs.recommended, comments.recommended, {
     "no-constant-condition": [2, { checkLoops: false }],
     // overwrite recommended: allow `try {foo();} catch (e) {}`
     "no-empty": [2, { allowEmptyCatch: true }],
-    // use "import/no-duplicates" instead
+    // use "import-x/no-duplicates" instead
     // "no-duplicate-imports": 2,
     "no-import-assign": 2,
     "no-misleading-character-class": 2,

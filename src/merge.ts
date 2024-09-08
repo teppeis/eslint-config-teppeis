@@ -36,7 +36,7 @@ export function merge(first: FlatConfig, ...rest: FlatConfig[]): FlatConfig {
     rules: deepObjectMerge(first.rules ?? {}, second.rules ?? {}),
   } as const;
 
-  // TODO: eslint-plugin-import requires `parserOptions.ecmaVersion` yet
+  // TODO: eslint-plugin-import-x requires `parserOptions.ecmaVersion` yet
   if (merged.languageOptions.ecmaVersion) {
     merged.languageOptions.parserOptions.ecmaVersion =
       merged.languageOptions.ecmaVersion;
