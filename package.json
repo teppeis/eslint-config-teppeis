@@ -47,7 +47,6 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
     "@eslint/js": "^9.10.0",
-    "@types/eslint": "^9.6.1",
     "deepmerge": "^4.3.1",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import-x": "^4.2.1",

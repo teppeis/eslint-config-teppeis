@@ -1,7 +1,7 @@
 import type { Linter } from "eslint";
 import globals from "globals";
 
-export const mocha: Linter.FlatConfig = {
+export const mocha: Linter.Config = {
   files: ["**/test/**/*.{js,cjs,mjs,jsx,ts,tsx,cts,mts}"],
   languageOptions: {
     globals: {
