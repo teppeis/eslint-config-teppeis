@@ -4,7 +4,6 @@
   "compilerOptions": {
     "lib": ["es2023"],
     "module": "CommonJS",
-    "moduleResolution": "Node16",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,

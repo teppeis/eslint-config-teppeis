@@ -55,7 +55,8 @@ export const typescript = merge(
       "@typescript-eslint/prefer-literal-enum-member": 2,
     },
     settings: {
-      // Don't enable rules that requires TypeScript parser for perf reasons.
+      // Use only resolver, don't config `import-x/extensions` or `import-x/parsers`
+      // that cause extra TS parsing and perf issues.
       "import-x/resolver": "typescript",
     },
   },

@@ -8,7 +8,6 @@
     "target": "es2022",
     "jsx": "preserve",
     "strict": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true
