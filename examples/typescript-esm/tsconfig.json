@@ -3,8 +3,8 @@
   "display": "Node 18",
   "compilerOptions": {
     "lib": ["es2023"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "target": "es2022",
     "jsx": "preserve",
     "strict": true,
