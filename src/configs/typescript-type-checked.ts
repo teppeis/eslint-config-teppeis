@@ -20,7 +20,10 @@ export const typescriptTypeChecked = merge(typescript, {
     "@typescript-eslint/no-for-in-array": 2,
     "@typescript-eslint/no-misused-promises": 2,
     "@typescript-eslint/no-mixed-enums": 2,
-    "@typescript-eslint/no-unnecessary-condition": 2,
+    "@typescript-eslint/no-unnecessary-condition": [
+      2,
+      { checkTypePredicates: true },
+    ],
     "@typescript-eslint/no-unnecessary-type-assertion": 2,
     "@typescript-eslint/restrict-plus-operands": 2,
     "@typescript-eslint/restrict-template-expressions": 2,
