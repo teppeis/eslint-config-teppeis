@@ -1,6 +1,4 @@
 {
-  // enable flat config (eslnitrc is disabled instead)
-  "eslint.experimental.useFlatConfig": true,
   "eslint.workingDirectories": [
     {
       // for projects with multiple configuration files
