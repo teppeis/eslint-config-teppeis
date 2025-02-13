@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^18.19.75",
+    "@types/node": "^18.19.76",
     "@types/react": "^19.0.8",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
