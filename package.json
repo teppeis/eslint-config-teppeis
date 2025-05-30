@@ -57,7 +57,7 @@
     "typescript-eslint": "^8.30.1"
   },
   "devDependencies": {
-    "@types/node": "^18.19.105",
+    "@types/node": "^18.19.109",
     "@types/react": "^19.1.6",
     "eslint": "^9.24.0",
     "eslint-config-prettier": "^10.1.5",
