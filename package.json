@@ -48,7 +48,7 @@
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/js": "^9.24.0",
     "deepmerge": "^4.3.1",
-    "eslint-import-resolver-typescript": "^4.3.5",
+    "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.10.6",
     "eslint-plugin-jsdoc": "^50.6.17",
     "eslint-plugin-n": "^17.17.0",
