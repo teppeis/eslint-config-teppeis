@@ -60,7 +60,7 @@
     "@types/node": "^18.19.120",
     "@types/react": "^19.1.8",
     "eslint": "^9.24.0",
-    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-prettier": "^10.1.8",
     "glob": "^10.4.5",
     "mocha": "^11.5.0",
     "npm-run-all": "^4.1.5",
