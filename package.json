@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
-    "@eslint/js": "^9.24.0",
+    "@eslint/js": "^9.39.1",
     "deepmerge": "^4.3.1",
     "eslint-import-resolver-typescript": "^4.3.5",
     "eslint-plugin-import-x": "^4.10.6",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@types/node": "^18.19.130",
     "@types/react": "^19.1.17",
-    "eslint": "^9.24.0",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "glob": "^10.4.5",
     "mocha": "^11.7.1",
@@ -68,7 +68,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.24.0",
+    "eslint": "^9.39.1",
     "prettier": "^3.5.3"
   },
   "peerDependenciesMeta": {
